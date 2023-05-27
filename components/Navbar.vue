@@ -1,7 +1,7 @@
 <template>
   <Disclosure as="nav" class="bg-primary1 md:bg-transparent" v-slot="{ open }">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex h-12 justify-between my-4">
+      <div class="flex h-12 justify-between my-4 md:my-8">
         <div class="flex">
           <div class="-ml-2 mr-2 flex items-center md:hidden">
             <!-- Mobile menu button -->
