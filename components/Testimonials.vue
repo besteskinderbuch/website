@@ -5,7 +5,7 @@
       aria-hidden="true"
     >
       <div
-        class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]"
+        class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#0f7200] to-[#4690c9]"
         style="
           clip-path: polygon(
             74.1% 44.1%,
@@ -33,7 +33,7 @@
       aria-hidden="true"
     >
       <div
-        class="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] xl:ml-0 xl:mr-[calc(50%-12rem)]"
+        class="ml-[-22rem] aspect-[1313/771] w-[82.0625rem] flex-none origin-top-right rotate-[30deg] bg-gradient-to-tr from-[#0f7200] to-[#4690c9] xl:ml-0 xl:mr-[calc(50%-12rem)]"
         style="
           clip-path: polygon(
             74.1% 44.1%,
@@ -58,16 +58,16 @@
     </div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-xl text-center">
-        <h2
-          class="text-lg font-semibold leading-8 tracking-tight text-indigo-600"
+       <!--  <h2
+          class="text-lg font-semibold leading-8 tracking-tight text-secondary1"
         >
           Testimonials
-        </h2>
-        <p
+        </h2> -->
+        <h2
           class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
         >
-          We have worked with thousands of amazing people
-        </p>
+          Andere Eltern sind auch überzeugt
+      </h2>
       </div>
       <div
         class="mx-auto mt-16 grid max-w-2xl grid-cols-1 grid-rows-1 gap-8 text-sm leading-6 text-gray-900 sm:mt-20 sm:grid-cols-2 xl:mx-0 xl:max-w-none xl:grid-flow-col xl:grid-cols-4"
@@ -76,7 +76,7 @@
           class="col-span-2 hidden sm:block sm:rounded-2xl sm:bg-white sm:shadow-lg sm:ring-1 sm:ring-gray-900/5 xl:col-start-2 xl:row-end-1"
         >
           <blockquote
-            class="p-12 text-xl font-semibold leading-8 tracking-tight text-gray-900"
+            class="p-12 text-xl leading-8 tracking-tight text-gray-900"
           >
             <p>{{ `“${featuredTestimonial.body}”` }}</p>
           </blockquote>
@@ -92,15 +92,15 @@
               <div class="font-semibold">
                 {{ featuredTestimonial.author.name }}
               </div>
-              <div class="text-gray-600">
+             <!--  <div class="text-gray-600">
                 {{ `@${featuredTestimonial.author.handle}` }}
-              </div>
+              </div> -->
             </div>
-            <img
+            <!-- <img
               class="h-10 w-auto flex-none"
               :src="featuredTestimonial.author.logoUrl"
               alt=""
-            />
+            /> -->
           </figcaption>
         </figure>
         <div
@@ -136,9 +136,9 @@
                 />
                 <div>
                   <div class="font-semibold">{{ testimonial.author.name }}</div>
-                  <div class="text-gray-600">
+                 <!--  <div class="text-gray-600">
                     {{ `@${testimonial.author.handle}` }}
-                  </div>
+                  </div> -->
                 </div>
               </figcaption>
             </figure>

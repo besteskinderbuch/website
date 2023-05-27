@@ -1,19 +1,17 @@
 <template>
-  <div class="bg-gray-900 py-24 sm:py-32">
+  <div class="bg-green-400 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:text-center">
-        <h2 class="text-base font-semibold leading-7 text-indigo-400">
-          Deploy faster
-        </h2>
-        <p
-          class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+      <!--   <h2 class="text-base font-semibold leading-7 text-primary1">
+          Immer was zum lesen
+        </h2> -->
+        <h2
+          class="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl"
         >
-          Everything you need to deploy your app
-        </p>
-        <p class="mt-6 text-lg leading-8 text-gray-300">
-          Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-          Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
-          In mi viverra elit nunc.
+        Vorteile deines Geschichten-Abos
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-800">
+          Du würdest deinem Kind gerne jeden Abend etwas vorlesen? Bücher sind aber zu teuer und brauchen zu viel Platz? Dann ist unser Geschichten-Abo genau das richtige für dich.
         </p>
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -26,26 +24,26 @@
             class="flex flex-col"
           >
             <dt
-              class="flex items-center gap-x-3 text-base font-semibold leading-7 text-white"
+              class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-800"
             >
-              <component
-                :is="feature.icon"
-                class="h-5 w-5 flex-none text-indigo-400"
+               <Icon
+                :name="feature.icon"
+                class="h-5 w-5 flex-none text-backgroundColor1 text-backgroundColor1"
                 aria-hidden="true"
-              />
+              /> 
               {{ feature.name }}
             </dt>
             <dd
-              class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300"
+              class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-800"
             >
               <p class="flex-auto">{{ feature.description }}</p>
-              <p class="mt-6">
+             <!--  <p class="mt-6">
                 <a
                   :href="feature.href"
                   class="text-sm font-semibold leading-6 text-indigo-400"
                   >Learn more <span aria-hidden="true">→</span></a
                 >
-              </p>
+              </p> -->
             </dd>
           </div>
         </dl>

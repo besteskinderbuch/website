@@ -3,15 +3,16 @@
     <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
       <div class="mx-auto max-w-4xl divide-y divide-gray-900/10">
         <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-          Frequently asked questions
+          Häufig gestellte Fragen
         </h2>
         <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
           <Disclosure
             as="div"
             v-for="faq in faqs"
-            :key="faq.question"
+            :key="faq.id"
             class="pt-6"
             v-slot="{ open }"
+            @click="openedFaq(faq)"
           >
             <dt>
               <DisclosureButton
@@ -35,6 +36,10 @@
             </DisclosurePanel>
           </Disclosure>
         </dl>
+       
+      </div>
+      <div class="w-full flex justify-center mt-20">
+        <BasicLink href="/help"><Icon name="material-symbols:arrow-forward" />weiter zur Hilfe</BasicLink>
       </div>
     </div>
   </div>
@@ -47,4 +52,11 @@ import { useContentStore } from "~/stores/useContentStore";
 
 const contentStore = useContentStore();
 const faqs = contentStore.faqs;
+
+function openedFaq(faq){
+  useTrackEvent({
+    event: "faq_opened",
+    faq: faq.id,
+  })
+}
 </script>
