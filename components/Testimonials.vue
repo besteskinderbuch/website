@@ -66,7 +66,7 @@
         <h2
           class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
         >
-          Andere Eltern sind auch überzeugt
+          Andere sind auch überzeugt
       </h2>
       </div>
       <div
