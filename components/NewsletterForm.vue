@@ -21,7 +21,7 @@ const id = scriptInfo.id
 
 <template>
     <ClientOnly>
-        <component v-if="devMode" is="script" type="text/javascript" async :src="src" :data-form="id" />
+        <component v-if="!devMode" is="script" type="text/javascript" async :src="src" :data-form="id" />
         <div v-else>dev mode</div>
     </ClientOnly>
 </template>
