@@ -33,7 +33,6 @@ const contentStore = useContentStore();
 const faqsLong = contentStore.faqsLong;
 
 function openedFaq(faq) {
-  console.log("faq",faq)
   useTrackEvent("faq_opened", {
     id: faq.id,
   })
