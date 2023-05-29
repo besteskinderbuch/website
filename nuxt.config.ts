@@ -62,4 +62,11 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
+  runtimeConfig: {
+    public: {
+      hotjarId: process.env.HOTJAR_ID,
+      gtagId: process.env.GTAG_ID,
+    }
+  }
+
 });
