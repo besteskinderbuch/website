@@ -78,9 +78,9 @@ onMounted(() => {
               Zurück zu allen Stories
             </a>
 
-            <h2 class="text-3xl font-bold lg:text-5xl dark:text-white">
+            <h1 class="text-3xl font-bold lg:text-5xl dark:text-white">
               {{ story.title }}
-            </h2>
+            </h1>
 
             <div class="flex items-center gap-x-5">
               <!-- <a

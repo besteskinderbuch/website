@@ -92,8 +92,8 @@
         </div>
         <div class="pt-5 flex flex-col md:flex-row justify-between items-center border-t gap-5 border-white/10">
           <h3 class="text-gray-100 text-center md:text-left">
-            Du willst regelmäßig über unsere Neuigkeiten informiert werden? <br />
-            Dann melde dich zum Newsletter an und sichere dir damit einen Monat gratis
+            Möchtest du stets auf dem Laufenden bleiben und über unsere frisch veröffentlichten Geschichten informiert werden?<br />
+            Dann abonniere unseren Newsletter und erhalte als kleines Dankeschön einen 50% Rabatt auf den ersten Monat eines Abos.
           </h3>
           <div>
             <NewsletterForm type="footer" />

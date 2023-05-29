@@ -20,7 +20,7 @@
               </span>
             </a> -->
           </div>
-          <h1 class="mt-20 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">{{title}}</h1>
+          <h1 class="mt-20 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{title}}</h1>
           <p class="mt-6 text-lg leading-8 text-gray-600">{{subtitle}}</p>
           <div class="mt-10 flex items-center gap-x-6">
             <BasicLink type="button" href="/login">Direkt loslegen</BasicLink>

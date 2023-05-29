@@ -655,31 +655,31 @@ export const useContentStore = defineStore("content", () => {
       id: "faq-1",
       question: "Was ist das Konzept hinter dem Kinder Kurzgeschichten-Abo?",
       answer:
-        "Das Kinder Kurzgeschichten-Abo ist ein Abonnement für Kinderbücher. Es ist für Kinder zwischen 0 und 11 Jahren geeignet. Es gibt verschiedene Abos für unterschiedliche Bedürfnisse. Die Geschichten werden von verschiedenen Autoren geschrieben und Premium Geschichten von Designern illustriert. Es gibt auch die Möglichkeit Geschichten vorlesen zu lassen.",
+        "Das Kinder Kurzgeschichten-Abo verfolgt das Ziel, Kindern im Alter von 0 bis 11 Jahren Zugang zu einer Welt voller faszinierender Kinderbücher zu bieten. Wir stellen vielfältige Abo-Optionen bereit, um den unterschiedlichsten Anforderungen gerecht zu werden. Unsere Geschichten, verfasst von einer Vielzahl kreativer Autoren, werden von talentierten Designern mit bezaubernden Illustrationen bereichert. Für ein noch intensiveres Leseerlebnis bieten wir außerdem die Möglichkeit, die Geschichten vorlesen zu lassen.",
     },
     {
       id: "faq-2",
-      question: "Welche Sprachen unterstützt ihr?",
+      question: "Gibt es auch Geschichten für Nicht-Muttersprachler oder mehrsprachige Kinder?",
       answer:
-        "Aktuell unterstützen wir nur Deutsch. Wir planen aber in Zukunft auch viele andere Sprachen zu unterstützen.",
+        "Bislang noch nicht, aber wir haben definitiv vor, unser Angebot in Zukunft um Geschichten für Nicht-Muttersprachler und mehrsprachige Kinder zu erweitern.",
     },
     {
       id: "faq-3",
       question: "Wie oft werden neue Geschichten veröffentlicht?",
       answer:
-        "Es gibt keinen festen Rythmus aber ungefähr jede Woche kommen neue. Allerdings ist schon eine sehr große Auswahl an Geschichten von Anfang an vorhanden.",
+        "Auch wenn es keinen festen Veröffentlichungszeitplan gibt, bemühen wir uns, in etwa wöchentlich neue Geschichten hinzuzufügen. Doch keine Sorge, von Beginn an steht bereits eine beeindruckende Auswahl an Geschichten zur Verfügung, die deine Entdeckungsreise spannend und abwechslungsreich gestalten.",
     },
     {
       id: "faq-4",
       question: "Kann ich eine Geschichte vor dem Kauf probelesen?",
       answer:
-        "Ja. Nach dem Kauf eines Abos hast du Zugriff auf die Geschichten. Wenn du nicht auf die zweite Seite blätterst, gilt ein Geschichte nicht als gelesen. Somit konntest du die erste Seite probelesen.",
+        "Sicher, nach Abschluss eines Abos hast du die Möglichkeit, Geschichten Probe zu lesen. Solange du nicht zur zweiten Seite wechselst, wird die Geschichte nicht als gelesen gewertet. Du kannst also stets die erste Seite einer Geschichte als Probe lesen.",
     },
     {
       id: "faq-5",
       question: "Wie kann ich ein Abonnement bezahlen?",
       answer:
-        "Du brauchst eine Kreditkarte, ein Paypal Konto, Apple Pay oder Google Pay.",
+        "Um dein Abonnement zu bezahlen, kannst du verschiedene Zahlungsmethoden verwenden, darunter Kreditkarte, PayPal, Apple Pay oder Google Pay.",
     },
     {
       id: "faq-16",
@@ -690,7 +690,7 @@ export const useContentStore = defineStore("content", () => {
     {
       id: "faq-6",
       question: "Ist es möglich, das Abonnement jederzeit zu kündigen?",
-      answer: "Ja",
+      answer: "Ja, es ist absolut möglich, dein Abonnement jederzeit zu kündigen. Wir schätzen die Flexibilität und verstehen, dass sich die Bedürfnisse und Umstände ändern können. Um dein Abonnement zu kündigen, musst du dich lediglich in dein Konto einloggen und die entsprechenden Schritte in den Einstellungen durchführen. Nach der Kündigung bleibt dein Zugang bis zum Ende des aktuellen Abrechnungszeitraums bestehen. Wir würden uns freuen, wenn du uns das Feedback geben könntest, was wir besser machen könnten und hoffen, dich in der Zukunft wieder bei uns begrüßen zu dürfen.",
     },
     {
       id: "faq-7",
@@ -745,8 +745,20 @@ export const useContentStore = defineStore("content", () => {
     {
       id: "faq-15",
       question:
-        "Gibt es eine Möglichkeit, spezifische Themen oder Werte anzufordern, die in den Geschichten behandelt werden?",
-      answer: "Ja man kann Themen vorschlagen.",
+        "Kann ich Ideen für neue Geschichten vorschlagen?",
+      answer: "Ja, wir freuen uns sehr über Vorschläge für neue Geschichten! Unser Ziel ist es, eine breite Palette von Inhalten zu bieten, die die Vorstellungskraft unserer kleinen Leser anregen, und wir schätzen deine Beiträge, um dieses Ziel zu erreichen. Wenn du eine Geschichte oder eine Idee hast, die du gerne mit uns teilen möchtest, kannst du uns diese per E-Mail an besteskinderbuch@gmail.com senden. Unser engagiertes Team wird jede Einsendung sorgfältig prüfen. Wenn deine Geschichte ausgewählt und veröffentlicht wird, bieten wir auch eine Art Anerkennung dafür an. Wir freuen uns darauf, von dir zu hören und sind gespannt auf deine kreativen Ideen!",
+    },
+    {
+      id: "faq-17",
+      question:
+        "Sind die Inhalte kindersicher und geeignet für alle Altersgruppen?",
+      answer: "Ja, alle Inhalte auf unserer Plattform sind absolut kindersicher und speziell für Kinder konzipiert. Jede unserer Geschichten durchläuft einen gründlichen Überprüfungsprozess, um sicherzustellen, dass sie altersgerecht, pädagogisch wertvoll und unterhaltsam ist. Wir verstehen, dass jedes Kind unterschiedlich ist und sich in einem eigenen Entwicklungstempo befindet. Daher geben wir für jede Geschichte eine Altersempfehlung ab. Dies hilft den Eltern, Geschichten auszuwählen, die optimal auf den Entwicklungsstand und die Interessen ihres Kindes abgestimmt sind. Unser Ziel ist es, eine sichere, bereichernde und spaßige Leseumgebung für Kinder aller Altersgruppen zu schaffen. Dein Kind ist bei uns in guten Händen!",
+    },
+    {
+      id: "faq-18",
+      question:
+        "Was ist, wenn ich technische Probleme auf der Plattform habe?",
+      answer: "Solltest du auf technische Schwierigkeiten auf unserer Plattform stoßen, zögere bitte nicht, uns zu kontaktieren. Unser engagiertes Support-Team ist bereit und gewillt, dir bei jeglichen technischen Herausforderungen zur Seite zu stehen. Schicke uns einfach eine E-Mail an besteskinderbuch@gmail.com mit einer Beschreibung deines Problems. Um dir noch besser helfen zu können, wäre es hilfreich, wenn du auch Screenshots oder andere relevante Informationen mitschicken könntest. Wir verstehen, dass technische Probleme frustrierend sein können und wir setzen alles daran, deine Probleme so schnell und effizient wie möglich zu lösen. Deine Zufriedenheit und ein reibungsloses Leseerlebnis haben für uns oberste Priorität.",
     },
   ];
 
@@ -771,7 +783,7 @@ export const useContentStore = defineStore("content", () => {
       priceSuffix: false,
       free: true,
       price: { monthly: "gratis", annually: "gratis" },
-      description: "Du willst dich ersteinmal umschauen? Kein Problem!",
+      description: "Du möchtest erst einen Einblick gewinnen? Kein Problem",
       features: [
         "Zugriff auf 5 von uns ausgesuchten Geschichten",
         "Vorlesefunktion",
@@ -791,7 +803,7 @@ export const useContentStore = defineStore("content", () => {
         monthly: { current: "5,99 €", discounted: "4,99 €" },
         annually: { current: "59,9 €", discounted: "49,9 €" },
       },
-      description: "Lesen ist deine Leidenschaft? Dann bist du ein Bücherwurm!",
+      description: "Bist du ein leidenschaftlicher Leser? Dann heißen wir dich als unseren treuen Bücherwurm willkommen!",
       features: [
         "riesige Auswahl an Geschichten",
         "20 Geschichten/Monat lesbar",
@@ -814,7 +826,7 @@ export const useContentStore = defineStore("content", () => {
         monthly: { current: "17,99 €", discounted: "14,99" },
         annually: { current: "179,9", discounted: "149,9 €" },
       },
-      description: "Du verschlingst Bücher? Dann ist das dein Abo!",
+      description: "Das ultimative Leseerlebnis für wahre Bücherliebhaber!",
       features: [
         "riesige Auswahl an Geschichten",
         "65  Geschichten/Monat lesbar",

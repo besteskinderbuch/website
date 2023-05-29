@@ -12,10 +12,6 @@ const cookiebot = {
 const script = [];
 if (!devStage) {
   script.push(cookiebot);
-  script.push({
-    async: true,
-    src: "https://static.hotjar.com/c/hotjar-3509475.js?sv=6"
-  });
 }
 
 
@@ -41,6 +37,10 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => tag.startsWith("hanko-"),
     },
   },
+
+  plugins: [
+    "~/plugins/hotjar.client.ts",
+  ],
 
   modules: [
     "@pinia/nuxt",

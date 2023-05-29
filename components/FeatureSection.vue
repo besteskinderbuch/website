@@ -11,7 +11,7 @@
         Vorteile deines Geschichten-Abos
         </h2>
         <p class="mt-6 text-lg leading-8 text-gray-800">
-          Du würdest deinem Kind gerne jeden Abend etwas vorlesen? Bücher sind aber zu teuer und brauchen zu viel Platz? Dann ist unser Geschichten-Abo genau das richtige für dich.
+          Träumst du davon, deinem Kind täglich vor dem Schlafengehen eine Gute-Nacht-Geschichte zu erzählen? Fühlst du dich jedoch durch den hohen Preis und den Platzbedarf von Büchern eingeschränkt? Dann haben wir mit unserem Geschichten-Abo die perfekte Lösung für dich.
         </p>
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

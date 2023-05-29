@@ -23,12 +23,12 @@ const stories = computed(() => {
   <div class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Kurzgeschichten
-        </h2>
+        </h1>
         <p class="mt-6 text-lg leading-8 text-gray-800 text-justify">
           Schnapp dir <NuxtLink to="/login" class="text-blue-300">hier</NuxtLink> deinen persönlichen Account und sicher
-          dir gleich drei zusätzliche Geschichten kostenlos, als Bonus zu den zwei, die du bereits hast. Wenn du die
+          dir gleich 5 zusätzliche Geschichten kostenlos, als Bonus zu den zwei, die du bereits hast. Wenn du die
           unglaubliche Vielfalt unserer umfangreichen Geschichtensammlung entdecken möchtest, zögere nicht, eines unserer
           attraktiven Abonnements abzuschließen. Klick <NuxtLink to="/#pricing" class="text-blue-300">hier</NuxtLink> und
           tauche ein in eine Welt voller faszinierender Erzählungen!

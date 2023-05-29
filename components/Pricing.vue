@@ -10,9 +10,9 @@
         </h2>
       </div>
       <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
-        Wählen Sie das Abonnement, das perfekt auf Ihre Anforderungen zugeschnitten ist. Zusätzlich zu unserer
-        vielfältigen Auswahl bieten wir auch eine Rückerstattungsgarantie, um Ihre vollste Zufriedenheit sicherzustellen,
-        falls das Angebot Ihren Erwartungen nicht entspricht.
+        Entdecke die passende Abo-Option, maßgeschneidert für deine individuellen Bedürfnisse.
+        Wir legen großen Wert auf deine Zufriedenheit und bieten daher neben unserer vielfältigen Auswahl an Abonnements auch eine 30 Tage Geld-zurück-Garantie,
+        falls unser Angebot deinen Erwartungen leider nicht gerecht wird.
       </p>
       <div class="mt-16 flex justify-center">
         <RadioGroup v-model="frequency"

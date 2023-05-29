@@ -60,10 +60,10 @@
 import { CheckIcon } from '@heroicons/vue/20/solid'
 
 const steps = [
-    { name: 'Abos', description: '', status: 'current' },
+    { name: 'Geschichten für mehrsprachige Kinder und Nicht-Muttersprachler', description: 'Wir erkennen die wachsende Notwendigkeit, Kindern aus unterschiedlichen sprachlichen Hintergründen gerecht zu werden. Daher arbeiten wir daran, unser Angebot auf Geschichten für mehrsprachige Kinder und Nicht-Muttersprachler auszuweiten.', status: 'current' },
     {
-        name: 'verbesserter Audioplayer',
-        description: '',
+        name: 'Neue Abonnementoptionen',
+        description: 'Wir planen, noch flexiblere Abo-Modelle einzuführen, um die Bedürfnisse jedes einzelnen Lesers optimal zu bedienen.',
         status: 'upcoming',
     },
     {
@@ -72,23 +72,28 @@ const steps = [
         status: 'upcoming',
     },
     {
-        name: 'Mehrsprachigkeit',
-        description: '',
+        name: 'Interaktive Elemente',
+        description: 'In der Zukunft möchten wir unseren jungen Lesern ein noch spannenderes Leseerlebnis bieten, indem wir interaktive Elemente zu unseren digitalen Geschichten hinzufügen.',
         status: 'upcoming',
     },
     {
-        name: 'Mobil App',
-        description: '',
+        name: 'Verbesserter Audioplayer',
+        description: 'Wir sind bestrebt, unseren Audioplayer zu überarbeiten und ihn mit erweiterten Funktionen auszustatten. So wollen wir eine noch komfortablere und anpassungsfähigere Hörerfahrung für unsere Nutzer schaffen.',
         status: 'upcoming',
     },
     {
-        name: 'Verbesserter Customer Service',
-        description: '',
+        name: 'Erweiterter Kundensupport',
+        description: 'Kundenzufriedenheit steht für uns an oberster Stelle. Daher arbeiten wir daran, unseren Kundenservice zu verbessern und unsere Reaktionszeiten zu verkürzen, um dir bei Fragen oder Problemen noch schneller zur Seite stehen zu können.',
         status: 'upcoming',
     },
     {
-        name: '...',
-        description: '',
+        name: 'Mobile App',
+        description: 'Wir wissen, wie wichtig Mobilität in der heutigen Zeit ist. Daher planen wir, eine mobile App zu entwickeln, damit du und deine Kinder unsere Geschichten jederzeit und überall genießen können.',
+        status: 'upcoming',
+    },
+    {
+        name: 'Personalisierte Empfehlungen',
+        description: 'Wir planen, ein personalisiertes Empfehlungssystem einzuführen, das auf den individuellen Vorlieben und Interessen deines Kindes basiert. So können wir für jeden jungen Leser die perfekten Geschichten vorschlagen.',
         status: 'upcoming',
     },
 ]

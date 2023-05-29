@@ -22,6 +22,7 @@ specifiers:
   sass: ^1.62.1
   tailwindcss: ^3.3.2
   vue: 3.3.4
+  vue-hotjar-next: ^1.4.0
 
 dependencies:
   '@headlessui/vue': 1.7.13_vue@3.3.4
@@ -34,6 +35,7 @@ dependencies:
   nuxt-icon: 0.4.1_vue@3.3.4
   pinia: 2.1.3_vue@3.3.4
   vue: 3.3.4
+  vue-hotjar-next: 1.4.0
 
 devDependencies:
   '@nuxt/devtools': 0.5.5_nuxt@3.5.1
@@ -6331,6 +6333,10 @@ packages:
 
   /vue-devtools-stub/0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
+
+  /vue-hotjar-next/1.4.0:
+    resolution: {integrity: sha512-ZWLkTClEHDThzNQjiPZ3ooNiJqL+Z8MeBboA02iaNm+kdSFi0pxT7XXM7ehI+ddliHoHGv9yXWD3evA8NOOUMQ==}
+    dev: false
 
   /vue-i18n-routing/0.13.0_peen7ptyfkm5cdpxvienvien7e:
     resolution: {integrity: sha512-d/WVAZKo68blFqv6BPxFrGy530+FgvXsYVMbuvaICaoFO2CUxuaszF4vPCzCPIi9T68WRzWeUMTUb7vmv2SLyQ==}

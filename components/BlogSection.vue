@@ -10,12 +10,17 @@ const posts = computed(() => contentStore.posts);
   <div class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Aus dem Blog
-        </h2>
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Blog
+        </h1>
         <p class="mt-2 text-lg leading-8 text-gray-600">
-          Hier findest du viele interessante Blogartikel rund um das Thema Kindergeschichten.<br />
-          Und jede Woche kommen Neue dazu! Wenn du nichts verpassen willst, trag dich hier rein:
+          Entdecke unseren Blog, eine wahre Schatzkammer an aufschlussreichen Artikeln, die sich ganz der zauberhaften
+          Welt der Kindergeschichten widmen. Jede Woche bereichern wir diese Sammlung mit frischen Beiträgen, um dich
+          stets mit neuen Anregungen und Wissen zu versorgen.<br />
+          Ob du tiefer in bestimmte Themen eintauchen, mehr über deine Lieblingsgeschichten erfahren oder einfach nur neue
+          Inspiration suchen möchtest - unser Blog ist der perfekte Ort dafür.<br />
+          Du möchtest keinen unserer Blogartikel verpassen? Dann melde dich hier an und bleibe immer auf dem neuesten
+          Stand:
         </p>
         <div class="flex w-full justify-center">
           <NewsletterForm type="body" />
@@ -27,5 +32,4 @@ const posts = computed(() => contentStore.posts);
           class="flex flex-col items-start justify-between" />
       </div>
     </div>
-  </div>
-</template>
+</div></template>
