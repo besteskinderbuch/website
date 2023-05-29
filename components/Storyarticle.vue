@@ -26,7 +26,7 @@ const stories = computed(() => {
   return publicStories.value;
 });
 
-const story = computed(()=>stories.value.find((s) => s.id === props.id))
+const story = computed(() => stories.value.find((s) => s.id === props.id))
 
 const audioContainer = templateRef('audioContainer')
 onMounted(() => {
@@ -39,20 +39,17 @@ onMounted(() => {
     audioContainer.value.appendChild(sound);
 
     audioContainer.value.addEventListener('play', () => {
-      useTrackEvent({
-        event: 'play',
+      useTrackEvent("play", {
         story: story.value.id,
       })
     })
     audioContainer.value.addEventListener('pause', () => {
-      useTrackEvent({
-        event: 'pause',
+      useTrackEvent("pause", {
         story: story.value.id,
       })
     })
     audioContainer.value.addEventListener('ended', () => {
-      useTrackEvent({
-        event: 'ended',
+      useTrackEvent("ended", {
         story: story.value.id,
       })
     })
