@@ -13,7 +13,7 @@ const posts = computed(() => contentStore.posts);
         <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Blog
         </h1>
-        <p class="mt-2 text-lg leading-8 text-gray-600">
+        <p class="mt-2 text-lg leading-8 text-gray-600 text-justify">
           Entdecke unseren Blog, eine wahre Schatzkammer an aufschlussreichen Artikeln, die sich ganz der zauberhaften
           Welt der Kindergeschichten widmen. Jede Woche bereichern wir diese Sammlung mit frischen Beiträgen, um dich
           stets mit neuen Anregungen und Wissen zu versorgen.<br />
