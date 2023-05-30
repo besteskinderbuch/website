@@ -659,7 +659,8 @@ export const useContentStore = defineStore("content", () => {
     },
     {
       id: "faq-2",
-      question: "Gibt es auch Geschichten für Nicht-Muttersprachler oder mehrsprachige Kinder?",
+      question:
+        "Gibt es auch Geschichten für Nicht-Muttersprachler oder mehrsprachige Kinder?",
       answer:
         "Bislang noch nicht, aber wir haben definitiv vor, unser Angebot in Zukunft um Geschichten für Nicht-Muttersprachler und mehrsprachige Kinder zu erweitern.",
     },
@@ -690,7 +691,8 @@ export const useContentStore = defineStore("content", () => {
     {
       id: "faq-6",
       question: "Ist es möglich, das Abonnement jederzeit zu kündigen?",
-      answer: "Ja, es ist absolut möglich, dein Abonnement jederzeit zu kündigen. Wir schätzen die Flexibilität und verstehen, dass sich die Bedürfnisse und Umstände ändern können. Um dein Abonnement zu kündigen, musst du dich lediglich in dein Konto einloggen und die entsprechenden Schritte in den Einstellungen durchführen. Nach der Kündigung bleibt dein Zugang bis zum Ende des aktuellen Abrechnungszeitraums bestehen. Wir würden uns freuen, wenn du uns das Feedback geben könntest, was wir besser machen könnten und hoffen, dich in der Zukunft wieder bei uns begrüßen zu dürfen.",
+      answer:
+        "Ja, es ist absolut möglich, dein Abonnement jederzeit zu kündigen. Wir schätzen die Flexibilität und verstehen, dass sich die Bedürfnisse und Umstände ändern können. Um dein Abonnement zu kündigen, musst du dich lediglich in dein Konto einloggen und die entsprechenden Schritte in den Einstellungen durchführen. Nach der Kündigung bleibt dein Zugang bis zum Ende des aktuellen Abrechnungszeitraums bestehen. Wir würden uns freuen, wenn du uns das Feedback geben könntest, was wir besser machen könnten und hoffen, dich in der Zukunft wieder bei uns begrüßen zu dürfen.",
     },
     {
       id: "faq-7",
@@ -744,21 +746,22 @@ export const useContentStore = defineStore("content", () => {
     },
     {
       id: "faq-15",
-      question:
-        "Kann ich Ideen für neue Geschichten vorschlagen?",
-      answer: "Ja, wir freuen uns sehr über Vorschläge für neue Geschichten! Unser Ziel ist es, eine breite Palette von Inhalten zu bieten, die die Vorstellungskraft unserer kleinen Leser anregen, und wir schätzen deine Beiträge, um dieses Ziel zu erreichen. Wenn du eine Geschichte oder eine Idee hast, die du gerne mit uns teilen möchtest, kannst du uns diese per E-Mail an besteskinderbuch@gmail.com senden. Unser engagiertes Team wird jede Einsendung sorgfältig prüfen. Wenn deine Geschichte ausgewählt und veröffentlicht wird, bieten wir auch eine Art Anerkennung dafür an. Wir freuen uns darauf, von dir zu hören und sind gespannt auf deine kreativen Ideen!",
+      question: "Kann ich Ideen für neue Geschichten vorschlagen?",
+      answer:
+        "Ja, wir freuen uns sehr über Vorschläge für neue Geschichten! Unser Ziel ist es, eine breite Palette von Inhalten zu bieten, die die Vorstellungskraft unserer kleinen Leser anregen, und wir schätzen deine Beiträge, um dieses Ziel zu erreichen. Wenn du eine Geschichte oder eine Idee hast, die du gerne mit uns teilen möchtest, kannst du uns diese per E-Mail an besteskinderbuch@gmail.com senden. Unser engagiertes Team wird jede Einsendung sorgfältig prüfen. Wenn deine Geschichte ausgewählt und veröffentlicht wird, bieten wir auch eine Art Anerkennung dafür an. Wir freuen uns darauf, von dir zu hören und sind gespannt auf deine kreativen Ideen!",
     },
     {
       id: "faq-17",
       question:
         "Sind die Inhalte kindersicher und geeignet für alle Altersgruppen?",
-      answer: "Ja, alle Inhalte auf unserer Plattform sind absolut kindersicher und speziell für Kinder konzipiert. Jede unserer Geschichten durchläuft einen gründlichen Überprüfungsprozess, um sicherzustellen, dass sie altersgerecht, pädagogisch wertvoll und unterhaltsam ist. Wir verstehen, dass jedes Kind unterschiedlich ist und sich in einem eigenen Entwicklungstempo befindet. Daher geben wir für jede Geschichte eine Altersempfehlung ab. Dies hilft den Eltern, Geschichten auszuwählen, die optimal auf den Entwicklungsstand und die Interessen ihres Kindes abgestimmt sind. Unser Ziel ist es, eine sichere, bereichernde und spaßige Leseumgebung für Kinder aller Altersgruppen zu schaffen. Dein Kind ist bei uns in guten Händen!",
+      answer:
+        "Ja, alle Inhalte auf unserer Plattform sind absolut kindersicher und speziell für Kinder konzipiert. Jede unserer Geschichten durchläuft einen gründlichen Überprüfungsprozess, um sicherzustellen, dass sie altersgerecht, pädagogisch wertvoll und unterhaltsam ist. Wir verstehen, dass jedes Kind unterschiedlich ist und sich in einem eigenen Entwicklungstempo befindet. Daher geben wir für jede Geschichte eine Altersempfehlung ab. Dies hilft den Eltern, Geschichten auszuwählen, die optimal auf den Entwicklungsstand und die Interessen ihres Kindes abgestimmt sind. Unser Ziel ist es, eine sichere, bereichernde und spaßige Leseumgebung für Kinder aller Altersgruppen zu schaffen. Dein Kind ist bei uns in guten Händen!",
     },
     {
       id: "faq-18",
-      question:
-        "Was ist, wenn ich technische Probleme auf der Plattform habe?",
-      answer: "Solltest du auf technische Schwierigkeiten auf unserer Plattform stoßen, zögere bitte nicht, uns zu kontaktieren. Unser engagiertes Support-Team ist bereit und gewillt, dir bei jeglichen technischen Herausforderungen zur Seite zu stehen. Schicke uns einfach eine E-Mail an besteskinderbuch@gmail.com mit einer Beschreibung deines Problems. Um dir noch besser helfen zu können, wäre es hilfreich, wenn du auch Screenshots oder andere relevante Informationen mitschicken könntest. Wir verstehen, dass technische Probleme frustrierend sein können und wir setzen alles daran, deine Probleme so schnell und effizient wie möglich zu lösen. Deine Zufriedenheit und ein reibungsloses Leseerlebnis haben für uns oberste Priorität.",
+      question: "Was ist, wenn ich technische Probleme auf der Plattform habe?",
+      answer:
+        "Solltest du auf technische Schwierigkeiten auf unserer Plattform stoßen, zögere bitte nicht, uns zu kontaktieren. Unser engagiertes Support-Team ist bereit und gewillt, dir bei jeglichen technischen Herausforderungen zur Seite zu stehen. Schicke uns einfach eine E-Mail an besteskinderbuch@gmail.com mit einer Beschreibung deines Problems. Um dir noch besser helfen zu können, wäre es hilfreich, wenn du auch Screenshots oder andere relevante Informationen mitschicken könntest. Wir verstehen, dass technische Probleme frustrierend sein können und wir setzen alles daran, deine Probleme so schnell und effizient wie möglich zu lösen. Deine Zufriedenheit und ein reibungsloses Leseerlebnis haben für uns oberste Priorität.",
     },
   ];
 
@@ -803,7 +806,8 @@ export const useContentStore = defineStore("content", () => {
         monthly: { current: "6,99 €", discounted: "4,99 €" },
         annually: { current: "59,9 €", discounted: "49,9 €" },
       },
-      description: "Bist du oder dein Kind ein leidenschaftlicher Leser? Dann heißen wir dich als unseren treuen Bücherwurm willkommen!",
+      description:
+        "Bist du oder dein Kind ein leidenschaftlicher Leser? Dann heißen wir dich als unseren treuen Bücherwurm willkommen!",
       features: [
         "riesige Auswahl an Geschichten",
         "20 Geschichten/Monat lesbar",
@@ -958,16 +962,17 @@ export const useContentStore = defineStore("content", () => {
       price: "€12,97",
       href: "https://amzn.eu/d/hvV43aB",
     },
-/*     {
+    {
       id: "kleine-schritte-grosse-spuren-zwanzig-geschichten-den-kindern-den-weg-weisen",
       name: "Kleine Schritte, große Spuren: Zwanzig Geschichten den Kindern den Weg weisen",
-      description: ``,
-      imageUrl:
-        "",
+      description: `Tauche ein in eine Welt voller Abenteuer, Lektionen und Fantasie mit diesen zauberhaften Kurzgeschichten, die speziell auf Kinder im Alter von 6 Jahren abgestimmt sind. Von Lena, die durch ihren unsichtbaren Freund Tom lernt, Empathie zu zeigen, bis hin zu Max, der sein Selbstvertrauen entdeckt und zum kleinen Helden seiner Stadt wird. Verfolge die Geschwister Lisa und Tim, die die Schönheit der Vielfalt in ihrer bunten Stadt entdecken und Ben, der eine wichtige Lektion über Verantwortung lernt, als er seine Schultasche verliert.
+      Jede Geschichte ist so gestaltet, dass sie sowohl unterhaltsam als auch lehrreich ist, und bietet eine Vielfalt von Themen, die Kindern dabei helfen, wichtige Werte und Fähigkeiten zu verstehen und zu entwickeln. Von der Bedeutung von Zusammenarbeit und guten Manieren über die Kunst des Teilens bis hin zur Wertschätzung von Unterschieden und der Kraft der Fantasie - diese Sammlung von Kurzgeschichten enthält eine Fülle von Lektionen, die in aufregenden und fesselnden Geschichten verpackt sind.
+      Ob es nun das Abenteuer von Lilly ist, die die Kraft der Dankbarkeit entdeckt, oder die Reise von Leon und Lea, die lernen, Unterschiede zu akzeptieren und zu schätzen - jedes Kind wird sicherlich eine Geschichte finden, die es liebt und die es dazu inspiriert, zu wachsen und zu lernen. Mit farbenfrohen Illustrationen und fesselnden Erzählungen ist dieses Buch das perfekte Geschenk für jeden jungen Leser und eine Bereicherung für jede Kinderbibliothek.`,
+      imageUrl: "https://m.media-amazon.com/images/I/61Kohb3tnIL.jpg",
       imageAlt: "Cover - Kleine Schritte, große Spuren",
-      price: "€12,99",
-      href: "",
-    }, */
+      price: "€21,99",
+      href: "https://amzn.eu/d/5rIQDxs",
+    },
   ];
 
   const publicStories = [
@@ -1571,10 +1576,9 @@ export const useContentStore = defineStore("content", () => {
       },
       audios: [],
     },
-   
   ];
 
- /*  {
+  /*  {
     id: "sonnenblumen-sams-gartenabenteuer",
     title: "Sonnenblumen-Sam's Gartenabenteuer",
     href: "/stories/sonnenblumen-sams-gartenabenteuer",
