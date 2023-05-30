@@ -132,8 +132,20 @@ export const useContentStore = defineStore("content", () => {
       title: "Entdecke die Magie: Wie Kinderbücher die Fantasie anregen",
       href: "/blog/entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen",
       description: "",
-      imageUrl:
-        "/blogs/entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen.png",
+      image: {
+        src: "/blogs/entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen.png",
+        alt: "Cover - Entdecke die Magie: Wie Kinderbücher die Fantasie anregen",
+      },
+      date: "15. April 2023",
+      datetime: "2023-04-15",
+      tags: ["Kinderbücher", "Fantasie", "Kreativität"],
+      category: { title: "", href: "" },
+      author: {
+        name: "",
+        role: "",
+        href: "",
+        imageUrl: "",
+      },
       content: `
       <h2>Eintauchen in fantastische Welten: Wie Kinderbücher die Realität erweitern</h2>
       <p>Kinderbücher sind Fenster zu unendlich vielen Welten, die weit über die Grenzen unserer physischen Realität hinausgehen. Sie öffnen die Tore zu magischen Königreichen, fernen Planeten, verwunschenen Wäldern und vielen anderen faszinierenden Orten. Diese einzigartigen Umgebungen bieten Kindern eine unvergleichliche Möglichkeit, in ihrer Vorstellungskraft zu schwelgen und ihre Wahrnehmung der Welt zu erweitern.</p>
@@ -162,9 +174,19 @@ export const useContentStore = defineStore("content", () => {
       <p>Zusätzlich zu unseren Büchern bieten wir ein spezielles Abomodell für Geschichten an. Durch dieses Abonnement erhalten Kinder regelmäßig neue Geschichten, die sie lesen, erforschen und als Ausgangspunkt für ihre eigenen kreativen Abenteuer verwenden können. Dieses Modell garantiert einen ständigen Zugang zu frischen, qualitativ hochwertigen Geschichten, die die Fantasie anregen und die Liebe zum Lesen fördern.</p>
       <p>Insgesamt können Kinderbücher einen großen Einfluss auf die kreative Entwicklung von Kindern haben. Sie eröffnen eine Welt der Fantasie und des Abenteuers und legen den Grundstein für das kreative Schreiben und Spielen. Durch unsere Bücher und unser Geschichten-Abomodell bieten wir eine Plattform, die diese wichtige Entwicklung unterstützt.</p>
       `,
-      date: "15. April 2023",
-      datetime: "2023-04-15",
-      tags: ["Kinderbücher", "Fantasie", "Kreativität"],
+    },
+    {
+      id: "warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist",
+      title: "Warum Vorlesen wichtig für die Entwicklung Ihres Kindes ist",
+      href: "/blog/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist",
+      image: {
+        src: "/blogs/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist.png",
+        alt: "Cover - Warum Vorlesen wichtig für die Entwicklung Ihres Kindes ist",
+      },
+      description: "",
+      date: "26. April 2023",
+      datetime: "2023-04-26",
+      tags: ["Vorlesen", "Kinderbücher", "Entwicklung", "Kreativität"],
       category: { title: "", href: "" },
       author: {
         name: "",
@@ -172,18 +194,6 @@ export const useContentStore = defineStore("content", () => {
         href: "",
         imageUrl: "",
       },
-    },
-    {
-      id: "warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist",
-      title: "Warum Vorlesen wichtig für die Entwicklung Ihres Kindes ist",
-      href: "/blog/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist",
-      imageUrl:
-        "/blogs/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist.png",
-      description: "",
-      date: "26. April 2023",
-      datetime: "2023-04-26",
-      tags: ["Vorlesen", "Kinderbücher", "Entwicklung", "Kreativität"],
-      category: { title: "", href: "" },
       content: `<h2>Einleitung: Die Bedeutung des Vorlesens in der Kindheit</h2>
       
       <p>Das Vorlesen von Geschichten ist weit mehr als nur eine angenehme Bettruhe-Routine oder ein Mittel, um Kinder für eine kurze Weile zu beschäftigen. Es ist ein mächtiges Werkzeug für die Entwicklung eines Kindes und hat einen tiefgreifenden Einfluss auf verschiedene Aspekte des Lernens und des Wachstums. Diese Praxis hat tiefe historische Wurzeln und bleibt in unserer digitalisierten Welt weiterhin relevant und wertvoll.</p>
@@ -223,22 +233,17 @@ export const useContentStore = defineStore("content", () => {
       <p>Darüber hinaus kann die Liebe zum Lesen, die oft durch das Vorlesen geweckt wird, ein Leben lang anhalten. Sie kann zu einem lebenslangen Hobby werden, das Freude, Entspannung und ständiges Lernen bietet.</p>
       <p>Die Vorlesefunktion und die umfangreiche Sammlung von Kindergeschichten auf unserer Website "bestes-kinderbuch" sind wertvolle Werkzeuge, um all diese Vorteile zu fördern. Sie erleichtern das Vorlesen und stellen sicher, dass es eine angenehme und lohnende Erfahrung für Kinder und Eltern gleichermaßen ist.</p>
       <p>Das Vorlesen ist also mehr als nur eine angenehme Aktivität - es ist ein Geschenk, das wir unseren Kindern geben können, ein Geschenk, das sie in der Kindheit begleitet und von dem sie ein Leben lang profitieren können. Es lohnt sich, Zeit und Mühe in diese wertvolle Praxis zu investieren und ihren vollen Nutzen zu erkennen.</p>
-
       `,
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
     },
     {
       id: "die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt",
       title:
         "Die Kunst des Erzählens: Wie man eine fesselnde Kindergeschichte schreibt",
       href: "/blog/die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt",
-      imageUrl:
-        "/blogs/die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt.png",
+      image: {
+        src: "/blogs/die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt.png",
+        alt: "Cover - Die Kunst des Erzählens: Wie man eine fesselnde Kindergeschichte schreibt",
+      },
       description: "",
       date: "7. Mai 2023",
       datetime: "2023-05-07",
@@ -277,8 +282,10 @@ export const useContentStore = defineStore("content", () => {
       id: "die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten",
       title: "Die Welt der Fabeln: Wie sie Kinder lehren und unterhalten",
       href: "/blog/die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten",
-      imageUrl:
-        "/blogs/die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten.png",
+      image: {
+        src: "/blogs/die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten.png",
+        alt: "Cover - Die Welt der Fabeln: Wie sie Kinder lehren und unterhalten",
+      },
       description: "",
       date: "9. Mai 2023",
       datetime: "2023-05-09",
@@ -944,8 +951,10 @@ export const useContentStore = defineStore("content", () => {
         In "Schlummerland-Zaubereien" begegnen Ihre Kinder liebenswerten Charaktesren wie dem Mondlicht-Zauberer oder der mutigen Eule. Jede Geschichte hat eine moralische Botschaft und fördert Werte wie Freundschaft, Mut und Zusammenhalt, die für die persönliche Entwicklung Ihrer Kinder wichtig sind. Das Buch regt die Vorstellungskraft und Kreativität der jungen Leser an und unterstützt sie dabei, ihre Ängste und Sorgen vor dem Schlafengehen abzubauen.
         Die wunderschönen Illustrationen, die jede Geschichte begleiten, verleihen den Erzählungen zusätzlichen Charme. "Schlummerland-Zaubereien: Fantastische Geschichten zum Einschlafen" ist das perfekte Geschenk für alle jungen Träumer und bietet die ideale Möglichkeit, die abendliche Routine zu bereichern und gemeinsame, wertvolle Momente mit Ihren Kindern zu genießen.
         Lassen Sie sich und Ihre Kinder von den "Schlummerland-Zaubereien" verzaubern und entdecken Sie gemeinsam die Welt der Fantasie und Träume. Schaffen Sie wundervolle Erinnerungen, indem Sie diese Geschichten gemeinsam lesen, und fördern Sie einen gesunden Schlaf für Ihre Kinder.`,
-      imageUrl: "/books/schlummerland-zaubereien-fantastische-geschichten-zum-einschlafen.jpeg",
-      imageAlt: "Cover - Schlummerland-Zaubereien",
+      image: {
+        src: "/books/schlummerland-zaubereien-fantastische-geschichten-zum-einschlafen.jpeg",
+        alt: "Cover - Schlummerland-Zaubereien",
+      },
       price: "€13,90",
       href: "https://amzn.eu/d/4oznkoi",
     },
@@ -956,9 +965,10 @@ export const useContentStore = defineStore("content", () => {
       Mit 100 einzigartigen, detailreichen Tiermandalas bietet dieses Buch endlose Stunden kreativen Vergnügens und Lernens. Ob Ihr Kind ein Fan von flauschigen Kaninchen, majestätischen Löwen oder exotischen Tukanen ist, es wird sicher ein Mandala finden, das seine Fantasie beflügelt.
       Dieses Buch fördert nicht nur die künstlerischen Fähigkeiten und die Feinmotorik Ihres Kindes, sondern hilft ihm auch, ein tieferes Verständnis und eine Wertschätzung für die Tiere unserer Welt zu entwickeln.
       Von der ersten bis zur letzten Seite ist 'Reise durch das Tierreich: 100 Mandalas für junge Künstler/-innen' ein Abenteuer, das Ihre Kinder immer wieder erleben wollen. Es ist mehr als nur ein Malbuch – es ist ein Tor zur Natur, zur Kreativität und zur Entdeckungsreise. Sichern Sie sich Ihr Exemplar noch heute und starten Sie die kreative Reise!`,
-      imageUrl:
-        "books/reise-durch-das-tierreich-100-mandalas-fuer-junge-kuenstler-innen.jpg",
-      imageAlt: "Cover - Reise durch das Tierreich",
+      image: {
+        src:"books/reise-durch-das-tierreich-100-mandalas-fuer-junge-kuenstler-innen.jpg",
+        alt: "Cover - Reise durch das Tierreich",
+      },
       price: "€12,97",
       href: "https://amzn.eu/d/hvV43aB",
     },
@@ -968,8 +978,10 @@ export const useContentStore = defineStore("content", () => {
       description: `Tauche ein in eine Welt voller Abenteuer, Lektionen und Fantasie mit diesen zauberhaften Kurzgeschichten, die speziell auf Kinder im Alter von 6 Jahren abgestimmt sind. Von Lena, die durch ihren unsichtbaren Freund Tom lernt, Empathie zu zeigen, bis hin zu Max, der sein Selbstvertrauen entdeckt und zum kleinen Helden seiner Stadt wird. Verfolge die Geschwister Lisa und Tim, die die Schönheit der Vielfalt in ihrer bunten Stadt entdecken und Ben, der eine wichtige Lektion über Verantwortung lernt, als er seine Schultasche verliert.
       Jede Geschichte ist so gestaltet, dass sie sowohl unterhaltsam als auch lehrreich ist, und bietet eine Vielfalt von Themen, die Kindern dabei helfen, wichtige Werte und Fähigkeiten zu verstehen und zu entwickeln. Von der Bedeutung von Zusammenarbeit und guten Manieren über die Kunst des Teilens bis hin zur Wertschätzung von Unterschieden und der Kraft der Fantasie - diese Sammlung von Kurzgeschichten enthält eine Fülle von Lektionen, die in aufregenden und fesselnden Geschichten verpackt sind.
       Ob es nun das Abenteuer von Lilly ist, die die Kraft der Dankbarkeit entdeckt, oder die Reise von Leon und Lea, die lernen, Unterschiede zu akzeptieren und zu schätzen - jedes Kind wird sicherlich eine Geschichte finden, die es liebt und die es dazu inspiriert, zu wachsen und zu lernen. Mit farbenfrohen Illustrationen und fesselnden Erzählungen ist dieses Buch das perfekte Geschenk für jeden jungen Leser und eine Bereicherung für jede Kinderbibliothek.`,
-      imageUrl: "books/kleine-schritte-grosse-spuren-zwanzig-geschichten-den-kindern-den-weg-weisen.jpeg",
-      imageAlt: "Cover - Kleine Schritte, große Spuren",
+      image: {
+        src: "books/kleine-schritte-grosse-spuren-zwanzig-geschichten-den-kindern-den-weg-weisen.jpeg",
+        alt: "Cover - Kleine Schritte, große Spuren",
+      },
       price: "€21,99",
       href: "https://amzn.eu/d/5rIQDxs",
     },
@@ -980,11 +992,30 @@ export const useContentStore = defineStore("content", () => {
       id: "die-abenteuer-des-regenbogendrachens",
       title: "Die Abenteuer des Regenbogendrachens",
       href: "/stories/die-abenteuer-des-regenbogendrachens",
-      imageUrl: "/stories/die-abenteuer-des-regenbogendrachens.png",
+      image: {
+        src: "/stories/die-abenteuer-des-regenbogendrachens.png",
+        alt: "Cover - Die Abenteuer des Regenbogendrachens",
+      },
       rating: 4,
-      startAge: 2,
-      endAge: 6,
+      age: {
+        start: 2,
+        end: 6,
+      },
       description: "",
+      premium: false,
+      date: "16. Mai 2023",
+      datetime: "2023-05-16",
+      tags: ["Kinderbücher", "Fantasie", "Kreativität"],
+      category: { title: "", href: "" },
+      author: {
+        name: "",
+        role: "",
+        href: "",
+        imageUrl: "",
+      },
+      audio: {
+        src: "/audio/die-abenteuer-des-regenbogendrachens.mp3",
+      },
       content: `
       <h2>Die Geburt des Regenbogendrachens</h2>
       <p>Es war ein ungewöhnlicher Tag im Königreich der Wolken, als sich etwas Spektakuläres ereignete. Ein starker Windstoß ging durch den strahlend blauen Himmel und mit ihm bildete sich ein brillanter Regenbogen, der in all seinen Farben leuchtete. Dieser Regenbogen war jedoch kein gewöhnlicher Regenbogen; es war die Geburtsstätte eines neuen Lebens.</p>
@@ -1048,8 +1079,24 @@ export const useContentStore = defineStore("content", () => {
       <p>Und so endet die Geschichte von Prism, dem Regenbogendrachen, aber seine Abenteuer gehen weiter. Jedes Mal, wenn ein Regenbogen den Himmel nach einem Regenschauer erhellt, können wir uns vorstellen, dass es Prism ist, der hoch über den Wolken fliegt, bereit, die Welt mit Farbe und Freude zu erfüllen.</p>
       <p>Denn wie Prism uns gelehrt hat, gibt es immer Hoffnung und Schönheit nach einem Sturm, und jeder von uns trägt einen Teil dieses Regenbogens in unserem Herzen.</p>
       `,
-      date: "16. Mai 2023",
-      datetime: "2023-05-16",
+    },
+    {
+      id: "luna-und-die-sternenstaubfee",
+      title: "Luna und die Sternenstaubfee",
+      href: "/stories/luna-und-die-sternenstaubfee",
+      image: {
+        src: "/stories/luna-und-die-sternenstaubfee.png",
+        alt: "Cover - Luna und die Sternenstaubfee",
+      },
+      rating: 4,
+      age: {
+        start: 2,
+        end: 6,
+      },
+      description: "",
+      premium: false,
+      date: "24. Mai 2023",
+      datetime: "2023-05-24",
       tags: ["Kinderbücher", "Fantasie", "Kreativität"],
       category: { title: "", href: "" },
       author: {
@@ -1058,17 +1105,9 @@ export const useContentStore = defineStore("content", () => {
         href: "",
         imageUrl: "",
       },
-      audioUrl: "/audio/die-abenteuer-des-regenbogendrachens.mp3",
-    },
-    {
-      id: "luna-und-die-sternenstaubfee",
-      title: "Luna und die Sternenstaubfee",
-      href: "/stories/luna-und-die-sternenstaubfee",
-      imageUrl: "/stories/luna-und-die-sternenstaubfee.png",
-      description: "",
-      rating: 4,
-      startAge: 2,
-      endAge: 6,
+      audio: {
+        src: "/audio/luna-und-die-sternenstaubfee.mp3",
+      },
       content: `
       <h2>Ein nächtliches Geheimnis</h2>
       <p>Es war einmal ein kleines, lebhaftes Mädchen namens Luna. Luna war neugierig, immer voller Fragen und auf der Suche nach Antworten. Ihre riesigen Augen, so blau wie der Sommerhimmel, funkelten vor Abenteuerlust und ihre kastanienbraunen Haare hüpften munter mit jedem Schritt, den sie machte.</p>
@@ -1143,17 +1182,6 @@ export const useContentStore = defineStore("content", () => {
       <p>Mit diesen Gedanken schloss sie ihre Augen und schlief ein, wohl wissend, dass Stera da draußen war, über sie wachte und darauf wartete, dass sie ihre nächsten Abenteuer erlebte.</p>
       <p>Und so endet unsere Geschichte, aber die Abenteuer von Luna und der Sternenstaubfee sind noch lange nicht vorbei. Denn wahre Freundschaften enden nie, und wer weiß, was die Zukunft noch bringen mag?</p>
       `,
-      date: "24. Mai 2023",
-      datetime: "2023-05-24",
-      tags: ["Kinderbücher", "Fantasie", "Kreativität"],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-      audioUrl: "/audio/luna-und-die-sternenstaubfee.mp3",
     },
   ];
 
@@ -1162,11 +1190,30 @@ export const useContentStore = defineStore("content", () => {
       id: "die-verzauberte-feder",
       title: "Die verzauberte Feder",
       href: "/stories/die-verzauberte-feder",
-      imageUrl: "/stories/die-verzauberte-feder.png",
+      image: {
+        src: "/stories/die-verzauberte-feder.png",
+        alt: "Cover - Die verzauberte Feder",
+      },
       rating: 4,
-      startAge: 2,
-      endAge: 6,
+      age: {
+        start: 2,
+        end: 6,
+      },
       description: "",
+      premium: false,
+      date: "16. März 2023",
+      datetime: "2023-03-16",
+      tags: ["Kinderbücher", "Fantasie", "Kreativität"],
+      category: { title: "", href: "" },
+      author: {
+        name: "",
+        role: "",
+        href: "",
+        imageUrl: "",
+      },
+      audio: {
+        src: "/audio/die-verzauberte-feder.mp3",
+      },
       content: `
       <h2>Ein unerwartetes Geschenk</h2>
       <p>In einem kleinen Dorf am Rande eines riesigen, geheimnisvollen Waldes lebte ein junges Mädchen namens Lena. Sie war ein fröhliches Kind mit blitzenden grünen Augen und immer einem Lächeln auf ihrem runden Gesicht. Jeden Morgen lief sie mit ihrem Rucksack und einer kindlichen Neugier los, um im Wald neue Abenteuer zu erleben.</p>
@@ -1245,8 +1292,27 @@ export const useContentStore = defineStore("content", () => {
       <p>Von diesem Tag an war Lena nicht mehr dasselbe junge Mädchen. Sie war freundlicher, mitfühlender, großzügiger und mutiger. Sie kämpfte gegen Widrigkeiten und half, wo sie konnte. Sie wurde zu einer Inspiration für ihr Dorf und jeder, der sie traf, konnte die Magie, die sie in sich trug, spüren.</p>
       <p>Und so endet unsere Geschichte hier, aber für Lena war dies nur der Anfang. Denn sie wusste, dass die wahre Magie in ihr lag, und sie war bereit, sie mit der Welt zu teilen. Und obwohl Flora nicht mehr bei ihr war, würde ihre Stimme immer in Lenas Herzen bleiben, sie leiten und sie an die wertvollsten Geschenke des Lebens erinnern.</p>
       `,
-      date: "16. März 2023",
-      datetime: "2023-03-16",
+    },
+    {
+      id: "pfoetchens-erster-schultag",
+      title: "Pfötchens erster Schultag",
+      href: "/stories/pfoetchens-erster-schultag",
+      image: {
+        src: "/stories/pfoetchens-erster-schultag.png",
+        alt: "Cover - Pfötchens erster Schultag",
+      },
+      rating: 4,
+      age: {
+        start: 2,
+        end: 6,
+      },
+      description: "",
+      premium: false,
+      audio: {
+        src: null,
+      },
+      date: "23 März 2023",
+      datetime: "2023-03-23",
       tags: ["Kinderbücher", "Fantasie", "Kreativität"],
       category: { title: "", href: "" },
       author: {
@@ -1255,17 +1321,6 @@ export const useContentStore = defineStore("content", () => {
         href: "",
         imageUrl: "",
       },
-      audioUrl: "/audio/die-verzauberte-feder.mp3",
-    },
-    {
-      id: "pfötchens-erster-schultag",
-      title: "Pfötchens erster Schultag",
-      href: "/stories/pfötchens-erster-schultag",
-      imageUrl: "/stories/pfötchens-erster-schultag.png",
-      description: "",
-      rating: 4,
-      startAge: 2,
-      endAge: 6,
       content: `
       <h2>Aufwachen, Pfötchen</h2>
       <p>Die ersten warmen Strahlen der Morgensonne fielen auf ein kleines, gemütliches Haus inmitten des beschaulichen Dorfes Tannenwald. In diesem Haus, genau in der Mitte des weichsten Bettes, schlummerte ein kleiner, lebhafter Welpe namens Pfötchen. Sein goldenes Fell war kuschelig und warm, seine kleinen schwarzen Augen funkelten voller Abenteuerlust.</p>
@@ -1334,8 +1389,27 @@ export const useContentStore = defineStore("content", () => {
       <p>So endete Pfötchens erster Schultag - ein Tag voller Freude, Lernen und neuen Freundschaften. Er ging ins Bett und träumte von all den wunderbaren Dingen, die ihn in der Schule erwarteten. Und eines war sicher - Pfötchen war bereit für alle Abenteuer, die noch kommen würden!</p>
       <p>Dies ist das Ende von Pfötchens Geschichte "Der erste Schultag". Aber seid gewiss, es wird noch viele weitere Abenteuer geben. Bleibt dran und findet heraus, welche aufregenden Erfahrungen unser kleiner Held in seinen nächsten Schultagen machen wird!</p>
       `,
-      date: "23 März 2023",
-      datetime: "2023-03-23",
+    },
+    {
+      id: "bommelbaers-reise-zum-mond",
+      title: "Bommelbärs Reise zum Mond",
+      href: "/stories/bommelbaers-reise-zum-mond",
+      image: {
+        src: "/stories/bommelbaers-reise-zum-mond.png",
+        alt: "Cover - Bommelbärs Reise zum Mond",
+      },
+      rating: 4,
+      age: {
+        start: 2,
+        end: 6,
+      },
+      description: "",
+      premium: false,
+      audio: {
+        src: null,
+      },
+      date: "2. April 2023",
+      datetime: "2023-04-02",
       tags: ["Kinderbücher", "Fantasie", "Kreativität"],
       category: { title: "", href: "" },
       author: {
@@ -1344,17 +1418,6 @@ export const useContentStore = defineStore("content", () => {
         href: "",
         imageUrl: "",
       },
-      audios: [],
-    },
-    {
-      id: "bommelbaers-reise-zum-mond",
-      title: "Bommelbärs Reise zum Mond",
-      href: "/stories/bommelbaers-reise-zum-mond",
-      imageUrl: "/stories/bommelbaers-reise-zum-mond.png",
-      rating: 4,
-      startAge: 2,
-      endAge: 6,
-      description: "",
       content: `
       <h2>Ein Traum vom Fliegen</h2>
       <p>Inmitten eines dichten Waldes, umgeben von riesigen Bäumen und sprudelnden Bächen, lebte ein kleiner, neugieriger Bär namens Bommelbär. Mit seinem dichten, weichen Fell, das so flauschig war, dass es aussah, als hätte es kleine Bommeln, war Bommelbär der Liebling aller Tiere im Wald.</p>
@@ -1409,8 +1472,27 @@ export const useContentStore = defineStore("content", () => {
       <p>Und während Bommelbär seine Erlebnisse teilte, blickte er hinauf zum Nachthimmel. Der Mond hing hoch oben, und Bommelbär wusste, dass ein Teil von ihm immer dort sein würde. Er hatte seinen Traum erfüllt, und nichts konnte diese Erfahrung übertreffen.</p>
       <p>Aber für jetzt, war er froh, wieder zu Hause zu sein, umgeben von seinen Freunden und den Geräuschen des Waldes. Für Bommelbär war das der schönste Ort auf der Welt - sein Zuhause.</p>
       `,
-      date: "2. April 2023",
-      datetime: "2023-04-02",
+    },
+    {
+      id: "der-mutige-kleine-kaefer",
+      title: "Der mutige kleine Käfer",
+      href: "/stories/der-mutige-kleine-kaefer",
+      image: {
+        src: "/stories/der-mutige-kleine-kaefer.png",
+        alt: "Cover - Der mutige kleine Käfer",
+      },
+      rating: 4,
+      age: {
+        start: 2,
+        end: 6,
+      },
+      description: "",
+      premium: false,
+      audio: {
+        src: null,
+      },
+      date: "15. April 2023",
+      datetime: "2023-04-15",
       tags: ["Kinderbücher", "Fantasie", "Kreativität"],
       category: { title: "", href: "" },
       author: {
@@ -1419,17 +1501,6 @@ export const useContentStore = defineStore("content", () => {
         href: "",
         imageUrl: "",
       },
-      audios: [],
-    },
-    {
-      id: "der-mutige-kleine-kaefer",
-      title: "Der mutige kleine Käfer",
-      href: "/stories/der-mutige-kleine-kaefer",
-      imageUrl: "/stories/der-mutige-kleine-kaefer.png",
-      description: "",
-      rating: 4,
-      startAge: 2,
-      endAge: 6,
       content: `
       <h2>Kleiner Käfer, große Träume</h2>
       <p>Es war einmal ein winziger Käfer namens Kaspar. Er wohnte in einem prächtigen Wald voller hoch aufragender Bäume, saftig grüner Blätter und schillernden Blumen. Der Wald war sein Zuhause, ein Ort voller Abenteuer und Geheimnisse, die darauf warteten, entdeckt zu werden.</p>
@@ -1482,8 +1553,27 @@ export const useContentStore = defineStore("content", () => {
       <p>Und so endet die Geschichte von Kaspar, dem mutigen kleinen Käfer, der seinen Traum verwirklichte. Liebe Kinder, denkt daran: Seid mutig, seid entschlossen und glaubt an eure Träume, genau wie Kaspar. Denn ihr seid auch kleine Helden, bereit, große Träume zu erreichen!</p>
       <p>Und sie lebten glücklich und zufrieden in ihrem kleinen Wald. Und wenn sie nicht gestorben sind, dann flattern sie noch heute.</p>
       `,
-      date: "15. April 2023",
-      datetime: "2023-04-15",
+    },
+    {
+      id: "die-vier-jahreszeiten-der-waldtiere",
+      title: "Die vier Jahreszeiten der Waldtiere",
+      href: "/stories/die-vier-jahreszeiten-der-waldtiere",
+      image: {
+        src: "/stories/die-vier-jahreszeiten-der-waldtiere.png",
+        alt: "Cover - Die vier Jahreszeiten der Waldtiere",
+      },
+      rating: 4,
+      age: {
+        start: 2,
+        end: 6,
+      },
+      description: "",
+      premium: false,
+      audio: {
+        src: null,
+      },
+      date: "4. Mai 2023",
+      datetime: "2023-05-04",
       tags: ["Kinderbücher", "Fantasie", "Kreativität"],
       category: { title: "", href: "" },
       author: {
@@ -1492,17 +1582,6 @@ export const useContentStore = defineStore("content", () => {
         href: "",
         imageUrl: "",
       },
-      audios: [],
-    },
-    {
-      id: "die-vier-jahreszeiten-der-waldtiere",
-      title: "Die vier Jahreszeiten der Waldtiere",
-      href: "/stories/die-vier-jahreszeiten-der-waldtiere",
-      imageUrl: "/stories/die-vier-jahreszeiten-der-waldtiere.png",
-      description: "",
-      rating: 4,
-      startAge: 2,
-      endAge: 6,
       content: `
       <h2>Das Frühlingserwachen</h2>
       <p>Es war eine feine, sonnige Morgenstunde im zauberhaften Wald, als ein kleines Murmeltier namens Momo aus seinem Winterschlaf erwachte. Momo streckte und reckte sich in seinem gemütlichen Erdbau und sah dabei zu, wie ein schmaler Lichtstrahl durch das kleine Loch seiner Höhle fiel und auf seinen kuscheligen Pelz traf.</p>
@@ -1564,17 +1643,6 @@ export const useContentStore = defineStore("content", () => {
       <p>Mit Freude im Herzen und Hoffnung in den Augen standen sie zusammen und blickten in die Zukunft. Sie wussten, dass sie bereit waren für das, was kommen würde, und dass sie es zusammen meistern würden.</p>
       <p>So endete die letzte Geschichte in den vier Jahreszeiten der Waldtiere - eine Geschichte über den Kreislauf der Natur, Veränderung und den Wert von jedem neuen Anfang. Sie wussten, dass ihre Reise noch nicht zu Ende war und dass es immer neue Geschichten zu erzählen und neue Lektionen zu lernen gab. Und sie waren bereit, sie alle mit offenen Herzen zu begrüßen.</p>
       `,
-      date: "4. Mai 2023",
-      datetime: "2023-05-04",
-      tags: ["Kinderbücher", "Fantasie", "Kreativität"],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-      audios: [],
     },
   ];
 
@@ -1582,11 +1650,30 @@ export const useContentStore = defineStore("content", () => {
     id: "sonnenblumen-sams-gartenabenteuer",
     title: "Sonnenblumen-Sam's Gartenabenteuer",
     href: "/stories/sonnenblumen-sams-gartenabenteuer",
-    imageUrl: "/stories/sonnenblumen-sams-gartenabenteuer.png",
-    description: "",
+    image: {
+      src:"/stories/sonnenblumen-sams-gartenabenteuer.png",
+      alt: "Cover - Sonnenblumen-Sam's Gartenabenteuer",
+    },
     rating: 4,
-    startAge: 2,
-    endAge: 6,
+    age: {
+      start: 2,
+      end: 6,
+    },
+    description: "",
+    premium: false,
+    audio: {
+      src: null,
+    },
+    date: "21. April 2023",
+    datetime: "2023-04-21",
+    tags: ["Kinderbücher", "Fantasie", "Kreativität"],
+    category: { title: "", href: "" },
+    author: {
+      name: "",
+      role: "",
+      href: "",
+      imageUrl: "",
+    },
     content: `
     <h2>Sam's geliebter Garten</h2>
     <p>Es war einmal ein kleiner Junge namens Sam. Mit seinen funkelnden blauen Augen und strahlendem Lächeln konnte er jeden Raum erhellen. Aber es war nicht ein Zimmer, sondern ein besonderer Ort, an dem er sein strahlendstes Lächeln zeigte - sein geliebter Garten.</p>
@@ -1639,8 +1726,27 @@ export const useContentStore = defineStore("content", () => {
     <p>Am Ende des Tages saß Sam erschöpft, aber glücklich, auf einer Bank in seinem Garten. Er sah sich um und konnte nicht anders, als zu lächeln. Sein Garten war voller Freude, und er war ein Teil davon. Er hatte gelernt, wie man Probleme löst, wie man der Natur hilft und wie man feiert. Er wusste jetzt, dass sein Garten ein Ort voller Wunder und Abenteuer war.</p>
     <p>Und so endet die Geschichte von Sonnenblumen-Sam's Gartenabenteuer. Aber das war nur der Anfang. Denn in Sams Garten gibt es immer etwas zu entdecken, zu lernen und zu feiern. Und wer weiß, welches Abenteuer als nächstes auf ihn wartet? Denn mit Liebe, Geduld und Zusammenarbeit ist alles möglich. Und in Sams Garten ist jeder Tag ein neues, aufregendes Abenteuer.</p>
     `,
-    date: "21. April 2023",
-    datetime: "2023-04-21",
+  } */
+  /* {
+    id: "das-verzauberte-floetenmaennchen",
+    title: "Das verzauberte Flötenmännchen",
+    href: "/stories/das-verzauberte-floetenmaennchen",
+    image: {
+      src:"/stories/das-verzauberte-floetenmaennchen.png",
+      alt: "Cover - Das verzauberte Flötenmännchen",
+    },
+    rating: 4,
+    age: {
+      start: 2,
+      end: 6,
+    },
+    description: "",
+    premium: false,
+    audio: {
+      src: null,
+    },
+    date: "9. Mai 2023",
+    datetime: "2023-05-09",
     tags: ["Kinderbücher", "Fantasie", "Kreativität"],
     category: { title: "", href: "" },
     author: {
@@ -1649,17 +1755,6 @@ export const useContentStore = defineStore("content", () => {
       href: "",
       imageUrl: "",
     },
-    audios: [],
-  } */
-  /* {
-    id: "das-verzauberte-floetenmaennchen",
-    title: "Das verzauberte Flötenmännchen",
-    href: "/stories/das-verzauberte-floetenmaennchen",
-    imageUrl: "/stories/das-verzauberte-floetenmaennchen.png",
-    rating: 4,
-    startAge: 2,
-    endAge: 6,
-    description: "",
     content: `
     <h2>Die geheimnisvolle Flöte</h2>
     <p>Es war ein sonniger Frühlingstag, als der kleine Jonas auf Entdeckungstour durch den nahegelegenen Wald ging. Die Vögel sangen fröhliche Lieder und das sanfte Rascheln der Blätter war wie Musik in seinen Ohren. Jonas liebte diese Ausflüge mehr als alles andere. Er war neugierig und voller Entdeckerfreude. Jeder Stein, jeder Baum und jeder kleine Bach war ein neues Abenteuer für ihn.</p>
@@ -1715,18 +1810,6 @@ export const useContentStore = defineStore("content", () => {
     <p>"Danke, Flötenmännchen", flüsterte Jonas und hob die Flöte an seine Lippen. Er spielte die magische Melodie, die nun ein Teil von ihm war. Und obwohl er alleine war, fühlte er sich nicht einsam. Er wusste, dass er einen Freund hatte, der immer bei ihm sein würde, in der Magie der Musik und in seinem Herzen.</p>
     <p>Und so endete das Abenteuer von Jonas und dem Flötenmännchen, aber es war nur der Anfang von vielen weiteren magischen Geschichten, die noch erzählt werden würden. Denn wie das Flötenmännchen ihm gezeigt hatte, lag die wahre Magie in Jonas selbst, in seinem Mut und in seiner Musik. Und das war etwas, was er nie vergessen würde.</p>
     `,
-
-    date: "9. Mai 2023",
-    datetime: "2023-05-09",
-    tags: ["Kinderbücher", "Fantasie", "Kreativität"],
-    category: { title: "", href: "" },
-    author: {
-      name: "",
-      role: "",
-      href: "",
-      imageUrl: "",
-    },
-    audios: [],
   }, */
 
   return {

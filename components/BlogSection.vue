@@ -29,7 +29,7 @@ const posts = computed(() => contentStore.posts);
         </div>
       </div>
       <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        <BlogTeaser v-for="post in posts" :key="post.id" :href="post.href" :imageUrl="post.imageUrl" :date="post.date"
+        <BlogTeaser v-for="post in posts" :key="post.id" :href="post.href" :image="post.image" :date="post.date"
           :datetime="post.datetime" :category="post.category" :title="post.title" :description="post.description"
           class="flex flex-col items-start justify-between" />
       </div>

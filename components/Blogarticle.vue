@@ -50,7 +50,7 @@ const related = others.slice(0, 5);
                 {{ post.date }}
               </p>
             </div>
-            <nuxt-img provider="imgix" :src="post.imageUrl" :modifiers="{ auto: 'format,compress' }"/>
+            <nuxt-img provider="imgix" :src="post.image.src" :alt="post.image.alt" :modifiers="{ auto: 'format,compress' }"/>
 
             <div v-html="post.content" class="prose"></div>
 
@@ -309,7 +309,7 @@ const related = others.slice(0, 5);
               </div>
 
               <div class="flex-shrink-0 relative rounded-lg overflow-hidden w-20 h-20">
-                <nuxt-img provider="imgix" :src="post.imageUrl" :alt="post.imageAlt" loading="lazy" class="w-full h-full absolute top-0 left-0 object-cover rounded-lg"  :modifiers="{ auto: 'format,compress' }"/>
+                <nuxt-img provider="imgix" :src="post.image.src" :alt="post.image.alt" loading="lazy" class="w-full h-full absolute top-0 left-0 object-cover rounded-lg"  :modifiers="{ auto: 'format,compress' }"/>
               </div>
             </a>
             <!-- End Media -->

@@ -30,11 +30,11 @@ const story = computed(() => stories.value.find((s) => s.id === props.id))
 
 const audioContainer = templateRef('audioContainer')
 onMounted(() => {
-  if (story.value && story.value.audioUrl) {
+  if (story.value?.audio?.src) {
     const sound = document.createElement('audio');
     sound.id = 'audio-player';
     sound.controls = 'controls';
-    sound.src = story.value.audioUrl;
+    sound.src = story.value.audio.src;
     sound.type = 'audio/mpeg';
     audioContainer.value.appendChild(sound);
 

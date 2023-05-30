@@ -17,7 +17,7 @@
           v-for="post in prewiewPosts"
           :key="post.id"
           :href="post.href"
-          :imageUrl="post.imageUrl"
+          :image="post.image"
           :date="post.date"
           :datetime="post.datetime"
           :category="post.category"

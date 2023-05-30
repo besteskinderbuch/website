@@ -1,7 +1,7 @@
 <script setup>
 const props = defineProps({
   id: String,
-  imageUrl: String,
+  image: Object,
   imageAlt: String,
   href: String,
 });
@@ -14,7 +14,7 @@ function track() {
 <template>
   <a :href="href" class="h-full flex flex-col justify-between" target="_blank" @click="track">
     <div class="mx-auto">
-      <nuxt-img provider="imgix" :src="imageUrl" :alt="imageAlt" class="w-auto h-72" loading="lazy" :modifiers="{ auto: 'format,compress' }"/>
+      <nuxt-img provider="imgix" :src="image.src" :alt="image.alt" class="w-auto h-72" loading="lazy" :modifiers="{ auto: 'format,compress' }"/>
     </div>
     <div class="flex justify-center">
       <div class="hover:bg-white rounded-sm mt-5">

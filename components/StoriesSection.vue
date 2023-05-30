@@ -36,7 +36,7 @@ const stories = computed(() => {
       </div>
       <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         <ClientOnly>
-          <StoryTeaser v-for="story in stories" :key="story.id" :href="story.href" :imageUrl="story.imageUrl"
+          <StoryTeaser v-for="story in stories" :key="story.id" :href="story.href" :image="story.image"
             :date="story.date" :datetime="story.datetime" :category="story.category" :title="story.title"
             :description="story.description" class="flex flex-col items-start justify-between">
           </StoryTeaser>

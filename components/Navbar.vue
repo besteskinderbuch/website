@@ -1,3 +1,27 @@
+<script setup>
+import { storeToRefs } from 'pinia'
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from "@headlessui/vue";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { useContentStore } from "~/stores/useContentStore";
+import { useAccountStore } from "~/stores/useAccountStore";
+
+const accountStore = useAccountStore();
+
+const { loggedIn } = storeToRefs(accountStore);
+
+const contentStore = useContentStore();
+const navigation = contentStore.navigation;
+const userNavigation = contentStore.userNavigation;
+</script>
+
 <template>
   <Disclosure as="nav" class="bg-primary1 md:bg-transparent" v-slot="{ open }">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -136,26 +160,3 @@
   </Disclosure>
 </template>
 
-<script setup>
-import { storeToRefs } from 'pinia'
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-} from "@headlessui/vue";
-import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
-import { useContentStore } from "~/stores/useContentStore";
-import { useAccountStore } from "~/stores/useAccountStore";
-
-const accountStore = useAccountStore();
-
-const { loggedIn } = storeToRefs(accountStore);
-
-const contentStore = useContentStore();
-const navigation = contentStore.navigation;
-const userNavigation = contentStore.userNavigation;
-</script>

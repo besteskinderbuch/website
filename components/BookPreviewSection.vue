@@ -22,8 +22,7 @@
           <Book
               :id="book.id"
               :href="book.href"
-              :imageUrl="book.imageUrl"
-              :imageAlt="book.imageAlt"
+              :image="book.image"
             >
             </Book>
           </li>

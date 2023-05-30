@@ -11,7 +11,8 @@
       </div>
       <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
         Entdecke die passende Abo-Option, maßgeschneidert für deine individuellen Bedürfnisse.
-        Wir legen großen Wert auf deine Zufriedenheit und bieten daher neben unserer vielfältigen Auswahl an Abonnements auch eine 30 Tage Geld-zurück-Garantie,
+        Wir legen großen Wert auf deine Zufriedenheit und bieten daher neben unserer vielfältigen Auswahl an Abonnements
+        auch eine 30 Tage Geld-zurück-Garantie,
         falls unser Angebot deinen Erwartungen leider nicht gerecht wird.
       </p>
       <div class="mt-16 flex justify-center">
@@ -53,24 +54,32 @@
             }}
             </span>
 
-            <span class="text-4xl font-bold tracking-tight text-gray-100" :class="{'diagonal-line-through':!!tier.price[frequency.value].discounted}">
-              {{ tier.price[frequency.value].current}}
+            <span class="text-4xl font-bold tracking-tight text-gray-100"
+              :class="{ 'diagonal-line-through': !!tier.price[frequency.value].discounted }">
+              {{ tier.price[frequency.value].current }}
             </span>
 
-            <span v-if=" !tier.free " class="text-sm font-semibold leading-6 text-gray-100">{{
+            <span v-if="!tier.free" class="text-sm font-semibold leading-6 text-gray-100">{{
               frequency.priceSuffix
-              }}</span>
+            }}</span>
           </p>
-          <a :href=" tier.href[frequency.value] " :aria-describedby=" tier.id " :class="
-            [
-              tier.mostPopular
-                ? 'bg-secondary1 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-secondary1'
-                : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white',
-              'mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
-            ]
-          "><span v-if=" !tier.free ">Kaufen</span><span v-else>Kostenlos registrieren</span></a>
+          <a :href="tier.href[frequency.value]" :aria-describedby="tier.id" :class="[
+            tier.mostPopular
+              ? 'bg-secondary1 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-secondary1'
+              : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white',
+            'mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
+          ]
+            ">
+            <template v-if="loggedIn">
+
+            </template>
+            <template v-else>
+              <span v-if="!tier.free">Kaufen</span>
+              <span v-else>Kostenlos registrieren</span>
+            </template>
+          </a>
           <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
-            <li v-for=" feature  in  tier.features " :key=" feature " class="flex gap-x-3">
+            <li v-for=" feature  in  tier.features " :key="feature" class="flex gap-x-3">
               <CheckIcon class="h-6 w-5 flex-none text-white" aria-hidden="true" />
               {{ feature }}
             </li>
