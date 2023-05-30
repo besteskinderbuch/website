@@ -25,15 +25,15 @@ const related = others.slice(0, 5);
       <div class="lg:col-span-2">
         <div class="py-8 lg:pr-8">
           <div class="space-y-5 lg:space-y-8">
-            <a class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline"
-              href="/blog">
+            <NuxtLink class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline"
+              to="/blog">
               <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                   d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
               </svg>
               Zurück zu allen Blogartikeln
-            </a>
+            </NuxtLink>
 
             <h1 class="text-3xl font-bold lg:text-5xl dark:text-white">
               {{ post.title }}
@@ -300,7 +300,7 @@ const related = others.slice(0, 5);
           <!-- End Avatar Media -->
           <div class="space-y-6">
             <!-- Media -->
-            <a v-for="post in related" class="group flex items-center gap-x-6" :href="post.href">
+            <NuxtLink v-for="post in related" class="group flex items-center gap-x-6" :to="post.href">
               <div class="grow">
                 <span
                   class="text-sm text-gray-800 group-hover:text-blue-600 dark:text-gray-200 dark:group-hover:text-blue-500">
@@ -311,7 +311,7 @@ const related = others.slice(0, 5);
               <div class="flex-shrink-0 relative rounded-lg overflow-hidden w-20 h-20">
                 <nuxt-img provider="imgix" :src="post.image.src" :alt="post.image.alt" loading="lazy" class="w-full h-full absolute top-0 left-0 object-cover rounded-lg"  :modifiers="{ auto: 'format,compress' }"/>
               </div>
-            </a>
+            </NuxtLink>
             <!-- End Media -->
           </div>
         </div>

@@ -15,6 +15,12 @@ const publicStories = computed(() => contentStore.publicStories);
 
 const { loggedIn } = storeToRefs(accountStore);
 
+watch(loggedIn,()=>{
+  console.log("loggedIn", loggedIn.value)
+}, {
+  immediate: true
+})
+
 const stories = computed(() => {
   if (loggedIn.value) {
     return freeStories.value.concat(publicStories.value);
@@ -23,7 +29,15 @@ const stories = computed(() => {
   return publicStories.value;
 });
 
+watch(stories,(newVal,oldVal)=>{
+  console.log("stories newVal", newVal.value.length)
+  console.log("stories oldVal", oldVal.value.length)
+}, {
+  immediate: true
+})
+
 const story = computed(() => stories.value.find((s) => s.id === id))
+
 
 useServerSeoMeta({
   title: `bestes-kinderbuch - ${story.value.title}`,
@@ -39,7 +53,7 @@ useServerSeoMeta({
 <template>
   <Navbar></Navbar>
   <main class="flex-1">
-    <Storyarticle :id="id"></Storyarticle>
+    <Storyarticle :data="story"></Storyarticle>
   </main>
   <Footer></Footer>
 </template>

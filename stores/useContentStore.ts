@@ -743,8 +743,8 @@ export const useContentStore = defineStore("content", () => {
         src: "books/kleine-schritte-grosse-spuren-zwanzig-geschichten-den-kindern-den-weg-weisen.jpeg",
         alt: "Cover - Kleine Schritte, große Spuren",
       },
-      price: "€21,99",
-      href: "https://amzn.eu/d/5rIQDxs",
+      price: "€12,99",
+      href: "https://amzn.eu/d/3Z4epyK",
     },
   ];
 

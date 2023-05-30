@@ -1,56 +1,34 @@
 <script setup>
-import { storeToRefs } from 'pinia'
-import { useAccountStore } from "~/stores/useAccountStore";
-import { useContentStore } from "~/stores/useContentStore";
-
-const accountStore = useAccountStore();
-
 const props = defineProps({
-  id: {
-    type: String,
+  data: {
+    type: Object,
     required: true,
   },
 });
 
-const contentStore = useContentStore();
-const freeStories = computed(() => contentStore.freeStories);
-const publicStories = computed(() => contentStore.publicStories);
-
-const { loggedIn } = storeToRefs(accountStore);
-
-const stories = computed(() => {
-  if (loggedIn.value) {
-    return freeStories.value.concat(publicStories.value);
-  }
-
-  return publicStories.value;
-});
-
-const story = computed(() => stories.value.find((s) => s.id === props.id))
-
 const audioContainer = templateRef('audioContainer')
 onMounted(() => {
-  if (story.value?.audio?.src) {
+  if (props.data.audio?.src) {
     const sound = document.createElement('audio');
     sound.id = 'audio-player';
     sound.controls = 'controls';
-    sound.src = story.value.audio.src;
+    sound.src = props.data.audio.src;
     sound.type = 'audio/mpeg';
     audioContainer.value.appendChild(sound);
 
     audioContainer.value.addEventListener('play', () => {
       useTrackEvent("play", {
-        story: story.value.id,
+        story: props.data.id,
       })
     })
     audioContainer.value.addEventListener('pause', () => {
       useTrackEvent("pause", {
-        story: story.value.id,
+        story: props.data.id,
       })
     })
     audioContainer.value.addEventListener('ended', () => {
       useTrackEvent("ended", {
-        story: story.value.id,
+        story: props.data.id,
       })
     })
   }
@@ -60,23 +38,23 @@ onMounted(() => {
 
 <template>
   <div class="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
-    <div v-if="story">
+    <div>
       <!-- Content -->
       <div>
         <div class="py-8 lg:pr-8">
           <div class="space-y-5 lg:space-y-8">
-            <a class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline"
-              href="/stories">
+            <NuxtLink class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline"
+              to="/stories">
               <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
                   d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
               </svg>
               Zurück zu allen Stories
-            </a>
+            </NuxtLink>
 
             <h1 class="text-3xl font-bold lg:text-5xl">
-              {{ story.title }}
+              {{ data.title }}
             </h1>
 
             <div class="flex items-center gap-x-5">
@@ -87,23 +65,23 @@ onMounted(() => {
                 Company News
               </a> -->
               <p class="text-xs sm:text-sm text-gray-800">
-                {{ story.date }}
+                {{ data.date }}
               </p>
             </div>
 
-            <nuxt-img provider="imgix" :src="story.imageUrl" :modifiers="{ auto: 'format,compress' }"/>
+            <nuxt-img provider="imgix" :src="data.image.src" :alt="data.image.alt" :modifiers="{ auto: 'format,compress' }"/>
 
 
             <div ref="audioContainer">
 
             </div>
 
-            <div v-html="story.content" class="prose max-w-none"></div>
+            <div v-html="data.content" class="prose max-w-none"></div>
 
             <div class="grid lg:flex lg:justify-between lg:items-center gap-y-5 lg:gap-y-0">
               <!-- Badges/Tags -->
               <div>
-                <div v-for="tag in story.tags"
+                <div v-for="tag in data.tags"
                   class="m-0.5 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800">
                   {{ tag }}
                 </div>

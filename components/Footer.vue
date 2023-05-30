@@ -5,9 +5,9 @@
       <div class="flex flex-col w-full gap-5">
         <div class="flex flex-col items-center md:flex-row md:justify-between">
           <div>
-            <a class="text-sm font-semibold leading-6 text-white" href="/stories">
+            <NuxtLink class="text-sm font-semibold leading-6 text-white" to="/stories">
               Kurzgeschichten
-            </a>
+            </NuxtLink>
             <!--  <ul role="list" class="mt-6 space-y-4">
                 <li v-for="item in navigation.stories" :key="item.name">
                   <a
@@ -19,9 +19,9 @@
               </ul> -->
           </div>
           <div>
-            <a class="text-sm font-semibold leading-6 text-white" href="/help">
+            <NuxtLink class="text-sm font-semibold leading-6 text-white" to="/help">
               Häufig gestellte Fragen
-            </a>
+            </NuxtLink>
             <!-- <ul role="list" class="mt-6 space-y-4">
                 <li v-for="item in navigation.support" :key="item.name">
                   <a
@@ -33,9 +33,9 @@
               </ul> -->
           </div>
           <div>
-            <a class="text-sm font-semibold leading-6 text-white" href="/impressum">
+            <NuxtLink class="text-sm font-semibold leading-6 text-white" to="/impressum">
               Impressum
-            </a>
+            </NuxtLink>
             <!-- <ul role="list" class="mt-6 space-y-4">
                 <li v-for="item in navigation.company" :key="item.name">
                   <a
@@ -47,9 +47,9 @@
               </ul> -->
           </div>
           <div>
-            <a class="text-sm font-semibold leading-6 text-white" href="/dataprivacy">
+            <NuxtLink class="text-sm font-semibold leading-6 text-white" to="/dataprivacy">
               Datenschutz
-            </a>
+            </NuxtLink>
             <!-- <ul role="list" class="mt-6 space-y-4">
                 <li v-for="item in navigation.legal" :key="item.name">
                   <a
@@ -62,9 +62,9 @@
           </div>
           <!-- test -->
           <div>
-            <a class="text-sm font-semibold leading-6 text-white" href="/roadmap">
+            <NuxtLink class="text-sm font-semibold leading-6 text-white" to="/roadmap">
               In Kürze
-            </a>
+            </NuxtLink>
             <!--  <ul role="list" class="mt-6 space-y-4">
                 <li v-for="item in navigation.stories" :key="item.name">
                   <a
@@ -76,9 +76,9 @@
               </ul> -->
           </div>
           <div>
-            <a class="text-sm font-semibold leading-6 text-white" href="/blog">
+            <NuxtLink class="text-sm font-semibold leading-6 text-white" to="/blog">
               Blog
-            </a>
+            </NuxtLink>
             <!-- <ul role="list" class="mt-6 space-y-4">
                 <li v-for="item in navigation.support" :key="item.name">
                   <a

@@ -92,12 +92,12 @@ const { loggedIn, user } = storeToRefs(accountStore);
             <span>Dein aktuelles Abo</span>
           </span>
 
-          <a v-else :href="tier.href[frequency.value]" :aria-describedby="tier.id"
+          <NuxtLink v-else :to="tier.href[frequency.value]" :aria-describedby="tier.id"
             class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             :class="[tier.mostPopular ? 'bg-secondary1 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-secondary1' : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white']">
             <span v-if="!tier.free">Kaufen</span>
             <span v-else>Kostenlos registrieren</span>
-          </a>
+          </NuxtLink>
           <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
             <li v-for=" feature  in  tier.features " :key="feature" class="flex gap-x-3">
               <CheckIcon class="h-6 w-5 flex-none text-white" aria-hidden="true" />
