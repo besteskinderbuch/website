@@ -1,10 +1,11 @@
 
 <script setup>
-useHead({
-  title:"bestes-kinderbuch - Impressum",
-  meta: [
-    { name: 'description', content: ' Erwecken Sie die Fantasie Ihres Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starten Sie heute das Abo!' }
-  ],
+useServerSeoMeta({
+  title: "bestes-kinderbuch - Impressum",
+  description: 'Erwecken Sie die Fantasie Ihres Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starten Sie heute das Abo!',
+  ogTitle: "bestes-kinderbuch - Impressum",
+  ogDescription: 'Erwecken Sie die Fantasie Ihres Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starten Sie heute das Abo!',
+  ogImage: '/heroteaser.png',
 })
 </script>
 <template>

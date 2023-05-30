@@ -22,11 +22,12 @@ if (!devMode.value) {
   }
 }
 
-useHead({
+useServerSeoMeta({
   title: "bestes-kinderbuch",
-  meta: [
-    { name: 'description', content: ' Erwecken Sie die Fantasie Ihres Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starten Sie heute das Abo!' }
-  ],
+  description: 'Erwecken Sie die Fantasie Ihres Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starten Sie heute das Abo!',
+  ogTitle: "bestes-kinderbuch",
+  ogDescription: 'Erwecken Sie die Fantasie Ihres Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starten Sie heute das Abo!',
+  ogImage: '/heroteaser.png',
 })
 </script>
 <template>

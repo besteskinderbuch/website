@@ -1,15 +1,16 @@
 <script setup>
-useHead({
-  title:"bestes-kinderbuch - Roadmap",
-  meta: [
-    { name: 'description', content: 'Entdecken Sie die Roadmap von Bestes-Kinderbuch.de. Erleben Sie unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen Ihrer Erwartungen.' }
-  ],
+useServerSeoMeta({
+  title: "bestes-kinderbuch - Roadmap",
+  description: 'Entdecken Sie die Roadmap von Bestes-Kinderbuch.de. Erleben Sie unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen Ihrer Erwartungen.',
+  ogTitle: "bestes-kinderbuch - Roadmap",
+  ogDescription: 'Entdecken Sie die Roadmap von Bestes-Kinderbuch.de. Erleben Sie unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen Ihrer Erwartungen.',
+  ogImage: '/heroteaser.png',
 })
 </script>
 <template>
-    <Navbar></Navbar>
-    <main class="flex-1">
-      <Roadmap></Roadmap>
-    </main>
-    <Footer></Footer>
-  </template>
+  <Navbar></Navbar>
+  <main class="flex-1">
+    <Roadmap></Roadmap>
+  </main>
+  <Footer></Footer>
+</template>

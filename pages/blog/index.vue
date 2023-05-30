@@ -1,9 +1,10 @@
 <script setup>
-useHead({
-  title:"bestes-kinderbuch - Blog",
-  meta: [
-    { name: 'description', content: 'Entdecke auf bestes-kinderbuch.de unseren Blog voller faszinierender Kindergeschichten. Tauche jede Woche in neue Themen ein und finde Inspiration. Dein Tor zur Welt der Fantasie!' }
-  ],
+useServerSeoMeta({
+  title: "bestes-kinderbuch - Blog",
+  description: 'Entdecke auf bestes-kinderbuch.de unseren Blog voller faszinierender Kindergeschichten. Tauche jede Woche in neue Themen ein und finde Inspiration. Dein Tor zur Welt der Fantasie!',
+  ogTitle: "bestes-kinderbuch - Blog",
+  ogDescription: 'Entdecke auf bestes-kinderbuch.de unseren Blog voller faszinierender Kindergeschichten. Tauche jede Woche in neue Themen ein und finde Inspiration. Dein Tor zur Welt der Fantasie!',
+  ogImage: '/heroteaser.png',
 })
 </script>
 <template>

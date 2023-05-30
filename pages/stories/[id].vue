@@ -23,13 +23,14 @@ const stories = computed(() => {
   return publicStories.value;
 });
 
-const story = computed(()=>stories.value.find((s) => s.id === id))
+const story = computed(() => stories.value.find((s) => s.id === id))
 
-useHead({
-  title:`bestes-kinderbuch - ${story.value.title}`,
-  meta: [
-    { name: 'description', content: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.' }
-  ],
+useServerSeoMeta({
+  title: `bestes-kinderbuch - ${story.value.title}`,
+  description: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
+  ogTitle: `bestes-kinderbuch - ${story.value.title}`,
+  ogDescription: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
+  ogImage: '/heroteaser.png',
 })
 
 

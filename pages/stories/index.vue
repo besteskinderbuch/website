@@ -1,9 +1,10 @@
 <script setup>
-useHead({
-  title:"bestes-kinderbuch - Geschichten",
-  meta: [
-    { name: 'description', content: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.' }
-  ],
+useServerSeoMeta({
+  title: "bestes-kinderbuch - Geschichten",
+  description: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
+  ogTitle: "bestes-kinderbuch - Geschichten",
+  ogDescription: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
+  ogImage: '/heroteaser.png',
 })
 </script>
 <template>
