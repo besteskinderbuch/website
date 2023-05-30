@@ -40,7 +40,7 @@ export default defineNuxtConfig({
 
   image: {
     imgix: {
-      baseURL: 'besteskinderbuch-8301.imgix.net'
+      baseURL: 'https://besteskinderbuch-8301.imgix.net'
     }
   },
 

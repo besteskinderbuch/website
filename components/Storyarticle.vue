@@ -91,7 +91,7 @@ onMounted(() => {
               </p>
             </div>
 
-            <img :src="story.imageUrl" loading="lazy"/>
+            <nuxt-img provider="imgix" :src="story.imageUrl" :modifiers="{ auto: 'format,compress' }"/>
 
 
             <div ref="audioContainer">

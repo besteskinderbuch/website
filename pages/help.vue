@@ -36,7 +36,7 @@ useServerSeoMeta({
 
       </div>
   </div>
-  <Manual3></Manual3>
+  <Manual></Manual>
   <FaqLong></FaqLong>
 </main>
 <Footer></Footer></template>

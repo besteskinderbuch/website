@@ -24,7 +24,8 @@ useServerSeoMeta({
       </div>
     </div>
     <div class="relative hidden w-0 flex-1 lg:block">
-      <img class="absolute inset-0 h-full w-full object-cover" src="/login.png" alt="Märchenwald" loading="lazy" />
+      <nuxt-img provider="imgix" class="absolute inset-0 h-full w-full object-cover" src="/login.png" alt="Märchenwald"
+        :modifiers="{ auto: 'format,compress' }" />
     </div>
   </div>
 </template>

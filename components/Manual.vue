@@ -25,7 +25,27 @@
               </span>
               <span class="ml-4 text-xl font-medium text-gray-800">{{ step.name }}</span>
             </div>
-            <div class="p-5 flex-1 flex justify-between flex-col" v-html="steps[stepIdx].content">
+            <div class="p-5 flex-1 flex justify-between flex-col">
+              <template v-if="stepIdx === 0">
+                <p class="mx-4"> Finde <a href="/#pricing" class="text-gray-100 font-bold">hier</a> das Abo, das wie für
+                  dich gemacht ist. Klick hier und entdecke das Angebot, das perfekt zu dir passt!</p>
+                <img src="/demo/register.png" loading="lazy" class="rounded-lg mx-4 mt-4" />
+              </template>
+              <template v-else-if="stepIdx === 1">
+                <p class="mx-4">Entdecke <a href="/stories" class="text-gray-100 font-bold">hier</a> die spannendsten und
+                  herzerwärmendsten Geschichten, die dein Kind lieben wird. Stöbere jetzt durch unsere Sammlung und finde
+                  die perfekte Geschichte!</p>
+                <nuxt-img provider="imgix" src="/demo/search.png" loading="lazy" class="rounded-lg mx-4 mt-4"
+                  :modifiers="{ auto: 'format,compress' }" />
+              </template>
+              <template v-else-if="stepIdx === 2">
+                <p class="mx-4">Verschönere den Tag deines Kindes und schick es mit unseren faszinierenden Geschichten auf
+                  eine unvergessliche Traumreise. Lass die Fantasie deines Kindes aufblühen und zaubere ihm ein Lächeln
+                  ins Gesicht.</p>
+                <nuxt-img provider="imgix" src="/demo/example.png" loading="lazy" class="rounded-lg  mx-4 mt-4"
+                  :modifiers="{ auto: 'format,compress' }" />
+              </template>
+
             </div>
           </li>
         </ol>
@@ -37,22 +57,13 @@
 <script setup>
 const steps = [
   {
-    id: '01', name: 'Anmelden', href: '/#pricing', content: `
-        <p class="mx-4"> Finde <a href="/#pricing" class="text-gray-100 font-bold">hier</a>  das Abo, das wie für dich gemacht ist. Klick hier und entdecke das Angebot, das perfekt zu dir passt!</p>
-        <img src="/demo/register.png" loading="lazy" class="rounded-lg mx-4 mt-4"/>
-    `
+    id: '01', name: 'Anmelden', href: '/#pricing'
   },
   {
-    id: '02', name: 'Geschichten finden', href: '/stories', content: `
-      <p class="mx-4">Entdecke <a href="/stories" class="text-gray-100 font-bold">hier</a> die spannendsten und herzerwärmendsten Geschichten, die dein Kind lieben wird. Stöbere jetzt durch unsere Sammlung und finde die perfekte Geschichte!</p>
-      <img src="/demo/search.png" loading="lazy" class="rounded-lg mx-4 mt-4"/>
-    `
+    id: '02', name: 'Geschichten finden', href: '/stories'
   },
   {
-    id: '03', name: 'Traumreise beginnen', content: `
-        <p class="mx-4">Verschönere den Tag deines Kindes und schick es mit unseren faszinierenden Geschichten auf eine unvergessliche Traumreise. Lass die Fantasie deines Kindes aufblühen und zaubere ihm ein Lächeln ins Gesicht.</p>
-        <img src="/demo/example.png" loading="lazy" class="rounded-lg  mx-4 mt-4"/>
-        `
+    id: '03', name: 'Traumreise beginnen'
   },
 ]
 </script>

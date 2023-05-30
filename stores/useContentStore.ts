@@ -133,7 +133,7 @@ export const useContentStore = defineStore("content", () => {
       href: "/blog/entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen",
       description: "",
       imageUrl:
-        "/images/blogs/entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen.png",
+        "/blogs/entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen.png",
       content: `
       <h2>Eintauchen in fantastische Welten: Wie Kinderbücher die Realität erweitern</h2>
       <p>Kinderbücher sind Fenster zu unendlich vielen Welten, die weit über die Grenzen unserer physischen Realität hinausgehen. Sie öffnen die Tore zu magischen Königreichen, fernen Planeten, verwunschenen Wäldern und vielen anderen faszinierenden Orten. Diese einzigartigen Umgebungen bieten Kindern eine unvergleichliche Möglichkeit, in ihrer Vorstellungskraft zu schwelgen und ihre Wahrnehmung der Welt zu erweitern.</p>
@@ -178,7 +178,7 @@ export const useContentStore = defineStore("content", () => {
       title: "Warum Vorlesen wichtig für die Entwicklung Ihres Kindes ist",
       href: "/blog/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist",
       imageUrl:
-        "/images/blogs/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist.png",
+        "/blogs/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist.png",
       description: "",
       date: "26. April 2023",
       datetime: "2023-04-26",
@@ -238,7 +238,7 @@ export const useContentStore = defineStore("content", () => {
         "Die Kunst des Erzählens: Wie man eine fesselnde Kindergeschichte schreibt",
       href: "/blog/die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt",
       imageUrl:
-        "/images/blogs/die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt.png",
+        "/blogs/die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt.png",
       description: "",
       date: "7. Mai 2023",
       datetime: "2023-05-07",
@@ -278,7 +278,7 @@ export const useContentStore = defineStore("content", () => {
       title: "Die Welt der Fabeln: Wie sie Kinder lehren und unterhalten",
       href: "/blog/die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten",
       imageUrl:
-        "/images/blogs/die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten.png",
+        "/blogs/die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten.png",
       description: "",
       date: "9. Mai 2023",
       datetime: "2023-05-09",
@@ -325,7 +325,7 @@ export const useContentStore = defineStore("content", () => {
         "Kinderbücher und ihre Rolle in der emotionalen Entwicklung des Kindes",
       href: "/blog/kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes",
       imageUrl:
-        "/images/blogs/kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes.png",
+        "/blogs/kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes.png",
       description: "",
       date: "19. Mai 2023",
       datetime: "2023-05-19",
@@ -365,7 +365,7 @@ export const useContentStore = defineStore("content", () => {
         "Von Drachen, Prinzen und Prinzessinnen: Die Bedeutung von Märchen in der Kindheit",
       href: "/blog/von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit",
       imageUrl:
-        "/images/blogs/von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit.png",
+        "/blogs/von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit.png",
       description: "",
       date: "24 Mai 2023",
       datetime: "2023-05-24",
@@ -941,10 +941,10 @@ export const useContentStore = defineStore("content", () => {
       name: "Schlummerland-Zaubereien: Fantastische Geschichten zum Einschlafen",
       description: `Entdecken Sie "Schlummerland-Zaubereien: Fantastische Geschichten zum Einschlafen", eine Sammlung von zehn zauberhaften Gute-Nacht-Geschichten für Kinder im Alter von 0 bis 11 Jahren. In diesem liebevoll gestalteten Buch finden Sie magische Abenteuer und bezaubernde Charaktere, die Ihre Kleinen auf eine Reise in das Land der Träume begleiten und für süße Träume sorgen.
         Jede der zehn Geschichten ist so konzipiert, dass sie Kinder in eine Welt voller Fantasie und Wunder entführt und gleichzeitig beruhigende und entspannende Elemente beinhaltet, die den Übergang in den Schlaf erleichtern. Dabei sind die Geschichten in einer leicht verständlichen und kindgerechten Sprache verfasst, sodass sie für alle Altersgruppen geeignet sind.
-        In "Schlummerland-Zaubereien" begegnen Ihre Kinder liebenswerten Charakteren wie dem Mondlicht-Zauberer oder der mutigen Eule. Jede Geschichte hat eine moralische Botschaft und fördert Werte wie Freundschaft, Mut und Zusammenhalt, die für die persönliche Entwicklung Ihrer Kinder wichtig sind. Das Buch regt die Vorstellungskraft und Kreativität der jungen Leser an und unterstützt sie dabei, ihre Ängste und Sorgen vor dem Schlafengehen abzubauen.
+        In "Schlummerland-Zaubereien" begegnen Ihre Kinder liebenswerten Charaktesren wie dem Mondlicht-Zauberer oder der mutigen Eule. Jede Geschichte hat eine moralische Botschaft und fördert Werte wie Freundschaft, Mut und Zusammenhalt, die für die persönliche Entwicklung Ihrer Kinder wichtig sind. Das Buch regt die Vorstellungskraft und Kreativität der jungen Leser an und unterstützt sie dabei, ihre Ängste und Sorgen vor dem Schlafengehen abzubauen.
         Die wunderschönen Illustrationen, die jede Geschichte begleiten, verleihen den Erzählungen zusätzlichen Charme. "Schlummerland-Zaubereien: Fantastische Geschichten zum Einschlafen" ist das perfekte Geschenk für alle jungen Träumer und bietet die ideale Möglichkeit, die abendliche Routine zu bereichern und gemeinsame, wertvolle Momente mit Ihren Kindern zu genießen.
         Lassen Sie sich und Ihre Kinder von den "Schlummerland-Zaubereien" verzaubern und entdecken Sie gemeinsam die Welt der Fantasie und Träume. Schaffen Sie wundervolle Erinnerungen, indem Sie diese Geschichten gemeinsam lesen, und fördern Sie einen gesunden Schlaf für Ihre Kinder.`,
-      imageUrl: "https://m.media-amazon.com/images/I/71JFj5IQiKL.jpg",
+      imageUrl: "/books/schlummerland-zaubereien-fantastische-geschichten-zum-einschlafen.jpeg",
       imageAlt: "Cover - Schlummerland-Zaubereien",
       price: "€13,90",
       href: "https://amzn.eu/d/4oznkoi",
@@ -957,7 +957,7 @@ export const useContentStore = defineStore("content", () => {
       Dieses Buch fördert nicht nur die künstlerischen Fähigkeiten und die Feinmotorik Ihres Kindes, sondern hilft ihm auch, ein tieferes Verständnis und eine Wertschätzung für die Tiere unserer Welt zu entwickeln.
       Von der ersten bis zur letzten Seite ist 'Reise durch das Tierreich: 100 Mandalas für junge Künstler/-innen' ein Abenteuer, das Ihre Kinder immer wieder erleben wollen. Es ist mehr als nur ein Malbuch – es ist ein Tor zur Natur, zur Kreativität und zur Entdeckungsreise. Sichern Sie sich Ihr Exemplar noch heute und starten Sie die kreative Reise!`,
       imageUrl:
-        "https://m.media-amazon.com/images/P/B0C5PCX4HG.01._SCLZZZZZZZ_SX500_.jpg",
+        "books/reise-durch-das-tierreich-100-mandalas-fuer-junge-kuenstler-innen.jpg",
       imageAlt: "Cover - Reise durch das Tierreich",
       price: "€12,97",
       href: "https://amzn.eu/d/hvV43aB",
@@ -968,7 +968,7 @@ export const useContentStore = defineStore("content", () => {
       description: `Tauche ein in eine Welt voller Abenteuer, Lektionen und Fantasie mit diesen zauberhaften Kurzgeschichten, die speziell auf Kinder im Alter von 6 Jahren abgestimmt sind. Von Lena, die durch ihren unsichtbaren Freund Tom lernt, Empathie zu zeigen, bis hin zu Max, der sein Selbstvertrauen entdeckt und zum kleinen Helden seiner Stadt wird. Verfolge die Geschwister Lisa und Tim, die die Schönheit der Vielfalt in ihrer bunten Stadt entdecken und Ben, der eine wichtige Lektion über Verantwortung lernt, als er seine Schultasche verliert.
       Jede Geschichte ist so gestaltet, dass sie sowohl unterhaltsam als auch lehrreich ist, und bietet eine Vielfalt von Themen, die Kindern dabei helfen, wichtige Werte und Fähigkeiten zu verstehen und zu entwickeln. Von der Bedeutung von Zusammenarbeit und guten Manieren über die Kunst des Teilens bis hin zur Wertschätzung von Unterschieden und der Kraft der Fantasie - diese Sammlung von Kurzgeschichten enthält eine Fülle von Lektionen, die in aufregenden und fesselnden Geschichten verpackt sind.
       Ob es nun das Abenteuer von Lilly ist, die die Kraft der Dankbarkeit entdeckt, oder die Reise von Leon und Lea, die lernen, Unterschiede zu akzeptieren und zu schätzen - jedes Kind wird sicherlich eine Geschichte finden, die es liebt und die es dazu inspiriert, zu wachsen und zu lernen. Mit farbenfrohen Illustrationen und fesselnden Erzählungen ist dieses Buch das perfekte Geschenk für jeden jungen Leser und eine Bereicherung für jede Kinderbibliothek.`,
-      imageUrl: "https://m.media-amazon.com/images/I/61Kohb3tnIL.jpg",
+      imageUrl: "books/kleine-schritte-grosse-spuren-zwanzig-geschichten-den-kindern-den-weg-weisen.jpeg",
       imageAlt: "Cover - Kleine Schritte, große Spuren",
       price: "€21,99",
       href: "https://amzn.eu/d/5rIQDxs",
@@ -980,7 +980,7 @@ export const useContentStore = defineStore("content", () => {
       id: "die-abenteuer-des-regenbogendrachens",
       title: "Die Abenteuer des Regenbogendrachens",
       href: "/stories/die-abenteuer-des-regenbogendrachens",
-      imageUrl: "/images/stories/die-abenteuer-des-regenbogendrachens.png",
+      imageUrl: "/stories/die-abenteuer-des-regenbogendrachens.png",
       rating: 4,
       startAge: 2,
       endAge: 6,
@@ -1064,7 +1064,7 @@ export const useContentStore = defineStore("content", () => {
       id: "luna-und-die-sternenstaubfee",
       title: "Luna und die Sternenstaubfee",
       href: "/stories/luna-und-die-sternenstaubfee",
-      imageUrl: "/images/stories/luna-und-die-sternenstaubfee.png",
+      imageUrl: "/stories/luna-und-die-sternenstaubfee.png",
       description: "",
       rating: 4,
       startAge: 2,
@@ -1162,7 +1162,7 @@ export const useContentStore = defineStore("content", () => {
       id: "die-verzauberte-feder",
       title: "Die verzauberte Feder",
       href: "/stories/die-verzauberte-feder",
-      imageUrl: "/images/stories/die-verzauberte-feder.png",
+      imageUrl: "/stories/die-verzauberte-feder.png",
       rating: 4,
       startAge: 2,
       endAge: 6,
@@ -1261,7 +1261,7 @@ export const useContentStore = defineStore("content", () => {
       id: "pfötchens-erster-schultag",
       title: "Pfötchens erster Schultag",
       href: "/stories/pfötchens-erster-schultag",
-      imageUrl: "/images/stories/pfötchens-erster-schultag.png",
+      imageUrl: "/stories/pfötchens-erster-schultag.png",
       description: "",
       rating: 4,
       startAge: 2,
@@ -1350,7 +1350,7 @@ export const useContentStore = defineStore("content", () => {
       id: "bommelbaers-reise-zum-mond",
       title: "Bommelbärs Reise zum Mond",
       href: "/stories/bommelbaers-reise-zum-mond",
-      imageUrl: "/images/stories/bommelbaers-reise-zum-mond.png",
+      imageUrl: "/stories/bommelbaers-reise-zum-mond.png",
       rating: 4,
       startAge: 2,
       endAge: 6,
@@ -1425,7 +1425,7 @@ export const useContentStore = defineStore("content", () => {
       id: "der-mutige-kleine-kaefer",
       title: "Der mutige kleine Käfer",
       href: "/stories/der-mutige-kleine-kaefer",
-      imageUrl: "/images/stories/der-mutige-kleine-kaefer.png",
+      imageUrl: "/stories/der-mutige-kleine-kaefer.png",
       description: "",
       rating: 4,
       startAge: 2,
@@ -1498,7 +1498,7 @@ export const useContentStore = defineStore("content", () => {
       id: "die-vier-jahreszeiten-der-waldtiere",
       title: "Die vier Jahreszeiten der Waldtiere",
       href: "/stories/die-vier-jahreszeiten-der-waldtiere",
-      imageUrl: "/images/stories/die-vier-jahreszeiten-der-waldtiere.png",
+      imageUrl: "/stories/die-vier-jahreszeiten-der-waldtiere.png",
       description: "",
       rating: 4,
       startAge: 2,
@@ -1582,7 +1582,7 @@ export const useContentStore = defineStore("content", () => {
     id: "sonnenblumen-sams-gartenabenteuer",
     title: "Sonnenblumen-Sam's Gartenabenteuer",
     href: "/stories/sonnenblumen-sams-gartenabenteuer",
-    imageUrl: "/images/stories/sonnenblumen-sams-gartenabenteuer.png",
+    imageUrl: "/stories/sonnenblumen-sams-gartenabenteuer.png",
     description: "",
     rating: 4,
     startAge: 2,
@@ -1655,7 +1655,7 @@ export const useContentStore = defineStore("content", () => {
     id: "das-verzauberte-floetenmaennchen",
     title: "Das verzauberte Flötenmännchen",
     href: "/stories/das-verzauberte-floetenmaennchen",
-    imageUrl: "/images/stories/das-verzauberte-floetenmaennchen.png",
+    imageUrl: "/stories/das-verzauberte-floetenmaennchen.png",
     rating: 4,
     startAge: 2,
     endAge: 6,

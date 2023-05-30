@@ -36,7 +36,7 @@ useServerSeoMeta({
   <main class="flex-1">
     <HeroSection></HeroSection>
     <FeatureSection></FeatureSection>
-    <Manual3></Manual3>
+    <Manual></Manual>
     <Testimonials></Testimonials>
     <Newsletter></Newsletter>
     <Pricing></Pricing>
