@@ -1,3 +1,19 @@
+
+<script setup>
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
+import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/vue/24/outline";
+import { useContentStore } from "~/stores/useContentStore";
+
+const contentStore = useContentStore();
+const faqs = contentStore.faqs;
+
+function openedFaq(faq) {
+  useTrackEvent('faq_opened', {
+    id: faq.id,
+  })
+}
+</script>
+
 <template>
   <div class="bg-white">
     <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
@@ -19,7 +35,7 @@
               </DisclosureButton>
             </dt>
             <DisclosurePanel as="dd" class="mt-2 pr-12">
-              <p class="text-base leading-7 text-gray-600">{{ faq.answer }}</p>
+              <p class="text-base leading-7 text-gray-600" v-html="faq.answer"></p>
             </DisclosurePanel>
           </Disclosure>
         </dl>
@@ -33,18 +49,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
-import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/vue/24/outline";
-import { useContentStore } from "~/stores/useContentStore";
-
-const contentStore = useContentStore();
-const faqs = contentStore.faqs;
-
-function openedFaq(faq) {
-  useTrackEvent('faq_opened', {
-    id: faq.id,
-  })
-}
-</script>

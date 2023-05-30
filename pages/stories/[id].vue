@@ -6,7 +6,6 @@ import { useContentStore } from "~/stores/useContentStore";
 const route = useRoute();
 const id = route.params.id;
 
-
 const accountStore = useAccountStore();
 
 const contentStore = useContentStore();
@@ -14,12 +13,6 @@ const freeStories = computed(() => contentStore.freeStories);
 const publicStories = computed(() => contentStore.publicStories);
 
 const { loggedIn } = storeToRefs(accountStore);
-
-watch(loggedIn,()=>{
-  console.log("loggedIn", loggedIn.value)
-}, {
-  immediate: true
-})
 
 const stories = computed(() => {
   if (loggedIn.value) {
@@ -29,31 +22,27 @@ const stories = computed(() => {
   return publicStories.value;
 });
 
-watch(stories,(newVal,oldVal)=>{
-  console.log("stories newVal", newVal.value.length)
-  console.log("stories oldVal", oldVal.value.length)
-}, {
-  immediate: true
-})
+const story = ref(stories.value.find((s) => s.id === id))
+if (story.value) {
+  useServerSeoMeta({
+    title: `bestes-kinderbuch - ${story.value.title}`,
+    description: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
+    ogTitle: `bestes-kinderbuch - ${story.value.title}`,
+    ogDescription: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
+    ogImage: '/heroteaser.png',
+    twitterCard: 'summary',
+  })
+}
 
-const story = computed(() => stories.value.find((s) => s.id === id))
-
-
-useServerSeoMeta({
-  title: `bestes-kinderbuch - ${story.value.title}`,
-  description: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
-  ogTitle: `bestes-kinderbuch - ${story.value.title}`,
-  ogDescription: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
-  ogImage: '/heroteaser.png',
-  twitterCard: 'summary',
-})
-
-
+onMounted(() => {
+  story.value = stories.value.find((s) => s.id === id)
+});
 </script>
+
 <template>
   <Navbar></Navbar>
   <main class="flex-1">
-    <Storyarticle :data="story"></Storyarticle>
+    <Storyarticle v-if="story" :data="story"></Storyarticle>
   </main>
   <Footer></Footer>
 </template>

@@ -516,7 +516,7 @@ export const useContentStore = defineStore("content", () => {
       id: "faq-15",
       question: "Kann ich Ideen für neue Geschichten vorschlagen?",
       answer:
-        "Ja, wir freuen uns sehr über Vorschläge für neue Geschichten! Unser Ziel ist es, eine breite Palette von Inhalten zu bieten, die die Vorstellungskraft unserer kleinen Leser anregen, und wir schätzen deine Beiträge, um dieses Ziel zu erreichen. Wenn du eine Geschichte oder eine Idee hast, die du gerne mit uns teilen möchtest, kannst du uns diese per E-Mail an besteskinderbuch@gmail.com senden. Unser engagiertes Team wird jede Einsendung sorgfältig prüfen. Wenn deine Geschichte ausgewählt und veröffentlicht wird, bieten wir auch eine Art Anerkennung dafür an. Wir freuen uns darauf, von dir zu hören und sind gespannt auf deine kreativen Ideen!",
+        "Ja, wir freuen uns sehr über Vorschläge für neue Geschichten! Unser Ziel ist es, eine breite Palette von Inhalten zu bieten, die die Vorstellungskraft unserer kleinen Leser anregen, und wir schätzen deine Beiträge, um dieses Ziel zu erreichen. Wenn du eine Geschichte oder eine Idee hast, die du gerne mit uns teilen möchtest, kannst du uns diese per E-Mail an <a href='mailto:besteskinderbuch@gmail.com?subject=Idee'>besteskinderbuch@gmail.com</a> senden. Unser engagiertes Team wird jede Einsendung sorgfältig prüfen. Wenn deine Geschichte ausgewählt und veröffentlicht wird, bieten wir auch eine Art Anerkennung dafür an. Wir freuen uns darauf, von dir zu hören und sind gespannt auf deine kreativen Ideen!",
     },
     {
       id: "faq-17",
@@ -529,7 +529,7 @@ export const useContentStore = defineStore("content", () => {
       id: "faq-18",
       question: "Was ist, wenn ich technische Probleme auf der Plattform habe?",
       answer:
-        "Solltest du auf technische Schwierigkeiten auf unserer Plattform stoßen, zögere bitte nicht, uns zu kontaktieren. Unser engagiertes Support-Team ist bereit und gewillt, dir bei jeglichen technischen Herausforderungen zur Seite zu stehen. Schicke uns einfach eine E-Mail an besteskinderbuch@gmail.com mit einer Beschreibung deines Problems. Um dir noch besser helfen zu können, wäre es hilfreich, wenn du auch Screenshots oder andere relevante Informationen mitschicken könntest. Wir verstehen, dass technische Probleme frustrierend sein können und wir setzen alles daran, deine Probleme so schnell und effizient wie möglich zu lösen. Deine Zufriedenheit und ein reibungsloses Leseerlebnis haben für uns oberste Priorität.",
+        "Solltest du auf technische Schwierigkeiten auf unserer Plattform stoßen, zögere bitte nicht, uns zu kontaktieren. Unser engagiertes Support-Team ist bereit und gewillt, dir bei jeglichen technischen Herausforderungen zur Seite zu stehen. Schicke uns einfach eine E-Mail an <a href='mailto:besteskinderbuch@gmail.com?subject=technisches Problem'>besteskinderbuch@gmail.com</a> mit einer Beschreibung deines Problems. Um dir noch besser helfen zu können, wäre es hilfreich, wenn du auch Screenshots oder andere relevante Informationen mitschicken könntest. Wir verstehen, dass technische Probleme frustrierend sein können und wir setzen alles daran, deine Probleme so schnell und effizient wie möglich zu lösen. Deine Zufriedenheit und ein reibungsloses Leseerlebnis haben für uns oberste Priorität.",
     },
   ];
 

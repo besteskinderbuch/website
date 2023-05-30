@@ -15,7 +15,18 @@ import { useAccountStore } from "~/stores/useAccountStore";
 
 const accountStore = useAccountStore();
 
-const { loggedIn } = storeToRefs(accountStore);
+// const { loggedIn } = storeToRefs(accountStore);
+
+const loggedIn = ref(false);
+onMounted(() => {
+  const { loggedIn: bla } = storeToRefs(accountStore);
+
+  watch(bla, (newVal) => {
+    loggedIn.value = newVal
+  }, { immediate: true })
+});
+
+
 
 const contentStore = useContentStore();
 const navigation = contentStore.navigation;
@@ -64,8 +75,8 @@ const userNavigation = contentStore.userNavigation;
           </div>
           <div class="md:ml-4 md:flex md:flex-shrink-0 md:items-center space-x-5">
             <template v-if="!loggedIn">
-                <BasicLink class="hidden md:block" href="/login" name="register" size="md">Registrieren</BasicLink>
-                <BasicLink class="hidden md:block" type="button" href="/login" name="login">Anmelden</BasicLink>
+              <BasicLink class="hidden md:block" href="/login" name="register" size="md">Registrieren</BasicLink>
+              <BasicLink class="hidden md:block" type="button" href="/login" name="login">Anmelden</BasicLink>
             </template>
             <template v-else>
               <!--   <button
@@ -118,7 +129,7 @@ const userNavigation = contentStore.userNavigation;
         ]" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
       </div>
       <div v-if="!loggedIn" class="border-t border-gray-700 pb-3 pt-4">
-        <div  class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
           <div>
             <BasicLink type="button" href="/login" name="login" class="w-full">Einloggen</BasicLink>
           </div>
