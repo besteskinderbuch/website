@@ -32,7 +32,6 @@ const stories = computed(() => {
           unglaubliche Vielfalt unserer umfangreichen Geschichtensammlung entdecken möchtest, zögere nicht, eines unserer
           attraktiven Abonnements abzuschließen. Klick <NuxtLink to="/#pricing" class="text-blue-300">hier</NuxtLink> und
           tauche ein in eine Welt voller faszinierender Erzählungen!
-
         </p>
       </div>
       <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">

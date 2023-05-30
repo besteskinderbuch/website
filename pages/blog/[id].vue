@@ -10,6 +10,9 @@ const posts = contentstore.posts;
 const post = posts.find((post) => post.id === id);
 useHead({
   title:`bestes-kinderbuch - ${post.title}`,
+  meta: [
+    { name: 'description', content: 'Entdecke auf bestes-kinderbuch.de unseren Blog voller faszinierender Kindergeschichten. Tauche jede Woche in neue Themen ein und finde Inspiration. Dein Tor zur Welt der Fantasie!' }
+  ],
 })
 </script>
 

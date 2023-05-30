@@ -27,6 +27,9 @@ const story = computed(()=>stories.value.find((s) => s.id === id))
 
 useHead({
   title:`bestes-kinderbuch - ${story.value.title}`,
+  meta: [
+    { name: 'description', content: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.' }
+  ],
 })
 
 

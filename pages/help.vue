@@ -1,6 +1,9 @@
 <script setup>
 useHead({
   title:"bestes-kinderbuch - Hilfe",
+  meta: [
+    { name: 'description', content: 'Entdecke unsere Hilfe-Seite auf Bestes-Kinderbuch.de. Hier findest du Antworten auf deine Fragen zu unserem Kinderbuch-Abo. Begleite uns auf dieser magischen Lese-Reise!' }
+  ],
 })
 </script>
 <template>
