@@ -14,7 +14,7 @@ function track() {
 <template>
   <a :href="href" class="h-full flex flex-col justify-between" target="_blank" @click="track">
     <div class="mx-auto">
-      <img :src="imageUrl" :alt="imageAlt" class="w-auto h-72" />
+      <img :src="imageUrl" :alt="imageAlt" class="w-auto h-72" loading="lazy"/>
     </div>
     <div class="flex justify-center">
       <div class="hover:bg-white rounded-sm mt-5">

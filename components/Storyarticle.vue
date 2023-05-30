@@ -91,7 +91,7 @@ onMounted(() => {
               </p>
             </div>
 
-            <img :src="story.imageUrl" />
+            <img :src="story.imageUrl" loading="lazy"/>
 
 
             <div ref="audioContainer">

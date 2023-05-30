@@ -50,7 +50,7 @@ const related = others.slice(0, 5);
                 {{ post.date }}
               </p>
             </div>
-            <img :src="post.imageUrl" />
+            <img :src="post.imageUrl"  loading="lazy"/>
 
             <div v-html="post.content" class="prose"></div>
 
@@ -309,7 +309,7 @@ const related = others.slice(0, 5);
               </div>
 
               <div class="flex-shrink-0 relative rounded-lg overflow-hidden w-20 h-20">
-                <img  :src="post.imageUrl" :alt="post.imageAlt" class="w-full h-full absolute top-0 left-0 object-cover rounded-lg" />
+                <img  :src="post.imageUrl" :alt="post.imageAlt" loading="lazy" class="w-full h-full absolute top-0 left-0 object-cover rounded-lg" />
               </div>
             </a>
             <!-- End Media -->

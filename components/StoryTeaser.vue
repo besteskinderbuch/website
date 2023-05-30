@@ -1,42 +1,34 @@
 <script setup>
 defineProps({
-    href: String,
-    imageUrl: String,
-    date: String,
-    datetime: String,
-    category: Object,
-    title: String,
-    description: String,
+  href: String,
+  imageUrl: String,
+  imageAlt: String,
+  date: String,
+  datetime: String,
+  category: Object,
+  title: String,
+  description: String,
 });
 </script>
 <template>
   <article class="flex flex-col items-start justify-between">
     <a :href="href">
       <div class="relative w-full">
-        <img
-          :src="imageUrl"
-          alt=""
-          class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-        />
-        <div
-          class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
-        />
+        <img :src="imageUrl" :alt="imageAlt" loading="lazy"
+          class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]" />
+        <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
       </div>
       <div class="max-w-xl">
         <div class="mt-8 flex items-center gap-x-4 text-xs">
           <time :datetime="datetime" class="text-gray-500">{{
             date
           }}</time>
-          <a
-            :href="category.href"
-            class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-            >{{ category.title }}</a
-          >
+          <a :href="category.href"
+            class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{{
+              category.title }}</a>
         </div>
         <div class="group relative">
-          <h3
-            class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
-          >
+          <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
             <!-- <a :href="post.href"> -->
             <span class="absolute inset-0" />
             {{ title }}

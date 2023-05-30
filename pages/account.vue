@@ -1,7 +1,11 @@
 <script setup>
+import { useRootStore } from "~/stores/useRootStore";
+
 useHead({
   title:"bestes-kinderbuch - Mein Bereich",
 })
+
+const { devMode } = useRootStore()
 </script>
 
 <template>
@@ -15,7 +19,7 @@ useHead({
         </div> -->
 
         <div class="mt-10">
-          <HankoProfile></HankoProfile>
+          <HankoProfile v-if="!devMode"></HankoProfile>
         </div>
       </div>
     </div>
@@ -23,7 +27,8 @@ useHead({
       <img
         class="absolute inset-0 h-full w-full object-cover"
         src="/login.png"
-        alt=""
+        alt="Märchenwald"
+        loading="lazy"
       />
     </div>
   </div>

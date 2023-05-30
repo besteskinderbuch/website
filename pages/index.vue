@@ -1,21 +1,29 @@
 <script setup>
 import { useAccountStore } from "~/stores/useAccountStore";
+import { useRootStore } from "~/stores/useRootStore";
+
 const { getCurrentUser } = useAuth();
 
-let user = null;
-try {
-  user = await getCurrentUser();
-} catch (e) {
-    console.debug("not logged in");
-}
 
-if (user) {
-  const accountStore = useAccountStore();
-  accountStore.user = user;
+const rootStore = useRootStore()
+const devMode = computed(() => rootStore.devMode)
+
+if (!devMode.value) {
+  let user = null;
+  try {
+    user = await getCurrentUser();
+  } catch (e) {
+    console.debug("not logged in");
+  }
+
+  if (user) {
+    const accountStore = useAccountStore();
+    accountStore.user = user;
+  }
 }
 
 useHead({
-  title:"bestes-kinderbuch",
+  title: "bestes-kinderbuch",
 })
 </script>
 <template>

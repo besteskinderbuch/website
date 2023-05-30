@@ -2,6 +2,7 @@
 defineProps({
   href: String,
   imageUrl: String,
+  imageAlt: String,
   date: String,
   datetime: String,
   category: Object,
@@ -13,8 +14,8 @@ defineProps({
   <article class="flex flex-col items-start justify-between">
     <a :href="href">
       <div class="relative w-full">
-        <img :src="imageUrl" alt=""
-          class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]" />
+        <img :src="imageUrl" :alt="imageAlt"
+          class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]" loading="lazy"/>
         <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
       </div>
       <div class="max-w-xl">

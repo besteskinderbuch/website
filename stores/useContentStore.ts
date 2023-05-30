@@ -800,10 +800,10 @@ export const useContentStore = defineStore("content", () => {
       priceSuffix: true,
       free: false,
       price: {
-        monthly: { current: "5,99 €", discounted: "4,99 €" },
+        monthly: { current: "6,99 €", discounted: "4,99 €" },
         annually: { current: "59,9 €", discounted: "49,9 €" },
       },
-      description: "Bist du ein leidenschaftlicher Leser? Dann heißen wir dich als unseren treuen Bücherwurm willkommen!",
+      description: "Bist du oder dein Kind ein leidenschaftlicher Leser? Dann heißen wir dich als unseren treuen Bücherwurm willkommen!",
       features: [
         "riesige Auswahl an Geschichten",
         "20 Geschichten/Monat lesbar",
@@ -958,6 +958,16 @@ export const useContentStore = defineStore("content", () => {
       price: "€12,97",
       href: "https://amzn.eu/d/hvV43aB",
     },
+/*     {
+      id: "kleine-schritte-grosse-spuren-zwanzig-geschichten-den-kindern-den-weg-weisen",
+      name: "Kleine Schritte, große Spuren: Zwanzig Geschichten den Kindern den Weg weisen",
+      description: ``,
+      imageUrl:
+        "",
+      imageAlt: "Cover - Kleine Schritte, große Spuren",
+      price: "€12,99",
+      href: "",
+    }, */
   ];
 
   const publicStories = [

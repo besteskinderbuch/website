@@ -1,5 +1,3 @@
-import { useAccountStore } from "~/stores/useAccountStore";
-
 export default defineNuxtRouteMiddleware(async (to, from) => {
   if (process.server) {
     return;

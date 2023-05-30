@@ -86,7 +86,8 @@
             <img
               class="h-10 w-10 flex-none rounded-full bg-gray-50"
               :src="featuredTestimonial.author.imageUrl"
-              alt=""
+              loading="lazy"
+              :alt="featuredTestimonial.author.imageAlt"
             />
             <div class="flex-auto">
               <div class="font-semibold">
@@ -132,7 +133,8 @@
                 <img
                   class="h-10 w-10 rounded-full bg-gray-50"
                   :src="testimonial.author.imageUrl"
-                  alt=""
+                  :alt="testimonial.author.imageAlt"
+                  loading="lazy"
                 />
                 <div>
                   <div class="font-semibold">{{ testimonial.author.name }}</div>

@@ -24,7 +24,8 @@ useHead({
       <img
         class="absolute inset-0 h-full w-full object-cover"
         src="/login.png"
-        alt=""
+        alt="Märchenwald"
+        loading="lazy"
       />
     </div>
   </div>

@@ -24,7 +24,7 @@
             class="flex flex-col"
           >
             <dt
-              class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-800"
+              class="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-800"
             >
                <Icon
                 :name="feature.icon"

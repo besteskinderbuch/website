@@ -1,5 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
+import { useRootStore } from "~/stores/useRootStore";
+
 const { endpoint, init } = useAuth();
 
 onMounted(() => {
@@ -11,10 +13,14 @@ const redirectAfterLogin = () => {
   useTrackEvent('login')
   router.push({ path: "/" });
 };
+
+const rootStore = useRootStore()
+const devMode = computed(() => rootStore.devMode)
 </script>
 
 <template>
   <ClientOnly>
-    <hanko-auth @hankoAuthSuccess="redirectAfterLogin" :api="endpoint" />
+    <hanko-auth v-if="!devMode" @hankoAuthSuccess="redirectAfterLogin" :api="endpoint" />
+    <FakeLogin v-else></FakeLogin>
   </ClientOnly>
 </template>
