@@ -65,7 +65,7 @@ onMounted(() => {
       <div>
         <div class="py-8 lg:pr-8">
           <div class="space-y-5 lg:space-y-8">
-            <a class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline dark:text-blue-400"
+            <a class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline"
               href="/stories">
               <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 viewBox="0 0 16 16">
@@ -75,7 +75,7 @@ onMounted(() => {
               Zurück zu allen Stories
             </a>
 
-            <h1 class="text-3xl font-bold lg:text-5xl dark:text-white">
+            <h1 class="text-3xl font-bold lg:text-5xl">
               {{ story.title }}
             </h1>
 
@@ -86,7 +86,7 @@ onMounted(() => {
               >
                 Company News
               </a> -->
-              <p class="text-xs sm:text-sm text-gray-800 dark:text-gray-200">
+              <p class="text-xs sm:text-sm text-gray-800">
                 {{ story.date }}
               </p>
             </div>
@@ -104,7 +104,7 @@ onMounted(() => {
               <!-- Badges/Tags -->
               <div>
                 <div v-for="tag in story.tags"
-                  class="m-0.5 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200">
+                  class="m-0.5 inline-flex items-center gap-1.5 py-2 px-3 rounded-full text-sm bg-gray-100 text-gray-800">
                   {{ tag }}
                 </div>
               </div>

@@ -25,7 +25,7 @@ const related = others.slice(0, 5);
       <div class="lg:col-span-2">
         <div class="py-8 lg:pr-8">
           <div class="space-y-5 lg:space-y-8">
-            <a class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline dark:text-blue-400"
+            <a class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline"
               href="/blog">
               <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                 viewBox="0 0 16 16">
