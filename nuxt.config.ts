@@ -55,7 +55,17 @@ export default defineNuxtConfig({
     "nuxt-icon",
     '@vueuse/nuxt',
     '@nuxt/image-edge',
+    '@nuxtjs/robots',
   ],
+
+  robots:{
+    rules: [
+      {
+        UserAgent: '*',
+        Allow: '/'
+      },
+    ]
+  },
 
   i18n: {
     vueI18n: "./i18n.config.ts",

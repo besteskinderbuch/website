@@ -6,6 +6,7 @@ specifiers:
   '@nuxt/devtools': ^0.5.5
   '@nuxt/image-edge': 1.0.0-28089462.3520a62
   '@nuxtjs/i18n': 8.0.0-beta.12
+  '@nuxtjs/robots': ^3.0.0
   '@pinia/nuxt': ^0.4.11
   '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/typography': ^0.5.9
@@ -29,6 +30,7 @@ specifiers:
 dependencies:
   '@headlessui/vue': 1.7.13_vue@3.3.4
   '@heroicons/vue': 2.0.18_vue@3.3.4
+  '@nuxtjs/robots': 3.0.0
   '@pinia/nuxt': 0.4.11_vue@3.3.4
   '@teamhanko/hanko-elements': 0.4.0-alpha
   '@vueuse/core': 10.1.2_vue@3.3.4
@@ -1071,7 +1073,6 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
-    dev: true
 
   /@nuxt/schema/3.5.1:
     resolution: {integrity: sha512-+TcJRT/Xm8IxpOwUWu9/7yoepPinITuQ0mkn/CThMuTt7z7N2LseqXOwSvONkI3bX+36VHFD2FFB8b3ABmwW2A==}
@@ -1106,7 +1107,6 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
-    dev: true
 
   /@nuxt/telemetry/2.2.0:
     resolution: {integrity: sha512-Z2UmPkBy5WjxvHKuUcl1X6vKWnIyWSP+9UGde1F+MzzZxYgAQybFud1uL2B3KCowxZdoqT1hd2WklV7EtyCwrQ==}
@@ -1242,6 +1242,16 @@ packages:
       - vue-i18n-bridge
       - vue-router
     dev: true
+
+  /@nuxtjs/robots/3.0.0:
+    resolution: {integrity: sha512-qsHGW1KXBvV5Kq7u3huPnFCUTbHS4Fk8Za2mNPgmUXcwLgp3exvhPtdZfIdjrCF/aZk3A8OZONNmGghs6CecBA==}
+    dependencies:
+      '@nuxt/kit': 3.5.2
+      h3: 1.6.6
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: false
 
   /@pinia/nuxt/0.4.11_vue@3.3.4:
     resolution: {integrity: sha512-bhuNFngJpmBCdAqWguezNJ/oJFR7wvKieqiZrmmdmPR07XjsidAw8RLXHMZE9kUm32M9E6T057OBbG/22jERTg==}
