@@ -5,6 +5,7 @@ useServerSeoMeta({
   ogTitle: "bestes-kinderbuch - Geschichten",
   ogDescription: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
   ogImage: '/heroteaser.png',
+  twitterCard: 'summary',
 })
 </script>
 <template>

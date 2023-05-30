@@ -5,6 +5,7 @@ useServerSeoMeta({
   ogTitle: "bestes-kinderbuch - Unsere Bücher",
   ogDescription: 'Entdecken Sie handverlesene Kinder-Kurzgeschichten bei Bestes-Kinderbuch.de. Ideal für Gute-Nacht-Geschichten, Lesespaß fördern oder als perfektes Geschenk!',
   ogImage: '/heroteaser.png',
+  twitterCard: 'summary',
 })
 </script>
 

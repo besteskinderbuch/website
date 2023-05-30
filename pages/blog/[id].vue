@@ -14,6 +14,7 @@ useServerSeoMeta({
   ogTitle: `bestes-kinderbuch - ${post.title}`,
   ogDescription: 'Entdecke auf bestes-kinderbuch.de unseren Blog voller faszinierender Kindergeschichten. Tauche jede Woche in neue Themen ein und finde Inspiration. Dein Tor zur Welt der Fantasie!',
   ogImage: '/heroteaser.png',
+  twitterCard: 'summary',
 })
 </script>
 

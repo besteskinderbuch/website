@@ -6,6 +6,7 @@ useServerSeoMeta({
   ogTitle: "bestes-kinderbuch - Impressum",
   ogDescription: 'Erwecken Sie die Fantasie Ihres Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starten Sie heute das Abo!',
   ogImage: '/heroteaser.png',
+  twitterCard: 'summary',
 })
 </script>
 <template>

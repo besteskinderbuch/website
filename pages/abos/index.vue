@@ -5,6 +5,7 @@ useServerSeoMeta({
   ogTitle: "bestes-kinderbuch - Abos",
   ogDescription: 'Bestes-Kinderbuch.de: Wähle aus vielfältigen Abo-Optionen für maßgeschneiderte Kinder-Kurzgeschichten. Mit 30 Tage Geld-zurück-Garantie. Entdecke jetzt!',
   ogImage: '/heroteaser.png',
+  twitterCard: 'summary',
 })
 </script>
 <template>

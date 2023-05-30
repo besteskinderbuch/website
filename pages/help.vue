@@ -5,6 +5,7 @@ useServerSeoMeta({
   ogTitle: "bestes-kinderbuch - Hilfe",
   ogDescription: 'Entdecke unsere Hilfe-Seite auf Bestes-Kinderbuch.de. Hier findest du Antworten auf deine Fragen zu unserem Kinderbuch-Abo. Begleite uns auf dieser magischen Lese-Reise!',
   ogImage: '/heroteaser.png',
+  twitterCard: 'summary',
 })
 </script>
 <template>
