@@ -3,6 +3,9 @@ import { useRootStore } from "~/stores/useRootStore";
 
 useHead({
   title:"bestes-kinderbuch - Mein Bereich",
+  meta: [
+    { name: 'description', content: 'Verwalten Sie Ihr Abo bei Bestes-Kinderbuch.de. Entdecken Sie neue Geschichten, bearbeiten Sie Präferenzen und aktualisieren Sie Ihre Kontoinformationen.' }
+  ],
 })
 
 const { devMode } = useRootStore()

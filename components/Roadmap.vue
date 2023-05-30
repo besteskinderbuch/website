@@ -50,8 +50,6 @@
 </template>
 
 <script setup>
-import { CheckIcon } from '@heroicons/vue/20/solid'
-
 const steps = [
     { name: 'Geschichten für mehrsprachige Kinder und Nicht-Muttersprachler', description: 'Wir erkennen die wachsende Notwendigkeit, Kindern aus unterschiedlichen sprachlichen Hintergründen gerecht zu werden. Daher arbeiten wir daran, unser Angebot auf Geschichten für mehrsprachige Kinder und Nicht-Muttersprachler auszuweiten.', status: 'current' },
     {
