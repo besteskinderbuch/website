@@ -17,7 +17,6 @@ const stories = computed(() => {
 
   return publicStories.value;
 });
-
 </script>
 <template>
   <div class="bg-white py-24 sm:py-32">
@@ -26,11 +25,15 @@ const stories = computed(() => {
         <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Kurzgeschichten
         </h1>
-        <p class="mt-6 text-lg leading-8 text-gray-800 text-justify">
+        <p v-if="!loggedIn" class="mt-6 text-lg leading-8 text-gray-800 text-justify">
           Schnapp dir <NuxtLink to="/login" class="text-blue-300">hier</NuxtLink> deinen persönlichen Account und sicher
           dir gleich 5 zusätzliche Geschichten kostenlos, als Bonus zu den zwei, die du bereits hast. Wenn du die
           unglaubliche Vielfalt unserer umfangreichen Geschichtensammlung entdecken möchtest, zögere nicht, eines unserer
           attraktiven Abonnements abzuschließen. Klick <NuxtLink to="/#pricing" class="text-blue-300">hier</NuxtLink> und
+          tauche ein in eine Welt voller faszinierender Erzählungen!
+        </p>
+        <p v-else>
+          Klick <NuxtLink to="/#pricing" class="text-blue-300">hier</NuxtLink> und
           tauche ein in eine Welt voller faszinierender Erzählungen!
         </p>
       </div>

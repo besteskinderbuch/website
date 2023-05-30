@@ -331,8 +331,10 @@ export const useContentStore = defineStore("content", () => {
       title:
         "Kinderbücher und ihre Rolle in der emotionalen Entwicklung des Kindes",
       href: "/blog/kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes",
-      imageUrl:
-        "/blogs/kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes.png",
+      image: {
+        src: "/blogs/kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes.png",
+        alt: "Cover - Kinderbücher und ihre Rolle in der emotionalen Entwicklung des Kindes",
+      },
       description: "",
       date: "19. Mai 2023",
       datetime: "2023-05-19",
@@ -371,8 +373,10 @@ export const useContentStore = defineStore("content", () => {
       title:
         "Von Drachen, Prinzen und Prinzessinnen: Die Bedeutung von Märchen in der Kindheit",
       href: "/blog/von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit",
-      imageUrl:
-        "/blogs/von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit.png",
+      image: {
+        src: "/blogs/von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit.png",
+        alt: "Cover - Von Drachen, Prinzen und Prinzessinnen: Die Bedeutung von Märchen in der Kindheit",
+      },
       description: "",
       date: "24 Mai 2023",
       datetime: "2023-05-24",
@@ -412,249 +416,6 @@ export const useContentStore = defineStore("content", () => {
         <p>Zusammenfassend lässt sich sagen, dass Märchen - ob sie gelesen oder gehört werden - ein wirksames Werkzeug zur Förderung der emotionalen Entwicklung von Kindern darstellen. Sie bieten eine sichere und unterstützende Umgebung, in der Kinder ihre Gefühle erforschen, Empathie entwickeln und wichtige Lektionen über das Navigieren im emotionalen Spektrum des Lebens lernen können. Unser Hörbuch-Abo ist eine hervorragende Möglichkeit, diese Vorteile zu nutzen und Ihr Kind auf seiner emotionalen Reise zu unterstützen.</p>
         `,
     },
-    /* {
-      id: "interaktive-geschichten-eine-neue-art-kinder-zum-lesen-zu-motivieren",
-      title:
-        "Interaktive Geschichten: Eine neue Art, Kinder zum Lesen zu motivieren",
-      href: "/blog/interaktive-geschichten-eine-neue-art-kinder-zum-lesen-zu-motivieren",
-      description: "",
-      imageUrl:
-        "/static/placeholder.avif",
-      date: "Mar 16, 2023",
-      datetime: "2023-03-16",
-      tags: ["Interaktive Geschichten", "Kinderbücher", "Geschichten"],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-    },
-    {
-      id: "die-rolle-von-kinderbuechern-bei-der-vermittlung-von-werten",
-      title: "Die Rolle von Kinderbüchern bei der Vermittlung von Werten",
-      href: "/blog/die-rolle-von-kinderbuechern-bei-der-vermittlung-von-werten",
-      description: "",
-      imageUrl:
-        "/static/placeholder.avif",
-      date: "Mar 16, 2023",
-      datetime: "2023-03-16",
-      tags: ["Werte", "Kinderbücher", "Geschichten", "Emotionale Entwicklung"],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-    },
-    {
-      id: "kinderbuecher-die-die-umweltliebe-foerdern",
-      title: "Kinderbücher, die die Umweltliebe fördern",
-      href: "/blog/kinderbuecher-die-die-umweltliebe-foerdern",
-      description: "",
-      imageUrl:
-        "/static/placeholder.avif",
-      date: "Mar 16, 2023",
-      datetime: "2023-03-16",
-      tags: ["Emotionale Entwicklung", "Kinderbücher", "Geschichten", "Umwelt"],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-    },
-    {
-      id: "respekt-und-toleranz-so-lernen-kinder-durch-geschichten",
-      title: "Respekt und Toleranz: So lernen Kinder durch Geschichten",
-      href: "/blog/respekt-und-toleranz-so-lernen-kinder-durch-geschichten",
-      description: "",
-      imageUrl:
-        "/static/placeholder.avif",
-      date: "Mar 16, 2023",
-      datetime: "2023-03-16",
-      tags: [
-        "Emotionale Entwicklung",
-        "Kinderbücher",
-        "Geschichten",
-        "Respekt",
-        "Toleranz",
-      ],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-    },
-    {
-      id: "mut-und-freundlichkeit-werte-die-kinder-durch-geschichten-lernen",
-      title:
-        "Mut und Freundlichkeit: Werte, die Kinder durch Geschichten lernen",
-      href: "/blog/mut-und-freundlichkeit-werte-die-kinder-durch-geschichten-lernen",
-      description: "",
-      imageUrl:
-        "/static/placeholder.avif",
-      date: "Mar 16, 2023",
-      datetime: "2023-03-16",
-      tags: [
-        "Emotionale Entwicklung",
-        "Kinderbücher",
-        "Geschichten",
-        "Mut",
-        "Freundlichkeit",
-      ],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-    },
-    {
-      id: "ermutigung-zum-lesen-wie-kurzgeschichten-die-lesefähigkeiten-von-kindern-verbessern",
-      title:
-        "Ermutigung zum Lesen: Wie Kurzgeschichten die Lesefähigkeiten von Kindern verbessern",
-      href: "/blog/ermutigung-zum-lesen-wie-kurzgeschichten-die-lesefähigkeiten-von-kindern-verbessern",
-      description: "",
-      imageUrl:
-        "/static/placeholder.avif",
-      date: "Mar 16, 2023",
-      datetime: "2023-03-16",
-      tags: [
-        "Kinderbücher",
-        "Geschichten",
-        "Lesen",
-        "Lesefähigkeiten",
-        "Lesen lernen",
-      ],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-    },
-    {
-      id: "warum-kinderbuecher-mehr-als-nur-unterhaltung-sind-die-versteckte-bildung-in-geschichten",
-      title:
-        "Warum Kinderbücher mehr als nur Unterhaltung sind: Die versteckte Bildung in Geschichten",
-      href: "/blog/warum-kinderbuecher-mehr-als-nur-unterhaltung-sind-die-versteckte-bildung-in-geschichten",
-      description: "",
-      imageUrl:
-        "/static/placeholder.avif",
-      date: "Mar 16, 2023",
-      datetime: "2023-03-16",
-      tags: [
-        "Kinderbücher",
-        "Geschichten",
-        "Bildung",
-        "Unterhaltung",
-        "Lernen",
-      ],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-    },
-    {
-      id: "fantasie-oder-realitaet-wie-kinderbuecher-das-verstaendnis-der-welt-formen",
-      title:
-        "Fantasie oder Realität? Wie Kinderbücher das Verständnis der Welt formen",
-      href: "/blog/fantasie-oder-realitaet-wie-kinderbuecher-das-verstaendnis-der-welt-formen",
-      description: "",
-      imageUrl:
-        "/static/placeholder.avif",
-      date: "Mar 16, 2023",
-      datetime: "2023-03-16",
-      tags: [
-        "Kinderbücher",
-        "Geschichten",
-        "Fantasie",
-        "Realität",
-        "Weltverständnis",
-      ],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-    },
-    {
-      id: "die-bedeutung-von-gleichberechtigung-und-inklusion-in-kinderbuechern",
-      title:
-        "Die Bedeutung von Gleichberechtigung und Inklusion in Kinderbüchern",
-      href: "/blog/die-bedeutung-von-gleichberechtigung-und-inklusion-in-kinderbuechern",
-      description: "",
-      content: `
-      <p>In der heutigen Welt ist die Erziehung unserer Kinder zu mitfühlenden, respektvollen und fairen Individuen wichtiger denn je. Ein Weg, diese Werte zu vermitteln, ist durch Kinderbücher. Besonders die Themen Gleichberechtigung und Inklusion nehmen dabei eine zentrale Rolle ein.</p>
-
-    <h2>Gleichberechtigung in Kinderbüchern</h2>
-    <p>Gleichberechtigung ist nicht nur ein Konzept für Erwachsene. Kinder können und sollten von Anfang an lernen, dass alle Menschen unabhängig von Geschlecht, Herkunft oder sozialem Status gleiche Rechte und Chancen haben sollten. Bücher, die starke Charaktere aller Geschlechter präsentieren und traditionelle Rollenbilder hinterfragen, können hier einen entscheidenden Beitrag leisten.</p>
-
-    <h2>Inklusion in Kinderbüchern</h2>
-    <p>Inklusion bedeutet, dass jeder Mensch - unabhängig von seinen persönlichen Fähigkeiten, seiner Herkunft oder sonstigen Merkmalen - voll und ganz an der Gesellschaft teilnehmen kann. Inklusive Kinderbücher zeigen vielfältige Charaktere und Familienmodelle, und sie stellen Menschen mit Behinderungen oder Minderheiten als normale Teilnehmer in der Gesellschaft dar.</p>
-
-    <h2>Warum sind diese Themen so wichtig?</h2>
-    <p>Die frühzeitige Auseinandersetzung mit den Themen Gleichberechtigung und Inklusion hilft Kindern, Vorurteile abzubauen und Empathie zu entwickeln. Sie lernen, dass Vielfalt etwas Positives ist und dass jeder Mensch wertvoll und respektwürdig ist, unabhängig von seinen individuellen Eigenschaften oder Lebensumständen.</p>
-    
-    <p>Indem wir unseren Kindern solche Bücher vorlesen oder sie selbst lesen lassen, bereiten wir sie auf ein Leben in einer diversen und offenen Gesellschaft vor und legen den Grundstein für Toleranz und Respekt gegenüber allen Menschen.</p>
-`,
-      imageUrl:
-        "/static/placeholder.avif",
-      date: "Mar 16, 2023",
-      datetime: "2023-03-16",
-      tags: [
-        "Kinderbücher",
-        "Geschichten",
-        "Gleichberechtigung",
-        "Inklusion",
-        "Vielfalt",
-      ],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-    },
-    {
-      id: "buecher-als-spiegel-der-gesellschaft-wie-kinder-durch-geschichten-soziale-themen-verstehen",
-      title:
-        "Bücher als Spiegel der Gesellschaft: Wie Kinder durch Geschichten soziale Themen verstehen",
-      href: "/blog/buecher-als-spiegel-der-gesellschaft-wie-kinder-durch-geschichten-soziale-themen-verstehen",
-      description: "",
-      imageUrl:
-        "/static/placeholder.avif",
-      date: "Mar 16, 2023",
-      datetime: "2023-03-16",
-      tags: [
-        "Kinderbücher",
-        "Geschichten",
-        "Soziale Themen",
-        "Gesellschaft",
-        "Verständnis",
-      ],
-      category: { title: "", href: "" },
-      author: {
-        name: "",
-        role: "",
-        href: "",
-        imageUrl: "",
-      },
-    }, */
   ];
 
   const faqsLong = [

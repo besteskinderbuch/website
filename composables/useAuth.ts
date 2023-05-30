@@ -42,12 +42,12 @@ export default () => {
       if (devMode.value) {
         const data = useLocalStorage("user-data", null)
         if(data.value){
-          user.value = { type: "user", data: data.value };
+          user.value = { type: "user", data: data.value , subscription: "tier-littlebookworm"};
         }
       } else {
         try {
           const data = await hanko.user.getCurrent();
-          user.value = { type: "user", data };
+          user.value = { type: "user", data,subscription: "tier-littlebookworm" };
         } catch (e) {
           user.value = { type: "guest" };
         }

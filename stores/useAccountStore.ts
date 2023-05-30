@@ -5,6 +5,7 @@ import type { User as Userdata } from "@teamhanko/hanko-frontend-sdk";
 type User = {
   type: "guest" | "user";
   data?: Userdata;
+  subscription?: string;
 }
 
 export const useAccountStore = defineStore("account", () => {

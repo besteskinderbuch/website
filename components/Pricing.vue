@@ -1,3 +1,24 @@
+
+<script setup>
+import { ref } from "vue";
+import { storeToRefs } from 'pinia';
+import { RadioGroup, RadioGroupLabel, RadioGroupOption } from "@headlessui/vue";
+import { CheckIcon } from "@heroicons/vue/20/solid";
+import { useContentStore } from "~/stores/useContentStore";
+import { useAccountStore } from "~/stores/useAccountStore";
+
+const contentStore = useContentStore();
+const tiers = contentStore.tiers;
+const frequencies = contentStore.frequencies;
+
+
+const frequency = ref(frequencies[0]);
+
+
+const accountStore = useAccountStore();
+const { loggedIn, user } = storeToRefs(accountStore);
+</script>
+
 <template>
   <div class="bg-blue-600 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -63,20 +84,17 @@
               frequency.priceSuffix
             }}</span>
           </p>
-          <a :href="tier.href[frequency.value]" :aria-describedby="tier.id" :class="[
-            tier.mostPopular
-              ? 'bg-secondary1 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-secondary1'
-              : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white',
-            'mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2',
-          ]
-            ">
-            <template v-if="loggedIn">
+          <span v-if="loggedIn && tier.id === user.subscription"
+            class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            :class="[tier.mostPopular ? 'bg-secondary1 text-white shadow-sm focus-visible:outline-secondary1' : 'bg-white/10 text-white  focus-visible:outline-white']">
+            <span>Dein aktuelles Abo</span>
+          </span>
 
-            </template>
-            <template v-else>
-              <span v-if="!tier.free">Kaufen</span>
-              <span v-else>Kostenlos registrieren</span>
-            </template>
+          <a v-else :href="tier.href[frequency.value]" :aria-describedby="tier.id"
+            class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+            :class="[tier.mostPopular ? 'bg-secondary1 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-secondary1' : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white']">
+            <span v-if="!tier.free">Kaufen</span>
+            <span v-else>Kostenlos registrieren</span>
           </a>
           <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
             <li v-for=" feature  in  tier.features " :key="feature" class="flex gap-x-3">
@@ -90,19 +108,6 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
-import { RadioGroup, RadioGroupLabel, RadioGroupOption } from "@headlessui/vue";
-import { CheckIcon } from "@heroicons/vue/20/solid";
-import { useContentStore } from "~/stores/useContentStore";
-
-const contentStore = useContentStore();
-const tiers = contentStore.tiers;
-const frequencies = contentStore.frequencies;
-
-
-const frequency = ref(frequencies[0]);
-</script>
 <style>
 .diagonal-line-through {
   font-size: 14px;

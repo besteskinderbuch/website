@@ -22,7 +22,7 @@ const name = computed(()=>`${props.id}-${props.frequency}`)
           <p class="mt-5 text-lg leading-8 text-gray-600">Wir sind leider noch mitten im Aufbau, daher kannst du dieses
             Abo derzeit noch nicht buchen.
             Bei großen Interesse werden wir es höher priorisieren und es in wenigen Tagen/Wochen bereitstellen.
-            Trage dich hierfür bitte in diesem Abo Newsletter ein und wir informieren dich sobald es buchbar ist.</p>
+            Trage dich hierfür bitte in diesem Abo Newsletter ein, sichere dir 50% Rabatt auf den ersten Monat und wir informieren dich sobald es buchbar ist.</p>
         </div>
 
         <div class="w-full max-w-md lg:col-span-5 lg:pt-2">

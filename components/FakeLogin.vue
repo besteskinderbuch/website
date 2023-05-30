@@ -12,7 +12,8 @@ function login() {
         data: {
             name: name.value,
             email: email.value
-        }
+        },
+        subscription: "tier-littlebookworm"
     }
 
     data.value = user
