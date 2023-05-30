@@ -38,6 +38,12 @@ export default defineNuxtConfig({
     },
   },
 
+  image: {
+    imgix: {
+      baseURL: 'besteskinderbuch-8301.imgix.net'
+    }
+  },
+
   plugins: [
     "~/plugins/hotjar.client.ts",
   ],
@@ -48,6 +54,7 @@ export default defineNuxtConfig({
     "nuxt-gtag",
     "nuxt-icon",
     '@vueuse/nuxt',
+    '@nuxt/image-edge',
   ],
 
   i18n: {

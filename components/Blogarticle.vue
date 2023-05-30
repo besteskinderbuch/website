@@ -50,7 +50,7 @@ const related = others.slice(0, 5);
                 {{ post.date }}
               </p>
             </div>
-            <img :src="post.imageUrl"  loading="lazy"/>
+            <nuxt-img :src="post.imageUrl"  loading="lazy"/>
 
             <div v-html="post.content" class="prose"></div>
 
