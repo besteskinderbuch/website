@@ -24,6 +24,7 @@ specifiers:
   tailwindcss: ^3.3.2
   vue: 3.3.4
   vue-hotjar-next: ^1.4.0
+  vue-star-rating: ^2.1.0
 
 dependencies:
   '@headlessui/vue': 1.7.13_vue@3.3.4
@@ -51,6 +52,7 @@ devDependencies:
   postcss: 8.4.23
   sass: 1.62.1
   tailwindcss: 3.3.2
+  vue-star-rating: 2.1.0
 
 packages:
 
@@ -6664,6 +6666,12 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.5.0
       vue: 3.3.4
+
+  /vue-star-rating/2.1.0:
+    resolution: {integrity: sha512-LnhuQPi4hkRg7egKls+iqtL1U0RTN2gQkdLsJN7acyynMsSc9epHLzk8McJS+bR0OzfG98zNFq7mxAyuSb/okQ==}
+    dependencies:
+      vue: 3.3.4
+    dev: true
 
   /vue/3.3.4:
     resolution: {integrity: sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw==}

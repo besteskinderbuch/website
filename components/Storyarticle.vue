@@ -1,4 +1,6 @@
 <script setup>
+import StarRating from 'vue-star-rating'
+
 const props = defineProps({
   data: {
     type: Object,
@@ -7,7 +9,7 @@ const props = defineProps({
 });
 
 const audioContainer = templateRef('audioContainer')
-onMounted(() => {
+ onMounted(() => {
   if (props.data.audio?.src) {
     const sound = document.createElement('audio');
     sound.id = 'audio-player';
@@ -33,12 +35,11 @@ onMounted(() => {
     })
   }
 })
-
 </script>
 
 <template>
   <div class="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
-    <div>
+    <div v-if="data">
       <!-- Content -->
       <div>
         <div class="py-8 lg:pr-8">
@@ -67,9 +68,15 @@ onMounted(() => {
               <p class="text-xs sm:text-sm text-gray-800">
                 {{ data.date }}
               </p>
+              <div class="leading-none pb-1">
+                <ClientOnly>
+                  <StarRating read-only :show-rating="false" :increment="0.5" star-size="20" :rating="data.rating" />
+                </ClientOnly>
+              </div>
             </div>
 
-            <nuxt-img provider="imgix" :src="data.image.src" :alt="data.image.alt" :modifiers="{ auto: 'format,compress' }"/>
+            <nuxt-img provider="imgix" :src="data.image.src" :alt="data.image.alt"
+              :modifiers="{ auto: 'format,compress' }" />
 
 
             <div ref="audioContainer">

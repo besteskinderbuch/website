@@ -1,4 +1,6 @@
 <script setup>
+import StarRating from 'vue-star-rating'
+
 defineProps({
   data: {
     type: Object,
@@ -17,11 +19,9 @@ defineProps({
       <div class="max-w-xl">
         <div class="mt-8 flex items-center gap-x-4 text-xs">
           <time :datetime="data.datetime" class="text-gray-500">{{
-            date
+            data.date
           }}</time>
-          <a :href="data.category.href"
-            class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">{{
-              data.category.title }}</a>
+        <StarRating read-only :show-rating="false" :increment="0.5" star-size="20" :rating="data.rating"></StarRating>
         </div>
         <div class="group relative">
           <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
