@@ -10,7 +10,7 @@ const props = defineProps({
 const scriptInfos = {
     footer: { url: "https://eomail6.com/form/db3c30ce-f4eb-11ed-8282-ffc86496b2ad.js", id: "db3c30ce-f4eb-11ed-8282-ffc86496b2ad" },
     body: { url: "https://eocampaign1.com/form/44035814-f0e9-11ed-af05-d9c4a3fb6d7e.js", id: "44035814-f0e9-11ed-af05-d9c4a3fb6d7e" },
-    abo: { url: "https://eomail6.com/form/fb29b606-fcaa-11ed-b820-a10ca3cf10d7.js", id: "fb29b606-fcaa-11ed-b820-a10ca3cf10d7" },
+    abo: { url: "https://eomail6.com/form/778a55e8-ff21-11ed-b283-0f4f077dd717.js", id: "778a55e8-ff21-11ed-b283-0f4f077dd717" },
 }
 
 const scriptInfo = scriptInfos[props.type]
