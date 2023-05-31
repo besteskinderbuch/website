@@ -89,8 +89,8 @@
                 <p>{{ `“${testimonial.body}”` }}</p>
               </blockquote>
               <figcaption class="mt-6 flex items-center gap-x-4">
-                <nuxt-img provider="imgix" class="h-10 w-10 rounded-full bg-gray-50" :src="testimonial.author.imageUrl"
-                  :alt="testimonial.author.imageAlt" loading="lazy" :modifiers="{ auto: 'format,compress' }" />
+               <!--  <nuxt-img provider="imgix" class="h-10 w-10 rounded-full bg-gray-50" :src="testimonial.author.imageUrl"
+                  :alt="testimonial.author.imageAlt" loading="lazy" :modifiers="{ auto: 'format,compress' }" /> -->
                 <div>
                   <div class="font-semibold">{{ testimonial.author.name }}</div>
                 </div>

@@ -29,7 +29,8 @@
               <template v-if="stepIdx === 0">
                 <p class="mx-4"> Finde <a href="/#pricing" class="text-gray-100 font-bold">hier</a> das Abo, das wie für
                   dich gemacht ist. Klick hier und entdecke das Angebot, das perfekt zu dir passt!</p>
-                <nuxt-img provider="imgix" src="/demo/register.png" loading="lazy" alt="signup form" :modifiers="{ auto: 'format,compress' }" class="rounded-lg mx-4 mt-4"/>
+                <nuxt-img provider="imgix" src="/demo/register.png" loading="lazy" alt="signup form"
+                  :modifiers="{ auto: 'format,compress' }" class="rounded-lg mx-4 mt-4" />
               </template>
               <template v-else-if="stepIdx === 1">
                 <p class="mx-4">Entdecke <a href="/stories" class="text-gray-100 font-bold">hier</a> die spannendsten und
@@ -43,7 +44,7 @@
                   eine unvergessliche Traumreise. Lass die Fantasie deines Kindes aufblühen und zaubere ihm ein Lächeln
                   ins Gesicht.</p>
                 <nuxt-img provider="imgix" src="/demo/example.png" loading="lazy" class="rounded-lg  mx-4 mt-4"
-                  :modifiers="{ auto: 'format,compress' }" alt="example story content"/>
+                  :modifiers="{ auto: 'format,compress' }" alt="example story content" />
               </template>
 
             </div>
