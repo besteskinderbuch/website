@@ -29,6 +29,7 @@
     "@headlessui/vue": "^1.7.13",
     "@heroicons/vue": "^2.0.18",
     "@nuxtjs/robots": "^3.0.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "@pinia/nuxt": "^0.4.11",
     "@teamhanko/hanko-elements": "0.4.0-alpha",
     "@vueuse/core": "^10.1.2",

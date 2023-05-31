@@ -37,6 +37,12 @@ if (story.value) {
 onMounted(() => {
   story.value = stories.value.find((s) => s.id === id)
 });
+
+useHead({
+  htmlAttrs: {
+    lang: 'de',
+  },
+})
 </script>
 
 <template>

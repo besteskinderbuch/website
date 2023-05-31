@@ -11,6 +11,12 @@ useServerSeoMeta({
 })
 
 const { devMode } = useRootStore()
+
+useHead({
+  htmlAttrs: {
+    lang: 'de',
+  },
+})
 </script>
 
 <template>

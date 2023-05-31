@@ -6,6 +6,13 @@ useServerSeoMeta({
   ogDescription: 'Erwecken Sie die Fantasie Ihres Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starten Sie heute das Abo!',
   ogImage: '/heroteaser.png',
   twitterCard: 'summary',
+  ogType: 'website',
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'de',
+  },
 })
 </script>
 

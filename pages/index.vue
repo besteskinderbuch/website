@@ -30,6 +30,12 @@ useServerSeoMeta({
   ogImage: '/heroteaser.png',
   twitterCard: 'summary',
 })
+
+useHead({
+  htmlAttrs: {
+    lang: 'de',
+  },
+})
 </script>
 <template>
   <Navbar></Navbar>
