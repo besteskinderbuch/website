@@ -35,14 +35,14 @@ useServerSeoMeta({
   <Navbar></Navbar>
   <main class="flex-1">
     <HeroSection></HeroSection>
-    <FeatureSection></FeatureSection>
-    <Manual></Manual>
-    <Testimonials></Testimonials>
-    <Newsletter></Newsletter>
-    <Pricing></Pricing>
-    <Faq></Faq>
-    <BookPreviewSection></BookPreviewSection>
-    <BlogPreviewSection></BlogPreviewSection>
+    <LazyFeatureSection></LazyFeatureSection>
+    <LazyManual></LazyManual>
+    <LazyTestimonials></LazyTestimonials>
+    <LazyNewsletter></LazyNewsletter>
+    <LazyPricing></LazyPricing>
+    <LazyFaq></LazyFaq>
+    <LazyBookPreviewSection></LazyBookPreviewSection>
+    <LazyBlogPreviewSection></LazyBlogPreviewSection>
   </main>
   <Footer></Footer>
 </template>
