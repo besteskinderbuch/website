@@ -65,7 +65,7 @@
           </blockquote>
           <figcaption class="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
             <nuxt-img provider="imgix" class="h-10 w-10 flex-none rounded-full bg-gray-50"
-              :src="featuredTestimonial.author.imageUrl" loading="lazy" :alt="featuredTestimonial.author.imageAlt"  :modifiers="{ auto: 'format,compress' }"/>
+              :src="featuredTestimonial.author.image.src" loading="lazy" :alt="featuredTestimonial.author.image.alt"  :modifiers="{ auto: 'format,compress' }"/>
             <div class="flex-auto">
               <div class="font-semibold">
                 {{ featuredTestimonial.author.name }}
