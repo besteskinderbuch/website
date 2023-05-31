@@ -7,7 +7,6 @@ const cookiebot = {
   src: "https://consent.cookiebot.com/uc.js",
   "data-cbid": "1fdf56a9-b6af-4a95-acd2-3666a03175f1",
   "data-blockingmode": "auto",
-  type: "text/partytown",
 };
 
 const hotjarWindow = { children: `window._hjSettings={hjid:${process.env.HOTJAR_ID},hjsv:6};` };
@@ -15,7 +14,6 @@ const hotjarWindow = { children: `window._hjSettings={hjid:${process.env.HOTJAR_
 const hotjar = {
   id: "Hotjar",
   src: `https://static.hotjar.com/c/hotjar-${process.env.HOTJAR_ID}.js?sv=6`,
-  type: "text/partytown",
 };
 
 const script = [];
@@ -63,7 +61,6 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/image-edge",
     "@nuxtjs/robots",
-    "@nuxtjs/partytown",
     'nuxt-delay-hydration',
   ],
 
