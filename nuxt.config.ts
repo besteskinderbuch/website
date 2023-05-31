@@ -1,5 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-
 const devStage = process.env.NODE_ENV !== "production";
 
 const cookiebot = {

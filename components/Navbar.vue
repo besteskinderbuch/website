@@ -15,7 +15,7 @@ import { useAccountStore } from "~/stores/useAccountStore";
 
 const accountStore = useAccountStore();
 
-// const { loggedIn } = storeToRefs(accountStore);
+// TODO:
 
 const loggedIn = ref(false);
 onMounted(() => {
@@ -47,47 +47,17 @@ const userNavigation = contentStore.userNavigation;
               <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
             </DisclosureButton>
           </div>
-          <!-- <div class="flex flex-shrink-0 items-center">
-            <img
-              class="block h-8 w-auto lg:hidden"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-              alt="Your Company"
-            />
-            <img
-              class="hidden h-8 w-auto lg:block"
-              src="/icon.png"
-              alt="Your Company"
-            />
-          </div> -->
           <div class="hidden md:flex md:space-x-8">
             <NavLink v-for="item in navigation" :key="item.name" :href="item.href" size="lg">{{ item.name }}</NavLink>
           </div>
         </div>
         <div class="flex items-center">
-          <div class="flex-shrink-0">
-            <!--  <button
-              type="button"
-              class="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-            >
-              <PlusIcon class="-ml-0.5 h-5 w-5" aria-hidden="true" />
-              New Job
-            </button> -->
-          </div>
           <div class="md:ml-4 md:flex md:flex-shrink-0 md:items-center space-x-5">
             <template v-if="!loggedIn">
               <BasicLink class="hidden md:block" href="/login" name="register" size="md">Registrieren</BasicLink>
               <BasicLink class="hidden md:block" type="button" href="/login" name="login">Anmelden</BasicLink>
             </template>
             <template v-else>
-              <!--   <button
-              type="button"
-              class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-            >
-              <span class="sr-only">View notifications</span>
-              <BellIcon class="h-6 w-6" aria-hidden="true" />
-            </button>  -->
-
-              <!-- Profile dropdown -->
               <Menu as="div" class="relative ml-3">
                 <div>
                   <MenuButton
@@ -137,35 +107,6 @@ const userNavigation = contentStore.userNavigation;
             <BasicLink type="button" href="/signup" name="signup" class="w-full">Registieren</BasicLink>
           </div>
         </div>
-
-        <!-- <div class="flex items-center px-5 sm:px-6">
-          <div class="flex-shrink-0">
-            <img class="h-10 w-10 rounded-full" :src="user.imageUrl" alt="" />
-          </div>
-          <div class="ml-3">
-            <div class="text-base font-medium text-white">{{ user.name }}</div>
-            <div class="text-sm font-medium text-gray-400">
-              {{ user.email }}
-            </div>
-          </div>
-          <button
-            type="button"
-            class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-          >
-            <span class="sr-only">View notifications</span>
-            <BellIcon class="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-       <div class="mt-3 space-y-1 px-2 sm:px-3">
-          <DisclosureButton
-            v-for="item in userNavigation"
-            :key="item.name"
-            as="a"
-            :href="item.href"
-            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-            >{{ item.name }}</DisclosureButton
-          >
-        </div> -->
       </div>
     </DisclosurePanel>
   </Disclosure>

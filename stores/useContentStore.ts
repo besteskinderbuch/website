@@ -615,7 +615,10 @@ export const useContentStore = defineStore("content", () => {
     body: "Als Eltern sind wir ständig auf der Suche nach qualitativ hochwertigen, unterhaltsamen und lehrreichen Geschichten, um die Fantasie unserer Kinder anzuregen und ihre Liebe zum Lesen zu fördern. Auf 'bestes-kinderbuch.de' haben wir genau das gefunden. Die Auswahl an Geschichten ist einfach unglaublich - es gibt wirklich etwas für jeden Geschmack und jedes Alter. Ob es sich um lustige Abenteuergeschichten, berührende Erzählungen oder informative Sachbücher handelt, jede Geschichte fängt die Aufmerksamkeit unserer Kinder ein und hält sie bis zur letzten Seite gefesselt. Es ist schön zu sehen, wie sie durch diese Geschichten lernen, wachsen und ihre Welt entdecken. 'Bestes-kinderbuch.de' ist jetzt unsere erste Anlaufstelle, wenn wir neue Geschichten für unsere Kinder suchen. Wir können diese Webseite jedem Elternteil nur wärmstens empfehlen!",
     author: {
       name: "Stefanie",
-      imageUrl: "/people/Stefanie.jpeg",
+      image:{
+        src: "/people/Stefanie.jpeg",
+        alt: "Stefanie",
+      }
     },
   };
   const testimonials = [
@@ -625,17 +628,22 @@ export const useContentStore = defineStore("content", () => {
           body: "Als Vater von drei Bücherwürmern habe ich bereits viele Kinderbücher gelesen, aber diese Reihe ist unschlagbar! Jedes Buch ist einzigartig, fesselnd und voller lehrreicher Momente. Die Qualität der Illustrationen und die Tiefe der Geschichten haben uns alle beeindruckt. Ich kann diese Bücher jedem Vater empfehlen, der eine unvergessliche Lesezeit mit seinen Kindern haben möchte.",
           author: {
             name: "Tobias",
-            imageUrl: "/people/Steffen.jpeg",
+            image:{
+              src: "/people/Tobias.jpeg",
+              alt: "Tobias",
+            }
           },
         },
-        // More testimonials...
       ],
       /*  [
         {
           body: "Das Kindergeschichten-Abo ist ein echter Gewinn für unsere Familie. Jedes mal freuen sich meine Kinder auf die neuen Geschichten und ich schätze die Qualität und Vielfalt. Es ist als ob wir einen Schatz an Wissen und Fantasie direkt zu uns nach Hause geliefert bekommen. Ich kann dieses Abo nur wärmstens empfehlen - es ist das Geschenk, das immer weiter gibt",
           author: {
             name: "Maria",
-            imageUrl: "/people/Maria.jpeg",
+            image:{
+              src: "/people/Maria.jpeg",
+              alt: "Maria",
+            }
           },
         },
       ], */
@@ -646,7 +654,10 @@ export const useContentStore = defineStore("content", () => {
           body: "Unser Abo für die bildlosen Kindergeschichten ist ein wahrer Segen! Es fördert die Vorstellungskraft unserer Kinder, da sie die Bilder in ihren Köpfen selbst malen. Jede Geschichte ist sorgfältig ausgewählt und hervorragend geschrieben. Als Elternteil schätze ich die Fähigkeit dieses Abo, das kreative Denken meiner Kinder zu fördern und ihre Liebe zur Literatur zu vertiefen.",
           author: {
             name: "Jürgen",
-            imageUrl: "/people/Jürgen.jpeg",
+            image:{
+              src: "/people/Jürgen.jpeg",
+              alt: "Jürgen",
+            }
           },
         },
       ], */
@@ -655,7 +666,10 @@ export const useContentStore = defineStore("content", () => {
           body: "Die Geschichten von bestes-kinderbuch hat unsere Abendroutine bereichert und unseren Kindern eine Welt voller Fantasie und Abenteuer eröffnet. Durch die sorgfältig ausgewählten Geschichten fördern wir nicht nur ihre Lesekompetenz, sondern auch ihre Kreativität und Vorstellungskraft. Wir sind mehr als zufrieden und empfehlen es allen Eltern, die die Liebe zum Lesen bei ihren Kindern wecken möchten.",
           author: {
             name: "Sandra",
-            imageUrl: "/people/Sandra.jpeg",
+            image:{
+              src: "/people/Sandra.jpeg",
+              alt: "Sandra",
+            }
           },
         },
       ],

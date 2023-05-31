@@ -52,11 +52,6 @@
     </div>
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-xl text-center">
-        <!--  <h2
-          class="text-lg font-semibold leading-8 tracking-tight text-secondary1"
-        >
-          Testimonials
-        </h2> -->
         <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Andere sind auch überzeugt
         </h2>
@@ -75,15 +70,7 @@
               <div class="font-semibold">
                 {{ featuredTestimonial.author.name }}
               </div>
-              <!--  <div class="text-gray-600">
-                {{ `@${featuredTestimonial.author.handle}` }}
-              </div> -->
             </div>
-            <!-- <img
-              class="h-10 w-auto flex-none"
-              :src="featuredTestimonial.author.logoUrl"
-              alt=""
-            /> -->
           </figcaption>
         </figure>
         <div v-for="(columnGroup, columnGroupIdx) in testimonials" :key="columnGroupIdx"
@@ -106,9 +93,6 @@
                   :alt="testimonial.author.imageAlt" loading="lazy" :modifiers="{ auto: 'format,compress' }" />
                 <div>
                   <div class="font-semibold">{{ testimonial.author.name }}</div>
-                  <!--  <div class="text-gray-600">
-                    {{ `@${testimonial.author.handle}` }}
-                  </div> -->
                 </div>
               </figcaption>
             </figure>
