@@ -64,7 +64,12 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "@nuxtjs/robots",
     "@nuxtjs/partytown",
+    'nuxt-delay-hydration',
   ],
+
+  delayHydration: {
+    mode: 'mount'
+  },
 
   robots: {
     rules: [
