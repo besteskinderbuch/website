@@ -13,5 +13,5 @@ useServerSeoMeta({
   <main class="flex-1">
     <Roadmap></Roadmap>
   </main>
-  <Footer></Footer>
+  <LazyFooter></LazyFooter>
 </template>

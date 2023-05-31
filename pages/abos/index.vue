@@ -13,5 +13,5 @@ useServerSeoMeta({
   <main class="flex-1">
     <Pricing></Pricing>
   </main>
-  <Footer></Footer>
+  <LazyFooter></LazyFooter>
 </template>

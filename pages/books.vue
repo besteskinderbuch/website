@@ -14,5 +14,5 @@ useServerSeoMeta({
   <main class="flex-1">
     <BookSection></BookSection>
   </main>
-  <Footer></Footer>
+  <LazyFooter></LazyFooter>
 </template>

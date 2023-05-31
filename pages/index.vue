@@ -44,5 +44,5 @@ useServerSeoMeta({
     <LazyBookPreviewSection></LazyBookPreviewSection>
     <LazyBlogPreviewSection></LazyBlogPreviewSection>
   </main>
-  <Footer></Footer>
+  <LazyFooter></LazyFooter>
 </template>

@@ -44,5 +44,5 @@ onMounted(() => {
   <main class="flex-1">
     <Storyarticle v-if="story" :data="story"></Storyarticle>
   </main>
-  <Footer></Footer>
+  <LazyFooter></LazyFooter>
 </template>

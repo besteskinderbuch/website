@@ -18,5 +18,5 @@ useServerSeoMeta({
   <main class="flex-1">
     <AboNewsletter :id="id" :frequency="frequency"> </AboNewsletter>
   </main>
-  <Footer></Footer>
+  <LazyFooter></LazyFooter>
 </template>

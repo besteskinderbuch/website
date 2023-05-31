@@ -25,5 +25,5 @@ useServerSeoMeta({
   <main class="flex-1">
     <Blogarticle :id="id"></Blogarticle>
   </main>
-  <Footer></Footer>
+  <LazyFooter></LazyFooter>
 </template>

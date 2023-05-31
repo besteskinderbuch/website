@@ -14,5 +14,5 @@ useServerSeoMeta({
   <main class="flex-1">
     <Impressum></Impressum>
   </main>
-  <Footer></Footer>
+  <LazyFooter></LazyFooter>
 </template>

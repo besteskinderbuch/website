@@ -13,5 +13,5 @@ useServerSeoMeta({
   <main class="flex-1">
     <StoriesSection> </StoriesSection>
   </main>
-  <Footer></Footer>
+  <LazyFooter></LazyFooter>
 </template>
