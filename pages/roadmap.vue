@@ -4,8 +4,8 @@ useServerSeoMeta({
   description: 'Entdecken Sie die Roadmap von Bestes-Kinderbuch.de. Erleben Sie unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen Ihrer Erwartungen.',
   ogTitle: "bestes-kinderbuch - Roadmap",
   ogDescription: 'Entdecken Sie die Roadmap von Bestes-Kinderbuch.de. Erleben Sie unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen Ihrer Erwartungen.',
-  ogImage: '/heroteaser.png',
-  twitterCard: 'summary',
+  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop',
+  twitterCard: 'summary_large_image',
 })
 
 useHead({

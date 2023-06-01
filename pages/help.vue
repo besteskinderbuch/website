@@ -4,8 +4,8 @@ useServerSeoMeta({
   description: 'Entdecke unsere Hilfe-Seite auf Bestes-Kinderbuch.de. Hier findest du Antworten auf deine Fragen zu unserem Kinderbuch-Abo. Begleite uns auf dieser magischen Lese-Reise!',
   ogTitle: "bestes-kinderbuch - Hilfe",
   ogDescription: 'Entdecke unsere Hilfe-Seite auf Bestes-Kinderbuch.de. Hier findest du Antworten auf deine Fragen zu unserem Kinderbuch-Abo. Begleite uns auf dieser magischen Lese-Reise!',
-  ogImage: '/heroteaser.png',
-  twitterCard: 'summary',
+  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop',
+  twitterCard: 'summary_large_image',
 })
 
 useHead({

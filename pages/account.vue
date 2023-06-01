@@ -6,8 +6,8 @@ useServerSeoMeta({
   description: 'Verwalten Sie Ihr Abo bei Bestes-Kinderbuch.de. Entdecken Sie neue Geschichten, bearbeiten Sie Präferenzen und aktualisieren Sie Ihre Kontoinformationen.',
   ogTitle: "bestes-kinderbuch - Mein Bereich",
   ogDescription: 'Verwalten Sie Ihr Abo bei Bestes-Kinderbuch.de. Entdecken Sie neue Geschichten, bearbeiten Sie Präferenzen und aktualisieren Sie Ihre Kontoinformationen.',
-  ogImage: '/heroteaser.png',
-  twitterCard: 'summary',
+  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop',
+  twitterCard: 'summary_large_image',
 })
 
 const { devMode } = useRootStore()
