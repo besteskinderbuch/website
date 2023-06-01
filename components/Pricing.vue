@@ -33,7 +33,7 @@ const { loggedIn, user } = storeToRefs(accountStore);
       <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
         Entdecke die passende Abo-Option, maßgeschneidert für deine individuellen Bedürfnisse.
         Wir legen großen Wert auf deine Zufriedenheit und bieten daher neben unserer vielfältigen Auswahl an Abonnements
-        auch eine 30 Tage Geld-zurück-Garantie, falls unser Angebot deinen Erwartungen leider nicht gerecht wird.
+        auch eine 7 Tage Geld-zurück-Garantie, falls unser Angebot deinen Erwartungen leider nicht gerecht wird.
       </p>
       <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
         Aber beeil dich, dieses unschlagbare Angebot gilt nur für kurze Zeit.
