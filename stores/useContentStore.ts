@@ -771,7 +771,7 @@ export const useContentStore = defineStore("content", () => {
         src: "/stories/die-abenteuer-des-regenbogendrachens.png",
         alt: "Cover - Die Abenteuer des Regenbogendrachens",
       },
-      rating: 4,
+      rating: 5,
       age: {
         start: 2,
         end: 6,
@@ -969,7 +969,8 @@ export const useContentStore = defineStore("content", () => {
         src: "/stories/die-verzauberte-feder.png",
         alt: "Cover - Die verzauberte Feder",
       },
-      rating: 4,
+      words:"1828",
+      rating: 4.5,
       age: {
         start: 2,
         end: 6,
@@ -1076,7 +1077,7 @@ export const useContentStore = defineStore("content", () => {
         src: "/stories/pfoetchens-erster-schultag.png",
         alt: "Cover - Pfötchens erster Schultag",
       },
-      rating: 4,
+      rating: 5,
       age: {
         start: 2,
         end: 6,
@@ -1256,7 +1257,7 @@ export const useContentStore = defineStore("content", () => {
         src: "/stories/der-mutige-kleine-kaefer.png",
         alt: "Cover - Der mutige kleine Käfer",
       },
-      rating: 4,
+      rating: 5,
       age: {
         start: 2,
         end: 6,
@@ -1337,7 +1338,7 @@ export const useContentStore = defineStore("content", () => {
         src: "/stories/die-vier-jahreszeiten-der-waldtiere.png",
         alt: "Cover - Die vier Jahreszeiten der Waldtiere",
       },
-      rating: 4,
+      rating: 3.5,
       age: {
         start: 2,
         end: 6,
