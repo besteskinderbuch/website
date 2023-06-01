@@ -15,5 +15,5 @@ export const useAccountStore = defineStore("account", () => {
 
   const wordsPerMin= ref(160);
 
-  return { user, loggedIn };
+  return { user, loggedIn, wordsPerMin };
 });

@@ -615,10 +615,10 @@ export const useContentStore = defineStore("content", () => {
     body: "Als Eltern sind wir ständig auf der Suche nach qualitativ hochwertigen, unterhaltsamen und lehrreichen Geschichten, um die Fantasie unserer Kinder anzuregen und ihre Liebe zum Lesen zu fördern. Auf 'bestes-kinderbuch.de' haben wir genau das gefunden. Die Auswahl an Geschichten ist einfach unglaublich - es gibt wirklich etwas für jeden Geschmack und jedes Alter. Ob es sich um lustige Abenteuergeschichten, berührende Erzählungen oder informative Sachbücher handelt, jede Geschichte fängt die Aufmerksamkeit unserer Kinder ein und hält sie bis zur letzten Seite gefesselt. Es ist schön zu sehen, wie sie durch diese Geschichten lernen, wachsen und ihre Welt entdecken. 'Bestes-kinderbuch.de' ist jetzt unsere erste Anlaufstelle, wenn wir neue Geschichten für unsere Kinder suchen. Wir können diese Webseite jedem Elternteil nur wärmstens empfehlen!",
     author: {
       name: "Stefanie",
-      image:{
+      image: {
         src: "/people/Stefanie.jpeg",
         alt: "Stefanie",
-      }
+      },
     },
   };
   const testimonials = [
@@ -628,10 +628,10 @@ export const useContentStore = defineStore("content", () => {
           body: "Als Vater von drei Bücherwürmern habe ich bereits viele Kinderbücher gelesen, aber diese Reihe ist unschlagbar! Jedes Buch ist einzigartig, fesselnd und voller lehrreicher Momente. Die Qualität der Illustrationen und die Tiefe der Geschichten haben uns alle beeindruckt. Ich kann diese Bücher jedem Vater empfehlen, der eine unvergessliche Lesezeit mit seinen Kindern haben möchte.",
           author: {
             name: "Tobias",
-            image:{
+            image: {
               src: "/people/Tobias.jpeg",
               alt: "Tobias",
-            }
+            },
           },
         },
       ],
@@ -666,10 +666,10 @@ export const useContentStore = defineStore("content", () => {
           body: "Die Geschichten von bestes-kinderbuch hat unsere Abendroutine bereichert und unseren Kindern eine Welt voller Fantasie und Abenteuer eröffnet. Durch die sorgfältig ausgewählten Geschichten fördern wir nicht nur ihre Lesekompetenz, sondern auch ihre Kreativität und Vorstellungskraft. Wir sind mehr als zufrieden und empfehlen es allen Eltern, die die Liebe zum Lesen bei ihren Kindern wecken möchten.",
           author: {
             name: "Sandra",
-            image:{
+            image: {
               src: "/people/Sandra.jpeg",
               alt: "Sandra",
-            }
+            },
           },
         },
       ],
@@ -741,7 +741,7 @@ export const useContentStore = defineStore("content", () => {
       Dieses Buch fördert nicht nur die künstlerischen Fähigkeiten und die Feinmotorik Ihres Kindes, sondern hilft ihm auch, ein tieferes Verständnis und eine Wertschätzung für die Tiere unserer Welt zu entwickeln.
       Von der ersten bis zur letzten Seite ist 'Reise durch das Tierreich: 100 Mandalas für junge Künstler/-innen' ein Abenteuer, das Ihre Kinder immer wieder erleben wollen. Es ist mehr als nur ein Malbuch – es ist ein Tor zur Natur, zur Kreativität und zur Entdeckungsreise. Sichern Sie sich Ihr Exemplar noch heute und starten Sie die kreative Reise!`,
       image: {
-        src:"books/reise-durch-das-tierreich-100-mandalas-fuer-junge-kuenstler-innen.jpg",
+        src: "books/reise-durch-das-tierreich-100-mandalas-fuer-junge-kuenstler-innen.jpg",
         alt: "Cover - Reise durch das Tierreich",
       },
       price: "€12,97",
@@ -969,7 +969,7 @@ export const useContentStore = defineStore("content", () => {
         src: "/stories/die-verzauberte-feder.png",
         alt: "Cover - Die verzauberte Feder",
       },
-      words:"1828",
+      words: 1828,
       rating: 4.5,
       age: {
         start: 2,
