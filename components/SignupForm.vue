@@ -15,6 +15,6 @@ const redirectAfterLogin = () => {
 
 <template>
   <ClientOnly>
-    <hanko-auth @hankoAuthSuccess="redirectAfterLogin" :api="endpoint" />
+    <div>TODO</div>
   </ClientOnly>
 </template>

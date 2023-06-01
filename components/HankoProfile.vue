@@ -8,5 +8,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <hanko-profile :api="endpoint" />
+  <div>TODO</div>
 </template>

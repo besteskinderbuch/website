@@ -20,7 +20,7 @@ const devMode = computed(() => rootStore.devMode)
 
 <template>
   <ClientOnly>
-    <hanko-auth v-if="!devMode" @hankoAuthSuccess="redirectAfterLogin" :api="endpoint" />
+    <div v-if="!devMode">TODO</div>
     <FakeLogin v-else></FakeLogin>
   </ClientOnly>
 </template>

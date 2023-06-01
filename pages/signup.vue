@@ -36,10 +36,3 @@ useHead({
     </div>
   </div>
 </template>
-
-<style>
-hanko-auth,
-hanko-profile {
-  --background-color: #E0FBFC;
-}
-</style>

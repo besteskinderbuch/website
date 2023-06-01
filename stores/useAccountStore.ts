@@ -1,7 +1,8 @@
 import { defineStore } from "pinia";
 
-import type { User as Userdata } from "@teamhanko/hanko-frontend-sdk";
 
+// TODO:
+type Userdata = {}
 type User = {
   type: "guest" | "user";
   data?: Userdata;

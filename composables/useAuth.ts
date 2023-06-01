@@ -1,14 +1,8 @@
-import { Hanko } from "@teamhanko/hanko-frontend-sdk";
-import { register } from "@teamhanko/hanko-elements";
 import { useAccountStore } from "~/stores/useAccountStore";
 import { useRootStore } from "~/stores/useRootStore";
 import { useLocalStorage } from "@vueuse/core";
 import { storeToRefs } from "pinia";
 
-const endpoint = "https://a9e87d58-7368-4dfb-a2c7-2c68db54eef2.hanko.io";
-const hanko = new Hanko(endpoint);
-
-const initialized = ref(false);
 
 export default () => {
   const accountStore = useAccountStore();
@@ -18,21 +12,12 @@ export default () => {
   const devMode = computed(() => rootStore.devMode);
 
 
-  function init() {
-    if (!initialized.value) {
-      register({ shadow: true }).catch((error) => {
-        console.error(error);
-      });
-      initialized.value = true;
-    }
-  }
-
   async function logout() {
     if (devMode.value) {
       const data = useLocalStorage("user-data", null)
       data.value = null
     }else{
-      await hanko.user.logout();
+     //TODO: 
     }
     user.value = { type: "guest" };
   }
@@ -46,7 +31,8 @@ export default () => {
         }
       } else {
         try {
-          const data = await hanko.user.getCurrent();
+          // TODO: 
+          const data= {}
           user.value = { type: "user", data,subscription: "tier-littlebookworm" };
         } catch (e) {
           user.value = { type: "guest" };
@@ -58,8 +44,6 @@ export default () => {
 
   return {
     user,
-    init,
-    endpoint,
     logout,
     getCurrentUser,
   };

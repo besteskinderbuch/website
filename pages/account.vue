@@ -28,7 +28,7 @@ useHead({
         </div> -->
 
         <div class="mt-10">
-          <HankoProfile v-if="!devMode"></HankoProfile>
+          <div v-if="!devMode">TODO</div>
         </div>
       </div>
     </div>
@@ -38,10 +38,3 @@ useHead({
     </div>
   </div>
 </template>
-
-<style>
-hanko-auth,
-hanko-profile {
-  --background-color: #E0FBFC;
-}
-</style>

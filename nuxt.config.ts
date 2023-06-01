@@ -37,12 +37,6 @@ export default defineNuxtConfig({
     },
   },
 
-  vue: {
-    compilerOptions: {
-      isCustomElement: (tag) => tag.startsWith("hanko-"),
-    },
-  },
-
   image: {
     imgix: {
       baseURL: "https://besteskinderbuch-8301.imgix.net",
