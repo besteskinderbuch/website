@@ -1,20 +1,25 @@
 <script setup>
-import { onMounted } from "vue";
-const { endpoint, init } = useAuth();
+const { createUser } = useAuth();
+import { useRootStore } from "~/stores/useRootStore";
 
-onMounted(() => {
-  init();
-});
+
+async function signup() { 
+  await createUser("dennis.maass.privat@googlemal.com", "123456")
+  }
 
 const router = useRouter();
 const redirectAfterLogin = () => {
   useTrackEvent('sign_up')
   router.push({ path: "/" });
 };
+
+
+const rootStore = useRootStore()
+const devMode = computed(() => rootStore.devMode)
 </script>
 
 <template>
   <ClientOnly>
-    <div>TODO</div>
+    <button v-if="devMode" @click="signup">registieren</button>
   </ClientOnly>
 </template>

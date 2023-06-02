@@ -1,12 +1,8 @@
 <script setup>
-import { onMounted } from "vue";
 import { useRootStore } from "~/stores/useRootStore";
 
-const { endpoint, init } = useAuth();
 
-onMounted(() => {
-  init();
-});
+const { login } = useAuth();
 
 const router = useRouter();
 const redirectAfterLogin = () => {
@@ -20,7 +16,7 @@ const devMode = computed(() => rootStore.devMode)
 
 <template>
   <ClientOnly>
-    <div v-if="!devMode">TODO</div>
+    <button v-if="devMode" @click="login">anmelden</button>
     <FakeLogin v-else></FakeLogin>
   </ClientOnly>
 </template>

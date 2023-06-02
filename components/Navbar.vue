@@ -54,7 +54,7 @@ const userNavigation = contentStore.userNavigation;
         <div class="flex items-center">
           <div class="md:ml-4 md:flex md:flex-shrink-0 md:items-center space-x-5">
             <template v-if="!loggedIn">
-              <BasicLink class="hidden md:block" href="/login" name="register" size="md">Registrieren</BasicLink>
+              <BasicLink class="hidden md:block" href="/signup" name="register" size="md">Registrieren</BasicLink>
               <BasicLink class="hidden md:block" type="button" href="/login" name="login">Anmelden</BasicLink>
             </template>
             <template v-else>
