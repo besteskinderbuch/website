@@ -22,7 +22,7 @@ function openedFaq(faq) {
           Häufig gestellte Fragen
         </h2>
         <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
-          <Disclosure as="div" v-for="faq in faqs" :key="faq.id" class="pt-6" v-slot="{ open }" @click="openedFaq(faq)">
+          <Disclosure as="div" v-for="faq in faqs" :key="faq.id" class="pt-6" v-slot="{ open }" @click="openedFaq(faq)" :data-id="faq.id">
             <dt>
               <DisclosureButton class="flex w-full items-start justify-between text-left text-gray-900">
                 <span class="text-base font-semibold leading-7">{{
