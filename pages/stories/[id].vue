@@ -8,9 +8,9 @@ const id = route.params.id;
 
 const accountStore = useAccountStore();
 
-const contentStore = useContentStore();
-const freeStories = computed(() => contentStore.freeStories);
-const publicStories = computed(() => contentStore.publicStories);
+const storyStore = useStoryStore();
+const freeStories = computed(() => storyStore.freeStories);
+const publicStories = computed(() => storyStore.publicStories);
 
 const { loggedIn } = storeToRefs(accountStore);
 
@@ -29,7 +29,7 @@ if (story.value) {
     description: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
     ogTitle: `bestes-kinderbuch - ${story.value.title}`,
     ogDescription: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
-    ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop',
+    ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
     twitterCard: 'summary_large_image',
   })
 }

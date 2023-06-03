@@ -1,5 +1,5 @@
 <script setup>
-import { useContentStore } from "~/stores/useContentStore";
+import { useBlogStore } from "~/stores/useBlogStore";
 
 const props = defineProps({
   id: {
@@ -8,8 +8,8 @@ const props = defineProps({
   },
 });
 
-const contentstore = useContentStore();
-const posts = contentstore.posts;
+const blogStore = useBlogStore();
+const posts = blogStore.posts;
 
 const post = posts.find((post) => post.id === props.id);
 
@@ -50,9 +50,18 @@ const related = others.slice(0, 5);
                 {{ post.date }}
               </p>
             </div>
-            <nuxt-img provider="imgix" :src="post.image.src" :alt="post.image.alt" :modifiers="{ auto: 'format,compress' }"/>
+            <nuxt-img provider="imgix" :src="post.image.src" :alt="post.image.alt"
+              :modifiers="{ auto: 'format,compress' }" />
 
             <div v-html="post.content" class="prose max-w-none"></div>
+            <div class="prose max-w-none">
+              <p>Folge uns auf <a href="https://www.facebook.com/people/Bestes-Kinderbuch/100093505710759/"
+                  target="_blank" rel="noopener noreferrer">Facebook</a> und <a
+                  href="https://www.instagram.com/bestes_kinderbuch/" target="_blank"
+                  rel="noopener noreferrer">Instagram</a>, um über die neuesten Entwicklungen in der Welt der
+                Kinderliteratur auf dem Laufenden zu bleiben.</p>
+            </div>
+
 
             <div class="grid lg:flex lg:justify-between lg:items-center gap-y-5 lg:gap-y-0">
               <!-- Badges/Tags -->
@@ -72,7 +81,7 @@ const related = others.slice(0, 5);
       <!-- Sidebar -->
       <div class="lg:col-span-1 lg:w-full lg:h-full border-l md:border-0 border-primary1/50">
         <div class="sticky top-0 left-0 py-8 lg:pl-8">
-          
+
           <h2 class="mb-10 text-center">Andere Blogartikel</h2>
           <!-- End Avatar Media -->
           <div class="space-y-6">
@@ -86,15 +95,16 @@ const related = others.slice(0, 5);
               </div>
 
               <div class="flex-shrink-0 relative rounded-lg overflow-hidden w-20 h-20">
-                <nuxt-img provider="imgix" :src="post.image.src" :alt="post.image.alt" loading="lazy" class="w-full h-full absolute top-0 left-0 object-cover rounded-lg"  :modifiers="{ auto: 'format,compress' }"/>
+                <nuxt-img provider="imgix" :src="post.image.src" :alt="post.image.alt" loading="lazy"
+                  class="w-full h-full absolute top-0 left-0 object-cover rounded-lg"
+                  :modifiers="{ auto: 'format,compress' }" />
               </div>
             </NuxtLink>
             <!-- End Media -->
           </div>
         </div>
       </div>
-      <!-- End Sidebar -->
-    </div>
+    <!-- End Sidebar -->
   </div>
-  <!-- End Blog Article -->
-</template>
+</div>
+<!-- End Blog Article --></template>

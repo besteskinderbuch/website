@@ -4,7 +4,7 @@ useServerSeoMeta({
   description: 'Bestes-Kinderbuch.de: Wähle aus vielfältigen Abo-Optionen für maßgeschneiderte Kinder-Kurzgeschichten. Mit 7 Tage Geld-zurück-Garantie. Entdecke jetzt!',
   ogTitle: "bestes-kinderbuch - Abos",
   ogDescription: 'Bestes-Kinderbuch.de: Wähle aus vielfältigen Abo-Optionen für maßgeschneiderte Kinder-Kurzgeschichten. Mit 7 Tage Geld-zurück-Garantie. Entdecke jetzt!',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop',
+  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
   twitterCard: 'summary_large_image',
 })
 

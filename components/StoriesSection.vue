@@ -1,14 +1,14 @@
 <script setup>
 import { storeToRefs } from 'pinia'
-import { useContentStore } from "~/stores/useContentStore";
 import { useAccountStore } from "~/stores/useAccountStore";
+import { useStoryStore } from '~/stores/useStoryStore';
 
 const accountStore = useAccountStore();
 const { loggedIn } = storeToRefs(accountStore);
 
-const contentStore = useContentStore();
-const freeStories = computed(() => contentStore.freeStories);
-const publicStories = computed(() => contentStore.publicStories);
+const storyStore = useStoryStore();
+const freeStories = computed(() => storyStore.freeStories);
+const publicStories = computed(() => storyStore.publicStories);
 
 const stories = computed(() => {
   if (loggedIn.value) {

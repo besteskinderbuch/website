@@ -1,11 +1,11 @@
 <script setup>
-import { useContentStore } from "~/stores/useContentStore";
+import { useBlogStore } from "~/stores/useBlogStore";
 
 const route = useRoute();
 const id = route.params.id;
 
-const contentstore = useContentStore();
-const posts = contentstore.posts;
+const blogStore = useBlogStore();
+const posts = blogStore.posts;
 
 const post = posts.find((post) => post.id === id);
 useServerSeoMeta({

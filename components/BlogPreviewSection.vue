@@ -35,11 +35,11 @@
 </template>
 
 <script setup>
-import { useContentStore } from "~/stores/useContentStore";
+import { useBlogStore } from "~/stores/useBlogStore";
 import BasicLink from "./BasicLink.vue";
 
-const contentStore = useContentStore();
-const posts = computed(() => contentStore.posts);
+const blogStore = useBlogStore();
+const posts = computed(() => blogStore.posts);
 
 const prewiewPosts = posts.value.slice(0, 3);
 </script>

@@ -1,9 +1,9 @@
 
 <script setup>
-import { useContentStore } from "~/stores/useContentStore";
+import { useBlogStore } from "~/stores/useBlogStore";
 
-const contentStore = useContentStore();
-const posts = computed(() => contentStore.posts);
+const blogStore = useBlogStore();
+const posts = computed(() => blogStore.posts);
 </script>
 
 <template>
