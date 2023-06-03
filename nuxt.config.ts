@@ -60,7 +60,12 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "@nuxtjs/robots",
     'nuxt-delay-hydration',
+    'nuxt-simple-sitemap',
   ],
+
+  sitemap: {
+    siteUrl: 'https://bestes-kinderbuch.de',
+  },
 
   delayHydration: {
     mode: 'mount'
