@@ -38,7 +38,7 @@ useHead({
 })
 </script>
 <template>
-  <Navbar2></Navbar2>
+  <Navbar></Navbar>
   <main class="flex-1">
     <HeroSection></HeroSection>
     <LazyFeatureSection></LazyFeatureSection>
