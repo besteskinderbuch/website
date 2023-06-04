@@ -16,9 +16,7 @@ const post = posts.find((post) => post.id === props.id);
 const others = posts.filter((post) => post.id !== props.id);
 
 const related= ref([])
-useAsyncData(() => {
-    related.value= others.sort(() => Math.random() - Math.random()).slice(0, 5)
-});
+related.value= others.sort(() => Math.random() - Math.random()).slice(0, 5)
 
 </script>
 
