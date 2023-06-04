@@ -49,7 +49,7 @@
         </dl>
       </div>
     </div>
-  </Container>>
+  </Container>
 </template>
 
 <script setup>
