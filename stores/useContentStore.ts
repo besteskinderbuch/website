@@ -7,17 +7,26 @@ export const useContentStore = defineStore("content", () => {
   const title = "Die besten Kindergeschichten";
   const subtitle =
     "Entdecke mit unserer Plattform eine Welt voller Fantasie! Unsere liebevoll ausgewählten, altersgerechten Geschichten fördern die Vorstellungskraft und Kreativität deines Kindes und lassen es in unvergessliche Abenteuer eintauchen. Gestalte das Lesen zu einem besonderen Moment, den du und dein Kind gemeinsam erleben könnt - entfache die Liebe zum Lesen in deinem Kind. Tritt jetzt unserer Community bei!";
-  const navigation = [
+  const navigation = ref([
     { name: "Home", href: "/", type: "internal" },
     {
       name: "Kurzgeschichten",
       href: "/stories",
       type: "internal",
+      important: true,
     },
     { name: "Bücher", href: "/books", type: "internal" },
-    { name: "Blog", href: "/blog", type: "internal" },
+    { name: "Blog", href: "/blog", type: "internal", important: true },
     { name: "Hilfe", href: "/help", type: "internal" },
-  ];
+  ]);
+
+  const importantNavigation = computed(() =>
+    navigation.value.filter((item) => item.important)
+  );
+
+  const nonImportantNavigation = computed(() =>
+  navigation.value.filter((item) => !item.important)
+);
 
   const userNavigation = [
     { name: "Dein Profil", href: "/account" },
@@ -470,8 +479,6 @@ export const useContentStore = defineStore("content", () => {
     },
   ];
 
- 
-
   /*  {
     id: "sonnenblumen-sams-gartenabenteuer",
     title: "Sonnenblumen-Sam's Gartenabenteuer",
@@ -642,6 +649,8 @@ export const useContentStore = defineStore("content", () => {
     title,
     subtitle,
     navigation,
+    importantNavigation,
+    nonImportantNavigation,
     userNavigation,
     frequencies,
     faqsLong,

@@ -5,9 +5,32 @@ const props=defineProps({
     type: String,
     default: "sm",
   },
+  theme: {
+    type: String,
+    default: "dark",
+  },
 });
 
 const current = useRoute().path === props.href;
+
+
+const color = computed(() => {
+  if (props.theme === "light") {
+    return "text-white";
+  } else {
+    return "text-gray-700";
+  }
+});
+
+const currentColor = computed(() => {
+  if (props.theme === "light") {
+    return "border-white text-white";
+  } else {
+    return "border-gray-300 text-gray-700";
+  }
+});
+
+
 </script>
 
 <template>
@@ -16,8 +39,8 @@ const current = useRoute().path === props.href;
     :class="[
       `text-${size}`,
       current
-        ? 'inline-flex items-center border-b-2 border-primary1 px-1 pt-1 font-medium text-gray-900'
-        : 'inline-flex items-center border-b-2 border-transparent px-1 pt-1  font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700',
+        ? `inline-flex items-center border-b-2  px-1 pt-1 font-medium ${currentColor}`
+        : `inline-flex items-center border-b-2 border-transparent px-1 pt-1  font-medium ${color} hover:border-gray-300 hover:text-gray-700`,
     ]"
     :aria-current="current ? 'page' : undefined"
   >

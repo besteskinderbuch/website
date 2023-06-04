@@ -15,7 +15,7 @@ const { loggedIn } = storeToRefs(accountStore);
 
 <template>
   <div class="relative isolate overflow-hidden">
-    <div class="min-h-screen md:h-auto relative mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-10">
+    <div class="min-h-screen md:h-auto relative mx-auto max-w-7xl px-6 pb-24 pt-16 sm:pb-32 lg:flex lg:px-8 lg:py-10">
       <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
         <h1 class="lg:mt-20 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ title }}</h1>
         <p class="mt-6 text-lg leading-8 text-gray-600">{{ subtitle }}</p>
