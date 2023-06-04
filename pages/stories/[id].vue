@@ -1,7 +1,7 @@
 <script setup>
 import { storeToRefs } from 'pinia'
 import { useAccountStore } from "~/stores/useAccountStore";
-import { useContentStore } from "~/stores/useContentStore";
+import { useStoryStore } from "~/stores/useStoryStore";
 
 const route = useRoute();
 const id = route.params.id;
