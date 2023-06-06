@@ -12,7 +12,8 @@ defineProps({
   <article class="flex flex-col items-start justify-between">
     <NuxtLink :to="data.href">
       <div class="relative w-full">
-        <nuxt-img provider="imgix" :src="data.image.src" :alt="data.image.alt" loading="lazy" :modifiers="{ auto: 'format,compress' }"
+        <nuxt-img provider="imgix" :src="data.image.src" :alt="data.image.alt" loading="lazy"
+          :modifiers="{ auto: 'format,compress' }"
           class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]" />
         <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
       </div>
@@ -21,7 +22,9 @@ defineProps({
           <time :datetime="data.datetime" class="text-gray-500">{{
             data.date
           }}</time>
-        <StarRating read-only :show-rating="false" :increment="0.5" star-size="20" :rating="data.rating"></StarRating>
+          <ClientOnly>
+            <StarRating read-only :show-rating="false" :increment="0.5" star-size="20" :rating="data.rating" />
+          </ClientOnly>
         </div>
         <div class="group relative">
           <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">

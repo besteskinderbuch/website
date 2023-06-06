@@ -7,7 +7,9 @@ const cookiebot = {
   "data-blockingmode": "auto",
 };
 
-const hotjarWindow = { children: `window._hjSettings={hjid:${process.env.HOTJAR_ID},hjsv:6};` };
+const hotjarWindow = {
+  children: `window._hjSettings={hjid:${process.env.HOTJAR_ID},hjsv:6};`,
+};
 
 const hotjar = {
   id: "Hotjar",
@@ -50,6 +52,10 @@ export default defineNuxtConfig({
   },
 
   plugins: [],
+  components: {
+    global: true,
+    dirs: ["~/components/section", "~/components/global", "~/components/"],
+  },
 
   modules: [
     "@pinia/nuxt",
@@ -59,16 +65,16 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/image-edge",
     "@nuxtjs/robots",
-    'nuxt-delay-hydration',
-    'nuxt-simple-sitemap',
+    "nuxt-delay-hydration",
+    "nuxt-simple-sitemap",
   ],
 
   sitemap: {
-    siteUrl: 'https://bestes-kinderbuch.de',
+    siteUrl: "https://bestes-kinderbuch.de",
   },
 
   delayHydration: {
-    mode: 'mount'
+    mode: "mount",
   },
 
   robots: {
@@ -77,6 +83,10 @@ export default defineNuxtConfig({
         UserAgent: "*",
         Allow: "/",
       },
+      {
+        UserAgent: "*",
+        Disallow: "/abos/*",
+      }
     ],
   },
 

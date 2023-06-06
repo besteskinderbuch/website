@@ -30,8 +30,8 @@ watch(stories, (newVal, oldVal) => {
 })
 </script>
 <template>
-  <div class="bg-white py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <Section>
+    <Container>
       <div class="mx-auto text-center">
         <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Kurzgeschichten
@@ -57,13 +57,11 @@ watch(stories, (newVal, oldVal) => {
         </p>
       </div>
       <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        <ClientOnly>
-          <StoryTeaser v-for="story in stories" :key="story.id" :data="story"
-            class="flex flex-col items-start justify-between">
-          </StoryTeaser>
-        </ClientOnly>
+        <StoryTeaser v-for="story in stories" :key="story.id" :data="story"
+          class="flex flex-col items-start justify-between">
+        </StoryTeaser>
       </div>
-    </div>
-  </div>
+    </Container>
+  </Section>
 </template>
 

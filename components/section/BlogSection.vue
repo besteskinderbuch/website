@@ -7,8 +7,8 @@ const posts = computed(() => blogStore.posts);
 </script>
 
 <template>
-  <div class="bg-white py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <Section>
+    <Container>
       <div class="mx-auto text-center">
         <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Blog
@@ -33,5 +33,6 @@ const posts = computed(() => blogStore.posts);
           :datetime="post.datetime" :category="post.category" :title="post.title" :description="post.description"
           class="flex flex-col items-start justify-between" />
       </div>
-    </div>
-</div></template>
+    </Container>
+  </Section>
+</template>

@@ -1,13 +1,5 @@
-<script setup>
-defineProps({
-    color: {
-        type: String,
-        default: 'bg-white'
-    }
-})
-</script>
 <template>
-    <div :class=[color] class="py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <slot></slot>
     </div>
 </template>

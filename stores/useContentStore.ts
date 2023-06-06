@@ -25,8 +25,8 @@ export const useContentStore = defineStore("content", () => {
   );
 
   const nonImportantNavigation = computed(() =>
-  navigation.value.filter((item) => !item.important)
-);
+    navigation.value.filter((item) => !item.important)
+  );
 
   const userNavigation = [
     { name: "Dein Profil", href: "/account" },
@@ -272,10 +272,12 @@ export const useContentStore = defineStore("content", () => {
       free: true,
       price: { monthly: "gratis", annually: "gratis" },
       description: "Du möchtest erst einen Einblick gewinnen? Kein Problem",
-      features: [
-        "Zugriff auf 5 von uns ausgesuchten Geschichten",
-        "Vorlesefunktion",
-      ],
+      features: {
+        always: [
+          "Zugriff auf 5 von uns ausgesuchten Geschichten",
+          "Vorlesefunktion",
+        ],
+      },
       mostPopular: false,
     },
     {
@@ -293,13 +295,16 @@ export const useContentStore = defineStore("content", () => {
       },
       description:
         "Bist du oder dein Kind ein leidenschaftlicher Leser? Dann heißen wir dich als unseren treuen Bücherwurm willkommen!",
-      features: [
-        "riesige Auswahl an Geschichten",
-        "20 Geschichten/Monat lesbar",
-        "1 Premiumgeschichte mit Bilder/Monat",
-        "Vorlesefunktion",
-        "Geschichtswünsche werden berücksichtigt",
-      ],
+      features: {
+        monthly: ["monatlich kündbar"],
+        annually: ["jährlich kündbar"],
+        always: [
+          "riesige Auswahl an Geschichten",
+          "20 Geschichten/Monat lesbar",
+          "Vorlesefunktion",
+          "Geschichtswünsche werden berücksichtigt",
+        ],
+      },
       mostPopular: true,
     },
     {
@@ -316,14 +321,18 @@ export const useContentStore = defineStore("content", () => {
         annually: { current: "179,9", discounted: "149,9 €" },
       },
       description: "Das ultimative Leseerlebnis für wahre Bücherliebhaber!",
-      features: [
-        "riesige Auswahl an Geschichten",
-        "65  Geschichten/Monat lesbar",
-        "2 Premiumgeschichten mit Bilder/Monat",
-        "Vorlesefunktion",
-        "Wünsche werden mehr gewichtet",
-        "bald verfügbar: Personalisierbarkeit der Geschichten",
-      ],
+      features: {
+        monthly: ["monatlich kündbar"],
+        annually: ["jährlich kündbar"],
+        always: [
+          "riesige Auswahl an Geschichten",
+          "65  Geschichten/Monat lesbar",
+          "2 Premiumgeschichten mit Bilder/Monat",
+          "Vorlesefunktion",
+          "Wünsche werden mehr gewichtet",
+          "bald verfügbar: Personalisierbarkeit der Geschichten",
+        ],
+      },
       mostPopular: false,
     },
   ];
@@ -396,41 +405,71 @@ export const useContentStore = defineStore("content", () => {
   const features = [
     {
       name: "Weniger Gewicht",
+      longDescription:"Kennst du das Gefühl, schwer bepackt mit Büchern zu sein, nur um sicherzustellen, dass dein Kind immer etwas zum Lesen hat? Mit unserem Geschichten-Abo gehört das der Vergangenheit an. Stell dir vor, du hast eine riesige Bibliothek in deiner Tasche, immer bereit, eine neue Geschichte anzubieten, ohne dass ein zusätzliches Gramm hinzukommt. Unser digitales Abo ermöglicht es dir, eine Unmenge von Büchern bequem auf deinem Gerät zu tragen. Und das Beste daran? Es ist egal, wo du bist oder wie viel du mit dir herumtragen musst - eine Welt voller Geschichten ist immer nur einen Klick entfernt.",
       description:
         "Vergiss das mühsame Schleppen von schweren Büchern. Mit unserem Geschichten-Abo hast du deinen persönlichen Zugang zu einer riesigen digitalen Bibliothek immer dabei - ohne zusätzliches Gewicht.",
       icon: "game-icons:weight-lifting-up",
+      image:{
+        src:"",
+        alt:""
+      }
     },
     {
       name: "Platzsparend",
+      longDescription:"Bücher sind wunderbar, aber sie nehmen auch viel Platz ein. Und wir alle kennen das Gefühl, wenn das Bücherregal überfüllt ist und wir nicht wissen, wohin mit den neuen Büchern. Mit unserem Geschichten-Abo musst du dir darüber keine Gedanken mehr machen. Die Geschichten nehmen keinen physischen Platz in Anspruch, was bedeutet, dass du so viele Bücher haben kannst, wie du möchtest, ohne einen zusätzlichen Quadratzentimeter zu benötigen. Die digitale Bibliothek bietet dir die Möglichkeit, eine unbegrenzte Anzahl von Büchern zu genießen, während du Platz in deinem Zuhause schaffst.",
       description:
         "Dein Bücherregal ist schon überfüllt? Kein Problem. Unser Abo bietet dir unendlichen Lesestoff, ohne zusätzlichen Platz zu beanspruchen. Genieße deine Bücher digital und schaffe Raum in deinem Zuhause.",
       icon: "streamline:interface-content-book-2-library-content-books-book-shelf-stack",
+      image:{
+        src:"",
+        alt:""
+      }
     },
     {
       name: "Mitgestalten",
+      longDescription:"Wir bei bestes-kinderbuch.de glauben fest daran, dass unsere Nutzer das Herz unserer Plattform sind. Deshalb legen wir großen Wert auf dein Feedback und deine Meinungen. Mit unserem Abo hast du die Möglichkeit, aktiv an der Gestaltung der Inhalte mitzuwirken. Du kannst Geschichten bewerten, dein Feedback teilen und uns per E-Mail deine Wünsche und Ideen für zukünftige Geschichten mitteilen. Das gibt dir nicht nur das Gefühl, ein wichtiger Teil unserer Community zu sein, sondern ermöglicht uns auch, unsere Inhalte ständig zu verbessern und auf die Bedürfnisse und Wünsche unserer Nutzer abzustimmen.",
       description:
         "Deine Meinung ist uns wichtig! Bei uns hast du die Möglichkeit, aktiv an der Gestaltung der Inhalte mitzuwirken. Bewerte Geschichten, teile Feedback und äußere per E-Mail deine Wünsche zu künftigen Geschichten. Wir freuen uns, von dir zu hören!",
       icon: "mdi:brush",
+      image:{
+        src:"",
+        alt:""
+      }
     },
     {
       name: "Filtermöglichkeiten",
       comingSoon: true,
+      longDescription:"Mit einer umfangreichen Sammlung von Geschichten kann die Auswahl der passenden manchmal zu einer Herausforderung werden. Um das zu vereinfachen, bieten wir dir mit unserem Geschichten-Abo die Möglichkeit, unsere praktischen Filterfunktionen zu nutzen. Statt Zeit damit zu verbringen, durch endlose Listen von Büchern zu blättern, kannst du einfach deine Präferenzen einstellen und unsere Plattform wird die passenden Geschichten für dich finden. Ob du nach Geschichten für bestimmte Altersgruppen suchst, nach einem bestimmten Genre oder nach Büchern, die spezielle Lernziele fördern - unsere Filterfunktion hilft dir dabei. Diese Funktion ist nicht nur ein großer Zeitsparer, sondern sie stellt auch sicher, dass du genau das findest, was du suchst. So kannst du weniger Zeit mit der Suche verbringen und mehr Zeit mit dem genießen, was wirklich zählt - dem gemeinsamen Lesen mit deinem Kind.",
       description:
         "Verbringe weniger Zeit mit Suchen und mehr mit Lesen. Nutze unsere Filterfunktion, um genau die Geschichten zu finden, die deinen Vorlieben und Interessen entsprechen.",
       icon: "icon-park-outline:setting-config",
+      image:{
+        src:"",
+        alt:""
+      }
     },
     {
       name: "Schriftgröße & Hellikeit anpassbar",
       comingSoon: true,
+      longDescription:"Jeder hat seine eigenen Vorlieben, wenn es um das Lesen geht, und wir möchten sicherstellen, dass du das bestmögliche Leseerlebnis hast. Mit unserem Abo kannst du die Schriftgröße und Helligkeit genau so einstellen, wie es dir am angenehmsten ist. Du kannst größere Schrift für einfachere Lesbarkeit wählen oder die Helligkeit herunterdrehen, wenn du abends im Bett liest. Unsere personalisierten Einstellungen ermöglichen es dir, eine angenehme Leseumgebung zu schaffen, die deinen Augen nicht schadet. Die individuelle Anpassungsfähigkeit unseres Abos ermöglicht ein Leseerlebnis, das genau auf deine Bedürfnisse zugeschnitten ist.",
       description:
         "Deine Augen werden es dir danken. Pass die Schriftgröße und Helligkeit nach deinen Wünschen an und schaffe dir so ein individuelles und angenehmes Leseerlebnis.",
       icon: "ph:text-aa-bold",
+      image:{
+        src:"",
+        alt:""
+      }
     },
     {
       name: "Probelesen",
+      longDescription:"Manchmal ist es schwierig zu entscheiden, ob eine Geschichte das Richtige für dein Kind ist oder nicht. Um dir die Entscheidung zu erleichtern, bieten wir eine Probelese-Funktion an. Du kannst in jede Geschichte hineinschnuppern und dir einen Eindruck davon verschaffen, bevor du dich für den Kauf entscheidest. Auf diese Weise kannst du sicher sein, dass du die richtige Wahl triffst und dass dein Kind jede Minute des Lesens genießen wird. Denn unser Ziel ist es, dass jedes Kind das Lesen liebt und sich auf die nächste Geschichte freut.",
       description:
         "Du bist dir nicht sicher, ob eine Geschichte das Richtige für dich ist? Kein Problem. Mit unserer Probelese-Funktion kannst du in jede Geschichte hineinschnuppern, bevor du dich entscheidest. Unser Ziel ist es, dass du jede Minute des Lesens genießt.",
       icon: "material-symbols:search",
+      image:{
+        src:"",
+        alt:""
+      }
     },
   ];
 

@@ -1,9 +1,9 @@
 <script setup>
 useServerSeoMeta({
   title: "bestes-kinderbuch - Roadmap",
-  description: 'Entdecken Sie die Roadmap von Bestes-Kinderbuch.de. Erleben Sie unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen Ihrer Erwartungen.',
+  description: 'Entdecke die Roadmap von Bestes-Kinderbuch.de. Erlebe unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen deiner Erwartungen.',
   ogTitle: "bestes-kinderbuch - Roadmap",
-  ogDescription: 'Entdecken Sie die Roadmap von Bestes-Kinderbuch.de. Erleben Sie unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen Ihrer Erwartungen.',
+  ogDescription: 'Entdecke die Roadmap von Bestes-Kinderbuch.de. Erlebe unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen deiner Erwartungen.',
   ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
   twitterCard: 'summary_large_image',
 })
@@ -13,11 +13,11 @@ useHead({
     lang: 'de',
   },
 })
+
+const breadcrumb= [{name:"Roadmap", href:"/roadmap", current:true}];
 </script>
 <template>
-  <Navbar></Navbar>
-  <main class="flex-1">
+  <Page :breadcrumb="breadcrumb">
     <Roadmap></Roadmap>
-  </main>
-  <LazyFooter></LazyFooter>
+  </Page>
 </template>

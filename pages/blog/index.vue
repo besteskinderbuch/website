@@ -13,11 +13,11 @@ useHead({
     lang: 'de',
   },
 })
+
+const breadcrumb = [{ name: "Alle Blogartikel", href: "/blog", current: true }];
 </script>
 <template>
-  <Navbar></Navbar>
-  <main class="flex-1">
+  <Page :breadcrumb="breadcrumb">
     <BlogSection></BlogSection>
-  </main>
-  <LazyFooter></LazyFooter>
+  </Page>
 </template>

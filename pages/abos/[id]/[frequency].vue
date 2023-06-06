@@ -17,12 +17,19 @@ useHead({
     lang: 'de',
   },
 })
+
+const aboName = id.charAt(0).toUpperCase() + id.slice(1);
+const frequencyName = {
+  "monthly": "monatlich",
+  "yearly": "jährlich",
+};
+const aboFrequency = frequencyName[frequency];
+
+const breadcrumb= [{name:"Abos", href:"/abos"}, {name:aboName, href:`/abos/${id}`}, {name:aboFrequency, href:`/abos/${id}/${frequency}`, current:true}];
 </script>
 
 <template>
-  <Navbar></Navbar>
-  <main class="flex-1">
+  <Page :breadcrumb="breadcrumb">
     <AboNewsletter :id="id" :frequency="frequency"> </AboNewsletter>
-  </main>
-  <LazyFooter></LazyFooter>
+  </Page>
 </template>

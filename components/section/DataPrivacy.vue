@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-backgroundColor1">
-        <div class="mx-auto max-w-7xl px-6 py-3 sm:py-32 lg:px-8 lg:py-40">
+    <Section>
+        <Container>
             <div class="prose max-w-none">
                 <h1>Datenschutz&shy;erkl&auml;rung</h1>
                 <h2>1. Datenschutz auf einen Blick</h2>
@@ -745,6 +745,6 @@
                 <component is="script" id="CookieDeclaration" type="text/javascript" async
                     src="https://consent.cookiebot.com/1fdf56a9-b6af-4a95-acd2-3666a03175f1/cd.js" />
             </div>
-        </div>
-    </div>
+        </Container>
+    </Section>
 </template>

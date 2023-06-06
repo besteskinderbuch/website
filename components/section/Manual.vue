@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-green-300">
-    <div class="mx-auto max-w-7xl px-6 py-3 sm:py-32 lg:px-8 lg:py-40">
+  <Section color="bg-green-300">
+    <Container>
       <div class="mx-auto max-w-2xl lg:text-center">
         <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
           Wie funktioniert es?
@@ -51,8 +51,8 @@
           </li>
         </ol>
       </nav>
-    </div>
-  </div>
+    </Container>
+  </Section>
 </template>
 
 <script setup>

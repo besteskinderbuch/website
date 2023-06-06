@@ -11,32 +11,31 @@ const contentStore = useContentStore();
 const tiers = contentStore.tiers;
 const frequencies = contentStore.frequencies;
 
-
 const frequency = ref(frequencies[0]);
-
 
 const accountStore = useAccountStore();
 const { loggedIn, user } = storeToRefs(accountStore);
 </script>
 
 <template>
-  <div class="bg-blue-600 py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <Section color="bg-blue-600" id="pricing">
+    <Container>
       <div class="mx-auto max-w-4xl text-center">
-        <!-- <h2 class="text-base font-semibold leading-7 text-gray-300" id="pricing">
-          Preise
-        </h2> -->
-        <h2 class="mt-2 text-4xl font-bold tracking-tight text-gray-100 sm:text-5xl" id="pricing">
+        <h2 class="mt-2 text-4xl font-bold tracking-tight text-gray-100 sm:text-5xl">
           Preispläne für die Geschichten-Abos
         </h2>
       </div>
       <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
-        Entdecke die passende Abo-Option, maßgeschneidert für deine individuellen Bedürfnisse.
-        Wir legen großen Wert auf deine Zufriedenheit und bieten daher neben unserer vielfältigen Auswahl an Abonnements
-        auch eine 7 Tage Geld-zurück-Garantie, falls unser Angebot deinen Erwartungen leider nicht gerecht wird.
+        Entdecke die passende Abo-Option, maßgeschneidert für deine individuellen Bedürfnisse.<br />
+        Wir legen großen Wert auf deine Zufriedenheit und bieten daher eine <b>7 Tage Geld-zurück-Garantie</b>.
+        Das heißt, wenn du mit deinem Abo nicht zufrieden bist, bekommst du dein Geld innerhalb der ersten 7 Tage
+        zurück.<br />
+        Aber beeil dich, dieses unschlagbare Angebot gilt nur für kurze Zeit.
       </p>
       <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
-        Aber beeil dich, dieses unschlagbare Angebot gilt nur für kurze Zeit.
+        Wenn dir etwas an unserern Abo-Optionen nicht gefällt, schreib uns einfach eine E-Mail an <a
+          href="mailto:besteskinderbuch@gmail.com">besteskinderbuch@gmail.com</a> und wir werden versuchen eine Lösung zu
+        finden.
       </p>
       <div class="mt-16 flex justify-center">
         <RadioGroup v-model="frequency"
@@ -99,15 +98,35 @@ const { loggedIn, user } = storeToRefs(accountStore);
             <span v-else>Kostenlos registrieren</span>
           </NuxtLink>
           <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
-            <li v-for=" feature  in  tier.features " :key="feature" class="flex gap-x-3">
+            <li v-for=" feature  in  tier.features[frequency.value] " :key="feature" class="flex gap-x-3">
+              <CheckIcon class="h-6 w-5 flex-none text-white" aria-hidden="true" />
+              {{ feature }}
+            </li>
+            <li v-for=" feature  in  tier.features.always " :key="feature" class="flex gap-x-3">
               <CheckIcon class="h-6 w-5 flex-none text-white" aria-hidden="true" />
               {{ feature }}
             </li>
           </ul>
         </div>
       </div>
-    </div>
-  </div>
+
+      <div class="isolate mx-auto mt-10 max-w-md lg:mx-0 lg:max-w-none ">
+        <div
+          class="mt-8 flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 ring-1 ring-gray-100/30 sm:gap-y-10 sm:p-10 lg:col-span-2 lg:flex-row lg:items-center">
+          <div class="lg:min-w-0 lg:flex-1">
+            <h3 class="text-lg font-semibold leading-8 text-gray-100">Enterprise</h3>
+            <p class="mt-1 text-sm leading-6 text-gray-300">Du möchtest noch mehr Geschichten und Features haben?</p>
+          </div>
+
+          <a href="mailto:besteskinderbuch@gmail.com?subject=Enterprise Abo" aria-describedby="enterprise"
+            class="block rounded-md px-3.5 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white">
+            Sales kontaktieren
+          </a>
+        </div>
+      </div>
+
+    </Container>
+  </Section>
 </template>
 
 <style>

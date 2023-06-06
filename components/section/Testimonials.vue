@@ -1,5 +1,5 @@
 <template>
-  <div class="relative isolate bg-white pb-32 pt-24 sm:pt-32">
+  <Section class="relative isolate">
     <div class="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
       aria-hidden="true">
       <div class="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#0f7200] to-[#4690c9]"
@@ -65,7 +65,8 @@
           </blockquote>
           <figcaption class="flex items-center gap-x-4 border-t border-gray-900/10 px-6 py-4">
             <nuxt-img provider="imgix" class="h-10 w-10 flex-none rounded-full bg-gray-50"
-              :src="featuredTestimonial.author.image.src" loading="lazy" :alt="featuredTestimonial.author.image.alt"  :modifiers="{ auto: 'format,compress' }"/>
+              :src="featuredTestimonial.author.image.src" loading="lazy" :alt="featuredTestimonial.author.image.alt"
+              :modifiers="{ auto: 'format,compress' }" />
             <div class="flex-auto">
               <div class="font-semibold">
                 {{ featuredTestimonial.author.name }}
@@ -89,7 +90,7 @@
                 <p>{{ `“${testimonial.body}”` }}</p>
               </blockquote>
               <figcaption class="mt-6 flex items-center gap-x-4">
-               <!--  <nuxt-img provider="imgix" class="h-10 w-10 rounded-full bg-gray-50" :src="testimonial.author.imageUrl"
+                <!--  <nuxt-img provider="imgix" class="h-10 w-10 rounded-full bg-gray-50" :src="testimonial.author.imageUrl"
                   :alt="testimonial.author.imageAlt" loading="lazy" :modifiers="{ auto: 'format,compress' }" /> -->
                 <div>
                   <div class="font-semibold">{{ testimonial.author.name }}</div>
@@ -100,7 +101,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </Section>
 </template>
 
 <script setup>

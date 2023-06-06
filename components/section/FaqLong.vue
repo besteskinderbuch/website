@@ -5,24 +5,23 @@ import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/vue/24/outline";
 import { useContentStore } from "~/stores/useContentStore";
 
 const contentStore = useContentStore();
-const faqs = contentStore.faqs;
+const faqsLong = contentStore.faqsLong;
 
 function openedFaq(faq) {
-  useTrackEvent('faq_opened', {
+  useTrackEvent("faq_opened", {
     id: faq.id,
   })
 }
 </script>
 
 <template>
-  <div class="bg-white">
-    <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
-      <div class="mx-auto max-w-4xl divide-y divide-gray-900/10">
-        <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-          Häufig gestellte Fragen
-        </h2>
+  <Section>
+    <Container>
+      <div class="mx-auto max-w-7xl divide-y divide-gray-900/10">
+        <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900"> Häufig gestellte Fragen</h2>
         <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
-          <Disclosure as="div" v-for="faq in faqs" :key="faq.id" class="pt-6" v-slot="{ open }" @click="openedFaq(faq)" :data-id="faq.id">
+          <Disclosure as="div" v-for="faq in faqsLong" :key="faq.id" class="pt-6" v-slot="{ open }"
+            @click="openedFaq(faq)" :data-id="faq.id">
             <dt>
               <DisclosureButton class="flex w-full items-start justify-between text-left text-gray-900">
                 <span class="text-base font-semibold leading-7">{{
@@ -39,13 +38,7 @@ function openedFaq(faq) {
             </DisclosurePanel>
           </Disclosure>
         </dl>
-
       </div>
-      <div class="w-full flex justify-center mt-20">
-        <BasicLink href="/help">
-          <Icon name="material-symbols:arrow-forward" />weiter zur Hilfe
-        </BasicLink>
-      </div>
-    </div>
-  </div>
+    </Container>
+  </Section>
 </template>

@@ -35,11 +35,6 @@ const navigation = contentStore.navigation;
 const importantNavigation = contentStore.importantNavigation;
 const nonImportantNavigation = contentStore.nonImportantNavigation;
 const userNavigation = contentStore.userNavigation;
-
-function goToTop() {
-    window.scrollTo(0, 0);
-}
-
 </script>
 <template>
     <Disclosure as="nav" class="bg-primary1 md:bg-transparent" v-slot="{ open }">
@@ -47,10 +42,14 @@ function goToTop() {
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 mr-6">
-                        <img @click="goToTop" class="cursor-pointer block h-8 w-auto md:hidden" src="/logo_lightblue.png"
-                            alt="Your Company" />
-                        <img @click="goToTop" class="cursor-pointer hidden h-8 w-auto md:block" src="/logo_darkblue.png"
-                            alt="Your Company" />
+                        <NuxtLink to="/">
+                            <img class="cursor-pointer block h-8 w-auto md:hidden" src="/logo_lightblue.png"
+                                alt="Your Company" />
+                        </NuxtLink>
+                        <NuxtLink to="/">
+                            <img class="cursor-pointer hidden h-8 w-auto md:block" src="/logo_darkblue.png"
+                                alt="Your Company" />
+                        </NuxtLink>
                     </div>
                     <!-- Mobil -->
                     <div class="hidden lg:ml-6 md:block">
@@ -62,8 +61,8 @@ function goToTop() {
                     <!-- between sm and lg-->
                     <div class="hidden sm:ml-6 sm:block md:hidden">
                         <div class="flex space-x-4">
-                            <NavLink v-for="item in navigation" :key="item.name" :href="item.href" size="lg"
-                                theme="light">{{ item.name }}
+                            <NavLink v-for="item in navigation" :key="item.name" :href="item.href" size="lg" theme="light">
+                                {{ item.name }}
                             </NavLink>
                         </div>
                     </div>
