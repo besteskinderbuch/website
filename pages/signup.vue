@@ -1,12 +1,14 @@
 <script setup>
 useServerSeoMeta({
-  title: "bestes-kinderbuch - Singup",
+  title: "bestes-kinderbuch - Registrierung",
+  ogUrl: 'https://besteskinderbuch.de/signup',
+  ogType: 'website',
   description: 'Erwecke die Fantasie deines Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starte heute das Abo!',
-  ogTitle: "bestes-kinderbuch - Singup",
+  ogTitle: "bestes-kinderbuch - Registrierung",
   ogDescription: 'Erwecke die Fantasie deines Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starte heute das Abo!',
   ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
   twitterCard: 'summary_large_image',
-  ogType: 'website',
+  twitterTitle: "bestes-kinderbuch - Registrierung",
 })
 
 useHead({

@@ -1,11 +1,14 @@
 <script setup>
 useServerSeoMeta({
   title: "bestes-kinderbuch - Hilfe",
+  ogUrl: 'https://besteskinderbuch.de/help',
+  ogType: 'website',
   description: 'Entdecke unsere Hilfe-Seite auf Bestes-Kinderbuch.de. Hier findest du Antworten auf deine Fragen zu unserem Kinderbuch-Abo. Begleite uns auf dieser magischen Lese-Reise!',
   ogTitle: "bestes-kinderbuch - Hilfe",
   ogDescription: 'Entdecke unsere Hilfe-Seite auf Bestes-Kinderbuch.de. Hier findest du Antworten auf deine Fragen zu unserem Kinderbuch-Abo. Begleite uns auf dieser magischen Lese-Reise!',
   ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
   twitterCard: 'summary_large_image',
+  twitterTitle: "bestes-kinderbuch - Hilfe",
 })
 
 useHead({

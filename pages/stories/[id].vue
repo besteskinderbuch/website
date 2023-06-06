@@ -26,11 +26,14 @@ const story = ref(stories.value.find((s) => s.id === id))
 if (story.value) {
   useServerSeoMeta({
     title: `bestes-kinderbuch - ${story.value.title}`,
+    ogUrl: `https://besteskinderbuch.de/stories/${id}`,
+    ogType: 'article',
     description: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
     ogTitle: `bestes-kinderbuch - ${story.value.title}`,
     ogDescription: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
     ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
     twitterCard: 'summary_large_image',
+    twitterTitle: `bestes-kinderbuch - ${story.value.title}`,
   })
 }
 

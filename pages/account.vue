@@ -3,11 +3,14 @@ import { useRootStore } from "~/stores/useRootStore";
 
 useServerSeoMeta({
   title: "bestes-kinderbuch - Mein Bereich",
+  ogUrl: 'https://besteskinderbuch.de/account',
+  ogType: 'website',
   description: 'Verwalte dein Abo bei Bestes-Kinderbuch.de, bearbeite Einstellungen und aktualisiere deine Kontoinformationen.',
   ogTitle: "bestes-kinderbuch - Mein Bereich",
   ogDescription: 'Verwalte dein Abo bei Bestes-Kinderbuch.de, bearbeite Einstellungen und aktualisiere deine Kontoinformationen.',
   ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
   twitterCard: 'summary_large_image',
+  twitterTitle: "bestes-kinderbuch - Mein Bereich",
 })
 
 const { devMode } = useRootStore()

@@ -24,11 +24,14 @@ if (!devMode.value) {
 
 useServerSeoMeta({
   title: "bestes-kinderbuch",
+  ogUrl: 'https://besteskinderbuch.de',
+  ogType: 'website',
   description: 'Erwecke die Fantasie deines Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starte heute das Abo!',
   ogTitle: "bestes-kinderbuch",
   ogDescription: 'Erwecke die Fantasie deines Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starte heute das Abo!',
   ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
   twitterCard: 'summary_large_image',
+  twitterTitle: "bestes-kinderbuch",
 })
 
 useHead({
