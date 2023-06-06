@@ -9,18 +9,22 @@ onMounted(() => {
 });
 
 const router = useRouter();
-const redirectAfterLogin = () => {
-  useTrackEvent('login')
-  router.push({ path: "/" });
-};
 
 const rootStore = useRootStore()
 const devMode = computed(() => rootStore.devMode)
+
+
+const emit = defineEmits(['success'])
+
+function handleSuccess() {
+  useTrackEvent('login')
+  emit("success")
+}
 </script>
 
 <template>
   <ClientOnly>
-    <hanko-auth v-if="!devMode" @hankoAuthSuccess="redirectAfterLogin" :api="endpoint" />
-    <FakeLogin v-else></FakeLogin>
+    <hanko-auth v-if="!devMode" @hankoAuthSuccess="handleSuccess" :api="endpoint" />
+    <FakeLogin v-else @success="handleSuccess"></FakeLogin>
   </ClientOnly>
 </template>

@@ -1,9 +1,9 @@
 <template>
   <nav class="flex" aria-label="Breadcrumb">
-    <ol role="list" class="flex items-center space-x-4">
+    <ol role="list" class="flex items-center space-x-1 md:space-x-4">
       <li>
         <div>
-          <NuxtLink to="/" class="text-gray-400 hover:text-gray-500">
+          <NuxtLink to="/" class="breadcrumb-link md:max-w-none text-gray-400 hover:text-gray-500">
             <HomeIcon class="h-5 w-5 flex-shrink-0" aria-hidden="true" />
             <span class="sr-only">Home</span>
           </NuxtLink>
@@ -12,7 +12,7 @@
       <li v-for="page in data" :key="page.name">
         <div class="flex items-center">
           <ChevronRightIcon class="h-5 w-5 flex-shrink-0 text-gray-400" aria-hidden="true" />
-          <NuxtLink :to="page.href" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
+          <NuxtLink :to="page.href" class="breadcrumb-link ml-1 md:ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
             :aria-current="page.current ? 'page' : undefined">{{ page.name }}</NuxtLink>
         </div>
       </li>
@@ -30,3 +30,11 @@ defineProps({
   },
 })
 </script>
+<style>
+.breadcrumb-link {
+    text-overflow: ellipsis;
+    max-width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+</style>

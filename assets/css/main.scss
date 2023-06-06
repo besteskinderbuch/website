@@ -7,3 +7,8 @@
     display: flex;
     flex-direction: column;
 }
+
+// make hotjar feedback button smaller
+._hj-AcOyB__styles__openStateButtonToggle _hj-cqDlV__styles__buttonToggleMiddleRight{
+    width: 30px !important;
+}

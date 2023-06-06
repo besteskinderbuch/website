@@ -35,6 +35,11 @@ const navigation = contentStore.navigation;
 const importantNavigation = contentStore.importantNavigation;
 const nonImportantNavigation = contentStore.nonImportantNavigation;
 const userNavigation = contentStore.userNavigation;
+
+
+const route = useRoute();
+const signupUrl = ref(`/signup?redirect=${route.fullPath}`);
+const loginUrl = ref(`/login?redirect=${route.fullPath}`);
 </script>
 <template>
     <Disclosure as="nav" class="bg-primary1 md:bg-transparent" v-slot="{ open }">
@@ -82,9 +87,9 @@ const userNavigation = contentStore.userNavigation;
 
                         <template v-if="!loggedIn">
                             <div class="flex space-x-4 items-center">
-                                <NavLink class="hidden md:block" href="/login" name="register" size="lg">Registrieren
+                                <NavLink class="hidden md:block" :href="signupUrl" name="register" size="lg">Registrieren
                                 </NavLink>
-                                <BasicLink class="hidden md:block" type="button" href="/login" name="login">Anmelden
+                                <BasicLink class="hidden md:block" type="button" :href="loginUrl" name="login">Anmelden
                                 </BasicLink>
                             </div>
                         </template>
