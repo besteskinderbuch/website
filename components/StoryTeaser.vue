@@ -1,6 +1,4 @@
 <script setup>
-import StarRating from 'vue-star-rating'
-
 defineProps({
   data: {
     type: Object,
@@ -23,7 +21,7 @@ defineProps({
             data.date
           }}</time>
           <ClientOnly>
-            <StarRating read-only :show-rating="false" :increment="0.5" star-size="20" :rating="data.rating" />
+            <StarRating read-only :show-rating="false" :increment="0.5" :star-size="20" :rating="data.rating" />
           </ClientOnly>
         </div>
         <div class="group relative">

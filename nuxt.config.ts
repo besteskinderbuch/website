@@ -51,7 +51,9 @@ export default defineNuxtConfig({
     },
   },
 
-  plugins: [],
+  plugins: [
+    "~/plugins/rating.client.ts",
+  ],
   components: {
     global: true,
     dirs: ["~/components/section", "~/components/global", "~/components/"],

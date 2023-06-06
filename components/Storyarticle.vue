@@ -1,6 +1,4 @@
 <script setup>
-import StarRating from 'vue-star-rating'
-
 const props = defineProps({
   data: {
     type: Object,
@@ -41,15 +39,6 @@ onMounted(() => {
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div v-if="data">
       <!-- Content -->
-        <NuxtLink class="inline-flex items-center gap-x-1.5 text-sm text-gray-600 decoration-2 hover:underline"
-          to="/stories">
-          <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-          </svg>
-          Zurück zu allen Stories
-        </NuxtLink>
 
         <h1 class="text-3xl font-bold lg:text-5xl">
           {{ data.title }}
@@ -67,7 +56,7 @@ onMounted(() => {
           </p>
           <div class="leading-none pb-1">
             <ClientOnly>
-              <StarRating read-only :show-rating="false" :increment="0.5" star-size="20" :rating="data.rating" />
+              <StarRating read-only :show-rating="false" :increment="0.5" :star-size="20" :rating="data.rating" />
             </ClientOnly>
           </div>
         </div>

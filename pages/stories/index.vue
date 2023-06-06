@@ -14,7 +14,7 @@ useHead({
   },
 })
 
-const breadcrumb= [{name:"Geschichten", href:"/stories", current:true}];
+const breadcrumb = [{ name: "Geschichten", href: "/stories", current: true }];
 </script>
 <template>
   <Page :breadcrumb="breadcrumb">
