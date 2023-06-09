@@ -1,25 +1,18 @@
 <script setup>
 import { useRootStore } from "~/stores/useRootStore";
+import { useContentStore } from '~/stores/useContentStore';
 
-useServerSeoMeta({
-  title: "bestes-kinderbuch - Mein Bereich",
-  ogUrl: 'https://besteskinderbuch.de/account',
-  ogType: 'website',
+const contentStore = useContentStore();
+
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Mein Bereich - ${contentStore.baseSeoInfo.title}`,
   description: 'Verwalte dein Abo bei Bestes-Kinderbuch.de, bearbeite Einstellungen und aktualisiere deine Kontoinformationen.',
-  ogTitle: "bestes-kinderbuch - Mein Bereich",
-  ogDescription: 'Verwalte dein Abo bei Bestes-Kinderbuch.de, bearbeite Einstellungen und aktualisiere deine Kontoinformationen.',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
-  twitterCard: 'summary_large_image',
-  twitterTitle: "bestes-kinderbuch - Mein Bereich",
-})
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
 
 const { devMode } = useRootStore()
-
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
 </script>
 
 <template>

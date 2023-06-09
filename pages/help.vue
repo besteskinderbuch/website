@@ -1,21 +1,15 @@
 <script setup>
-useServerSeoMeta({
-  title: "bestes-kinderbuch - Hilfe",
-  ogUrl: 'https://besteskinderbuch.de/help',
-  ogType: 'website',
-  description: 'Entdecke unsere Hilfe-Seite auf Bestes-Kinderbuch.de. Hier findest du Antworten auf deine Fragen zu unserem Kinderbuch-Abo. Begleite uns auf dieser magischen Lese-Reise!',
-  ogTitle: "bestes-kinderbuch - Hilfe",
-  ogDescription: 'Entdecke unsere Hilfe-Seite auf Bestes-Kinderbuch.de. Hier findest du Antworten auf deine Fragen zu unserem Kinderbuch-Abo. Begleite uns auf dieser magischen Lese-Reise!',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
-  twitterCard: 'summary_large_image',
-  twitterTitle: "bestes-kinderbuch - Hilfe",
-})
+import { useContentStore } from '~/stores/useContentStore';
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
+const contentStore = useContentStore();
+
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Hilfe - ${contentStore.baseSeoInfo.title}`,
+  description: 'Entdecke unseren Hilfe-Bereich. Hier findest du Antworten auf deine Fragen zu unserem Gute Nacht Geschichten Abo!',
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
 
 const breadcrumb= [{name:"Hilfe", href:"/help", current:true}];
 </script>

@@ -34,7 +34,7 @@ watch(stories, (newVal, oldVal) => {
     <Container>
       <div class="mx-auto text-center">
         <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Kurzgeschichten
+          Gute Nacht Geschichten zum Vorlesen
         </h1>
         <p v-if="!loggedIn" class="mt-6 text-lg leading-8 text-gray-800 text-justify">
           Bereit für eine Reise in die magische Welt der Fantasie? Klick <NuxtLink to="/login" class="text-blue-300">hier

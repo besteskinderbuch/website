@@ -1,5 +1,6 @@
 <script setup>
 import { useBlogStore } from "~/stores/useBlogStore";
+import { useContentStore } from '~/stores/useContentStore';
 
 const route = useRoute();
 const id = route.params.id;
@@ -8,25 +9,17 @@ const blogStore = useBlogStore();
 const posts = blogStore.posts;
 
 const post = posts.find((post) => post.id === id);
-useServerSeoMeta({
-  title: `bestes-kinderbuch - ${post.title}`,
-  ogUrl: `https://besteskinderbuch.de/blog/${id}`,
-  ogType: 'article',
-  description: 'Entdecke auf bestes-kinderbuch.de unseren Blog voller faszinierender Kindergeschichten. Tauche jede Woche in neue Themen ein und finde Inspiration. Dein Tor zur Welt der Fantasie!',
-  ogTitle: `bestes-kinderbuch - ${post.title}`,
-  ogDescription: 'Entdecke auf bestes-kinderbuch.de unseren Blog voller faszinierender Kindergeschichten. Tauche jede Woche in neue Themen ein und finde Inspiration. Dein Tor zur Welt der Fantasie!',
-  ogImage: `https://besteskinderbuch-8301.imgix.net${post.image.src}?auto=format,compress&ar=2:1&fit=crop&w=1456`,
-  twitterCard: 'summary_large_image',
-  twitterTitle: `bestes-kinderbuch - ${post.title}`,
-})
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
+const contentStore = useContentStore();
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Blogartikel: ${post.title}`,
+  description: 'Unser Blog voller faszinierender Artikel rund ums Thema Gute Nacht Geschichten.',
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
+
 const breadcrumb = [{ name: "Alle Blogartikel", href: "/blog" }, { name: post.title, href: `/blog/${post.id}`, current: true }];
-
 </script>
 
 <template>

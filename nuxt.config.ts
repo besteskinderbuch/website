@@ -27,6 +27,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       script,
+      htmlAttrs: {
+        lang: "de",
+      },
     },
   },
 
@@ -88,6 +91,10 @@ export default defineNuxtConfig({
       {
         UserAgent: "*",
         Disallow: "/abos/*",
+      },
+      {
+        UserAgent: "*",
+        Disallow: "/account",
       }
     ],
   },

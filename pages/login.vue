@@ -1,28 +1,26 @@
 <script setup>
-useServerSeoMeta({
-  title: "bestes-kinderbuch - Anmeldung",
-  ogType: 'website',
-  ogUrl: 'https://bestes-kinderbuch.de/login',
-  description: 'Erwecke die Fantasie deines Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starte heute das Abo!',
-  ogTitle: "bestes-kinderbuch - Anmeldung",
-  ogDescription: 'Erwecke die Fantasie deines Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starte heute das Abo!',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
-  twitterCard: 'summary_large_image',
-  twitterTitle: "bestes-kinderbuch - Anmeldung",
-})
+import { useContentStore } from '~/stores/useContentStore';
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
+const contentStore = useContentStore();
 
-const redirect = useRoute().query.redirect || '/'
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Anmeldung - ${contentStore.baseSeoInfo.title}`,
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
+
+const route = useRoute()
+const redirect = route.query.redirect || '/'
 
 const router = useRouter()
 function handleSuccess() {
   router.push(redirect)
 }
+
+definePageMeta({
+  layout: "empty",
+});
 </script>
 
 <template>

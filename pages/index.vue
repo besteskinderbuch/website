@@ -1,6 +1,7 @@
 <script setup>
 import { useAccountStore } from "~/stores/useAccountStore";
 import { useRootStore } from "~/stores/useRootStore";
+import { useContentStore } from '~/stores/useContentStore';
 
 const { getCurrentUser } = useAuth();
 
@@ -22,26 +23,12 @@ if (!devMode.value) {
   }
 }
 
-useServerSeoMeta({
-  title: "bestes-kinderbuch",
-  ogUrl: 'https://besteskinderbuch.de',
-  ogType: 'website',
-  description: 'Erwecke die Fantasie deines Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starte heute das Abo!',
-  ogTitle: "bestes-kinderbuch",
-  ogDescription: 'Erwecke die Fantasie deines Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starte heute das Abo!',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
-  twitterCard: 'summary_large_image',
-  twitterTitle: "bestes-kinderbuch",
-})
+const contentStore = useContentStore();
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
+const seoMeta = contentStore.createSeoMeta(contentStore.baseSeoInfo)
+useSeoMeta(seoMeta)
 </script>
 <template>
-  <Navbar></Navbar>
   <main class="flex-1">
     <HeroSection></HeroSection>
     <LazyFeatureSection></LazyFeatureSection>
@@ -53,5 +40,4 @@ useHead({
     <LazyBookPreviewSection></LazyBookPreviewSection>
     <LazyBlogPreviewSection></LazyBlogPreviewSection>
   </main>
-  <LazyFooter></LazyFooter>
 </template>

@@ -1,27 +1,34 @@
 <script setup>
-useServerSeoMeta({
-  title: "bestes-kinderbuch - Registrierung",
-  ogUrl: 'https://besteskinderbuch.de/signup',
-  ogType: 'website',
-  description: 'Erwecke die Fantasie deines Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starte heute das Abo!',
-  ogTitle: "bestes-kinderbuch - Registrierung",
-  ogDescription: 'Erwecke die Fantasie deines Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starte heute das Abo!',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
-  twitterCard: 'summary_large_image',
-  twitterTitle: "bestes-kinderbuch - Registrierung",
-})
+import { useContentStore } from '~/stores/useContentStore';
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
+const contentStore = useContentStore();
+
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Registrierung - ${contentStore.baseSeoInfo.title}`,
+}
+
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
+
+const route = useRoute()
+const redirect = route.query.redirect || '/'
+
+console.log("redirect", redirect)
+
+definePageMeta({
+  layout: "empty",
+});
 </script>
 
 <template>
   <div class="flex min-h-full flex-1">
     <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
       <div class="mx-auto w-full max-w-sm lg:w-96">
+        <div class="mb-8">
+          <Icon name="material-symbols:arrow-back"></Icon>
+          <NuxtLink :to="redirect">zurück</NuxtLink>
+        </div>
         <!--  <div>
           <img class="h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
         </div> -->

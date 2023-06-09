@@ -15,8 +15,6 @@ import { useAccountStore } from "~/stores/useAccountStore";
 
 const accountStore = useAccountStore();
 
-// TODO:
-
 const loggedIn = ref(false);
 onMounted(() => {
     const { loggedIn: bla } = storeToRefs(accountStore);
@@ -37,16 +35,24 @@ const nonImportantNavigation = contentStore.nonImportantNavigation;
 const userNavigation = contentStore.userNavigation;
 
 
-const route = useRoute();
-const signupUrl = ref(`/signup?redirect=${route.fullPath}`);
-const loginUrl = ref(`/login?redirect=${route.fullPath}`);
+
+const fullPath = ref("/")
+const route = useRoute()
+watch(() => route.fullPath, (newVal) => {
+    fullPath.value = newVal
+}, { immediate: true })
+
+
+
+const signupUrl = computed(() => `/signup?redirect=${fullPath.value}`);
+const loginUrl = computed(() => `/login?redirect=${fullPath.value}`);
 </script>
 <template>
     <Disclosure as="nav" class="bg-primary1 md:bg-transparent" v-slot="{ open }">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0 mr-6">
+                    <div class="flex-shrink-0 mr-4">
                         <NuxtLink to="/">
                             <img class="cursor-pointer block h-8 w-auto md:hidden" src="/logo_lightblue.png"
                                 alt="Your Company" />
@@ -56,15 +62,16 @@ const loginUrl = ref(`/login?redirect=${route.fullPath}`);
                                 alt="Your Company" />
                         </NuxtLink>
                     </div>
-                    <!-- Mobil -->
-                    <div class="hidden lg:ml-6 md:block">
+                    <!-- after Lg -->
+                    <div class="hidden md:block">
                         <div class="flex space-x-4">
-                            <NavLink v-for="item in navigation" :key="item.name" :href="item.href" size="lg">{{ item.name }}
+                            <NavLink v-for="item in navigation" :key="item.name" :href="item.href" size="lg" theme="dark">
+                                {{ item.name }}
                             </NavLink>
                         </div>
                     </div>
                     <!-- between sm and lg-->
-                    <div class="hidden sm:ml-6 sm:block md:hidden">
+                    <div class="hidden sm:block md:hidden">
                         <div class="flex space-x-4">
                             <NavLink v-for="item in navigation" :key="item.name" :href="item.href" size="lg" theme="light">
                                 {{ item.name }}
@@ -72,19 +79,19 @@ const loginUrl = ref(`/login?redirect=${route.fullPath}`);
                         </div>
                     </div>
                     <!-- Mobil -->
-                    <div class="sm:ml-6 sm:hidden">
+                    <div class="sm:hidden">
                         <div class="flex space-x-4">
                             <NavLink v-for="item in importantNavigation" :key="item.name" :href="item.href" size="lg"
-                                theme="light">{{ item.name }}
+                                theme="light">
+                                {{ item.name }}
                             </NavLink>
                         </div>
                     </div>
 
                 </div>
+
                 <div class="hidden sm:ml-6 sm:block">
-
                     <div class="flex items-center">
-
                         <template v-if="!loggedIn">
                             <div class="flex space-x-4 items-center">
                                 <NavLink class="hidden md:block" :href="signupUrl" name="register" size="lg">Registrieren
@@ -94,7 +101,6 @@ const loginUrl = ref(`/login?redirect=${route.fullPath}`);
                             </div>
                         </template>
                         <template v-else>
-
                             <!-- Profile dropdown -->
                             <Menu as="div" class="relative ml-3 hidden md:block">
                                 <div>
@@ -114,10 +120,8 @@ const loginUrl = ref(`/login?redirect=${route.fullPath}`);
                                     <MenuItems
                                         class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                         <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
-                                        <a v-if="item.href" :href="item.href" :class="[
-                                            active ? 'bg-gray-100' : '',
-                                            'block px-4 py-2 text-sm text-gray-700',
-                                        ]">{{ item.name }}</a>
+                                        <BasicLink v-if="item.href" size="lg" theme="light" :href="item.href">{{ item.name
+                                        }}</BasicLink>
                                         <div v-else @click="item.action()" class="block px-4 py-2 text-sm text-gray-700"
                                             :class="[active ? 'bg-gray-100' : '']">{{ item.name }}</div>
                                         </MenuItem>
@@ -139,15 +143,14 @@ const loginUrl = ref(`/login?redirect=${route.fullPath}`);
             </div>
         </div>
 
-        <DisclosurePanel class="md:hidden">
+        <!-- Mobile menu -->
+        <DisclosurePanel class="md:hidden" v-slot="{ close }">
             <div class="space-y-1 px-2 pb-3 pt-2 sm:hidden">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <DisclosureButton v-for="item in nonImportantNavigation" :key="item.name" as="a" :href="item.href" :class="[
-                    item.current
-                        ? 'bg-gray-900 text-white'
-                        : 'text-gray-100 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium',
-                ]" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+                <div v-for="item in nonImportantNavigation">
+                    <NavLink size="lg" theme="light" @click="close" :key="item.name" :href="item.href"
+                        :aria-current="item.current ? 'page' : undefined">{{ item.name }}</NavLink>
+                </div>
             </div>
             <div class="border-t border-gray-700 pb-3 pt-4">
                 <div v-if="loggedIn" class="flex items-center px-5">
@@ -167,18 +170,17 @@ const loginUrl = ref(`/login?redirect=${route.fullPath}`);
                                 : 'text-gray-100 hover:bg-gray-700 hover:text-white',
                             'block rounded-md px-3 py-2 text-base font-medium',
                         ]" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
-                        <DisclosureButton v-else:key="item.name" as="a" :href="item.href" :class="[
-                            item.current
-                                ? 'bg-gray-900 text-white'
-                                : 'text-gray-100 hover:bg-gray-700 hover:text-white',
-                            'block rounded-md px-3 py-2 text-base font-medium',
-                        ]" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+
+                        <NavLink v-else size="md" theme="light" @click="close" :href="item.href"
+                            :aria-current="item.current ? 'page' : undefined">{{ item.name }}</NavLink>
                     </template>
                 </div>
 
                 <div v-else class="mt-3 space-y-1 px-2">
-                    <BasicLink type="button" href="/login" name="login" class="w-full">Anmelden</BasicLink>
-                    <BasicLink type="button" href="/signup" name="signup" class="w-full">Registieren</BasicLink>
+                    <NavLink size="md" theme="light" type="button" href="/login" name="login" class="w-full">Anmelden
+                    </NavLink>
+                    <NavLink size="md" theme="light" type="button" href="/signup" name="signup" class="w-full">Registieren
+                    </NavLink>
                 </div>
             </div>
         </DisclosurePanel>

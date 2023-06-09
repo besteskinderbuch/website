@@ -58,10 +58,10 @@
 <script setup>
 const steps = [
   {
-    id: '01', name: 'Anmelden', href: '/#pricing'
+    id: '01', name: 'Registieren', href: '/#pricing'
   },
   {
-    id: '02', name: 'Geschichten finden', href: '/stories'
+    id: '02', name: 'Gute Nacht Geschichten finden', href: '/stories'
   },
   {
     id: '03', name: 'Traumreise beginnen'

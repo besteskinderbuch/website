@@ -4,20 +4,19 @@ import { defineComponent, h } from "vue";
 export const useContentStore = defineStore("content", () => {
   const { logout } = useAuth();
 
-  const title = "Die besten Kindergeschichten";
+  const title = "Die besten Gute Nacht Geschichten";
   const subtitle =
-    "Entdecke mit unserer Plattform eine Welt voller Fantasie! Unsere liebevoll ausgewählten, altersgerechten Geschichten fördern die Vorstellungskraft und Kreativität deines Kindes und lassen es in unvergessliche Abenteuer eintauchen. Gestalte das Lesen zu einem besonderen Moment, den du und dein Kind gemeinsam erleben könnt - entfache die Liebe zum Lesen in deinem Kind. Tritt jetzt unserer Community bei!";
+    "Entdecke mit unserer Plattform eine Welt voller Fantasie! Unsere liebevoll ausgewählten, altersgerechten Gute Nacht Geschichten fördern die Vorstellungskraft und Kreativität deines Kindes und lassen es in unvergessliche Abenteuer eintauchen. Gestalte das Lesen zu einem besonderen Moment, den du und dein Kind gemeinsam erleben könnt - entfache die Liebe zum Lesen in deinem Kind. Tritt jetzt unserer Community bei!";
   const navigation = ref([
-    { name: "Home", href: "/", type: "internal" },
     {
-      name: "Kurzgeschichten",
+      name: "Gute Nacht Geschichten",
       href: "/stories",
       type: "internal",
       important: true,
     },
-    { name: "Bücher", href: "/books", type: "internal" },
+    { name: "Bücher", href: "/books", type: "internal", important: false },
     { name: "Blog", href: "/blog", type: "internal", important: true },
-    { name: "Hilfe", href: "/help", type: "internal" },
+    { name: "Hilfe", href: "/help", type: "internal", important: false },
   ]);
 
   const importantNavigation = computed(() =>
@@ -138,9 +137,9 @@ export const useContentStore = defineStore("content", () => {
   const faqsLong = [
     {
       id: "faq-1",
-      question: "Was ist das Konzept hinter dem Kinder Kurzgeschichten-Abo?",
+      question: "Was ist das Konzept hinter dem Gute Nacht Geschichten Abo?",
       answer:
-        "Das Kinder Kurzgeschichten-Abo verfolgt das Ziel, Kindern im Alter von 0 bis 11 Jahren Zugang zu einer Welt voller faszinierender Kinderbücher zu bieten. Wir stellen vielfältige Abo-Optionen bereit, um den unterschiedlichsten Anforderungen gerecht zu werden. Unsere Geschichten, verfasst von einer Vielzahl kreativer Autoren, werden von talentierten Designern mit bezaubernden Illustrationen bereichert. Für ein noch intensiveres Leseerlebnis bieten wir außerdem die Möglichkeit, die Geschichten vorlesen zu lassen.",
+        "Das Gute Nacht Geschichten Abo verfolgt das Ziel, Kindern im Alter von 0 bis 11 Jahren Zugang zu einer Welt voller faszinierender Kinderbücher zu bieten. Wir stellen vielfältige Abo-Optionen bereit, um den unterschiedlichsten Anforderungen gerecht zu werden. Unsere Geschichten, verfasst von einer Vielzahl kreativer Autoren, werden von talentierten Designern mit bezaubernden Illustrationen bereichert. Für ein noch intensiveres Leseerlebnis bieten wir außerdem die Möglichkeit, die Geschichten vorlesen zu lassen.",
     },
     {
       id: "faq-2",
@@ -151,13 +150,13 @@ export const useContentStore = defineStore("content", () => {
     },
     {
       id: "faq-3",
-      question: "Wie oft werden neue Geschichten veröffentlicht?",
+      question: "Wie oft werden neue Gute Nacht Geschichten veröffentlicht?",
       answer:
         "Auch wenn es keinen festen Veröffentlichungszeitplan gibt, bemühen wir uns, in etwa wöchentlich neue Geschichten hinzuzufügen. Doch keine Sorge, von Beginn an steht bereits eine beeindruckende Auswahl an Geschichten zur Verfügung, die deine Entdeckungsreise spannend und abwechslungsreich gestalten.",
     },
     {
       id: "faq-4",
-      question: "Kann ich eine Geschichte vor dem Kauf probelesen?",
+      question: "Kann ich eine Gute Nacht Geschichten vor dem Kauf probelesen?",
       answer:
         "Sicher, nach Abschluss eines Abos hast du die Möglichkeit, Geschichten Probe zu lesen. Solange du nicht zur zweiten Seite wechselst, wird die Geschichte nicht als gelesen gewertet. Du kannst also stets die erste Seite einer Geschichte als Probe lesen.",
     },
@@ -181,22 +180,22 @@ export const useContentStore = defineStore("content", () => {
     },
     {
       id: "faq-7",
-      question: "Kann ich Geschichten für später speichern oder favorisieren?",
+      question: "Kann ich Gute Nacht Geschichten für später speichern oder favorisieren?",
       answer: "Noch nicht. Aber wir arbeiten daran.",
     },
     {
       id: "faq-8",
       question:
-        "Gibt es auch Geschichten für Nicht-Muttersprachler oder mehrsprachige Kinder?",
+        "Gibt es auch Gute Nacht Geschichten für Nicht-Muttersprachler oder mehrsprachige Kinder?",
       answer:
         "Noch nicht, wir planen auch Geschichten für Nicht-Muttersprachler oder mehrsprachige Kinder.",
     },
     {
       id: "faq-9",
       question:
-        "Sind die Geschichten interaktiv oder enthalten sie Illustrationen?",
+        "Sind die Gute Nacht Geschichten interaktiv oder enthalten sie Illustrationen?",
       answer:
-        "Premium-Geschichten sind illustriert. Interaktive Geschichten sind in Planung.",
+        "Alle unsere Gute Nacht Geschichten haben ein Titelbild, wohingegen Premium-Geschichten mehr illustriert sind. Interaktive Gute Nacht Geschichten sind in Planung.",
     },
     {
       id: "faq-10",
@@ -216,7 +215,7 @@ export const useContentStore = defineStore("content", () => {
       question:
         "Welche Maßnahmen werden ergriffen, um die Online-Sicherheit von Kindern auf der Plattform zu gewährleisten?",
       answer:
-        "Die Plattform setzt auf hohe Sicherheitsstandards und ist DSGVO-konform.",
+        "Die Plattform setzt selbstverständlich auf hohe Sicherheitsstandards!",
     },
     {
       id: "faq-13",
@@ -233,7 +232,7 @@ export const useContentStore = defineStore("content", () => {
       id: "faq-15",
       question: "Kann ich Ideen für neue Geschichten vorschlagen?",
       answer:
-        "Ja, wir freuen uns sehr über Vorschläge für neue Geschichten! Unser Ziel ist es, eine breite Palette von Inhalten zu bieten, die die Vorstellungskraft unserer kleinen Leser anregen, und wir schätzen deine Beiträge, um dieses Ziel zu erreichen. Wenn du eine Geschichte oder eine Idee hast, die du gerne mit uns teilen möchtest, kannst du uns diese per E-Mail an <a href='mailto:besteskinderbuch@gmail.com?subject=Idee'>besteskinderbuch@gmail.com</a> senden. Unser engagiertes Team wird jede Einsendung sorgfältig prüfen. Wenn deine Geschichte ausgewählt und veröffentlicht wird, bieten wir auch eine Art Anerkennung dafür an. Wir freuen uns darauf, von dir zu hören und sind gespannt auf deine kreativen Ideen!",
+        "Ja, wir freuen uns sehr über Vorschläge für neue Gute Nacht Geschichten! Unser Ziel ist es, eine breite Palette von Inhalten zu bieten, die die Vorstellungskraft unserer kleinen Leser anregen, und wir schätzen deine Beiträge, um dieses Ziel zu erreichen. Wenn du eine Geschichte oder eine Idee hast, die du gerne mit uns teilen möchtest, kannst du uns diese per E-Mail an <a href='mailto:besteskinderbuch@gmail.com?subject=Idee'>besteskinderbuch@gmail.com</a> senden. Unser engagiertes Team wird jede Einsendung sorgfältig prüfen. Wenn deine Geschichte ausgewählt und veröffentlicht wird, bieten wir auch eine Art Anerkennung dafür an. Wir freuen uns darauf, von dir zu hören und sind gespannt auf deine kreativen Ideen!",
     },
     {
       id: "faq-17",
@@ -256,20 +255,20 @@ export const useContentStore = defineStore("content", () => {
     { value: "monthly", label: "Monatlich", priceSuffix: "/Monat" },
     {
       value: "annually",
-      label: "Jährlich (2 Monate gratis)",
+      label: "Jährlich",
+      additionalInfo: "(2 Monate gratis)",
       priceSuffix: "/Jahr",
     },
   ];
-  const tiers = [
+  const tiers = ref([
     {
       name: "Buchwürmchen",
-      id: "tier-littlebookworm",
+      id: "littlebookworm",
       href: {
         monthly: "/login",
         annually: "/login",
       },
-      priceSuffix: false,
-      free: true,
+      isFree: true,
       price: { monthly: "gratis", annually: "gratis" },
       description: "Du möchtest erst einen Einblick gewinnen? Kein Problem",
       features: {
@@ -282,13 +281,12 @@ export const useContentStore = defineStore("content", () => {
     },
     {
       name: "Bücherwurm",
-      id: "tier-bookworm",
+      id: "bookworm",
       href: {
-        monthly: "/abos/buecherwurm/monthly",
-        annually: "/abos/buecherwurm/yearly",
+        monthly: "/abos/bookworm?frequency=monthly",
+        annually: "/abos/bookworm?frequency=yearly",
       },
-      priceSuffix: true,
-      free: false,
+      isFree: false,
       price: {
         monthly: { current: "6,99 €", discounted: "4,99 €" },
         annually: { current: "59,9 €", discounted: "49,9 €" },
@@ -309,13 +307,12 @@ export const useContentStore = defineStore("content", () => {
     },
     {
       name: "Lesefuchs",
-      id: "tier-readingfox",
+      id: "readingfox",
       href: {
-        monthly: "/abos/readingfox/monthly",
-        annually: "/abos/readingfox/yearly",
+        monthly: "/abos/readingfox?frequency=monthly",
+        annually: "/abos/readingfox?frequency=yearly",
       },
-      free: false,
-      priceSuffix: true,
+      isFree: false,
       price: {
         monthly: { current: "17,99 €", discounted: "14,99" },
         annually: { current: "179,9", discounted: "149,9 €" },
@@ -335,7 +332,7 @@ export const useContentStore = defineStore("content", () => {
       },
       mostPopular: false,
     },
-  ];
+  ]);
 
   const featuredTestimonial = {
     body: "Als Eltern sind wir ständig auf der Suche nach qualitativ hochwertigen, unterhaltsamen und lehrreichen Geschichten, um die Fantasie unserer Kinder anzuregen und ihre Liebe zum Lesen zu fördern. Auf 'bestes-kinderbuch.de' haben wir genau das gefunden. Die Auswahl an Geschichten ist einfach unglaublich - es gibt wirklich etwas für jeden Geschmack und jedes Alter. Ob es sich um lustige Abenteuergeschichten, berührende Erzählungen oder informative Sachbücher handelt, jede Geschichte fängt die Aufmerksamkeit unserer Kinder ein und hält sie bis zur letzten Seite gefesselt. Es ist schön zu sehen, wie sie durch diese Geschichten lernen, wachsen und ihre Welt entdecken. 'Bestes-kinderbuch.de' ist jetzt unsere erste Anlaufstelle, wenn wir neue Geschichten für unsere Kinder suchen. Wir können diese Webseite jedem Elternteil nur wärmstens empfehlen!",
@@ -405,71 +402,77 @@ export const useContentStore = defineStore("content", () => {
   const features = [
     {
       name: "Weniger Gewicht",
-      longDescription:"Kennst du das Gefühl, schwer bepackt mit Büchern zu sein, nur um sicherzustellen, dass dein Kind immer etwas zum Lesen hat? Mit unserem Geschichten-Abo gehört das der Vergangenheit an. Stell dir vor, du hast eine riesige Bibliothek in deiner Tasche, immer bereit, eine neue Geschichte anzubieten, ohne dass ein zusätzliches Gramm hinzukommt. Unser digitales Abo ermöglicht es dir, eine Unmenge von Büchern bequem auf deinem Gerät zu tragen. Und das Beste daran? Es ist egal, wo du bist oder wie viel du mit dir herumtragen musst - eine Welt voller Geschichten ist immer nur einen Klick entfernt.",
+      longDescription:
+        "Kennst du das Gefühl, schwer bepackt mit Büchern zu sein, nur um sicherzustellen, dass dein Kind immer etwas zum Lesen hat? Mit unserem Geschichten-Abo gehört das der Vergangenheit an. Stell dir vor, du hast eine riesige Bibliothek in deiner Tasche, immer bereit, eine neue Geschichte anzubieten, ohne dass ein zusätzliches Gramm hinzukommt. Unser digitales Abo ermöglicht es dir, eine Unmenge von Büchern bequem auf deinem Gerät zu tragen. Und das Beste daran? Es ist egal, wo du bist oder wie viel du mit dir herumtragen musst - eine Welt voller Geschichten ist immer nur einen Klick entfernt.",
       description:
         "Vergiss das mühsame Schleppen von schweren Büchern. Mit unserem Geschichten-Abo hast du deinen persönlichen Zugang zu einer riesigen digitalen Bibliothek immer dabei - ohne zusätzliches Gewicht.",
       icon: "game-icons:weight-lifting-up",
-      image:{
-        src:"",
-        alt:""
-      }
+      image: {
+        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_less-weight.png",
+        alt: "",
+      },
     },
     {
       name: "Platzsparend",
-      longDescription:"Bücher sind wunderbar, aber sie nehmen auch viel Platz ein. Und wir alle kennen das Gefühl, wenn das Bücherregal überfüllt ist und wir nicht wissen, wohin mit den neuen Büchern. Mit unserem Geschichten-Abo musst du dir darüber keine Gedanken mehr machen. Die Geschichten nehmen keinen physischen Platz in Anspruch, was bedeutet, dass du so viele Bücher haben kannst, wie du möchtest, ohne einen zusätzlichen Quadratzentimeter zu benötigen. Die digitale Bibliothek bietet dir die Möglichkeit, eine unbegrenzte Anzahl von Büchern zu genießen, während du Platz in deinem Zuhause schaffst.",
+      longDescription:
+        "Bücher sind wunderbar, aber sie nehmen auch viel Platz ein. Und wir alle kennen das Gefühl, wenn das Bücherregal überfüllt ist und wir nicht wissen, wohin mit den neuen Büchern. Mit unserem Geschichten-Abo musst du dir darüber keine Gedanken mehr machen. Die Geschichten nehmen keinen physischen Platz in Anspruch, was bedeutet, dass du so viele Bücher haben kannst, wie du möchtest, ohne einen zusätzlichen Quadratzentimeter zu benötigen. Die digitale Bibliothek bietet dir die Möglichkeit, eine unbegrenzte Anzahl von Büchern zu genießen, während du Platz in deinem Zuhause schaffst.",
       description:
         "Dein Bücherregal ist schon überfüllt? Kein Problem. Unser Abo bietet dir unendlichen Lesestoff, ohne zusätzlichen Platz zu beanspruchen. Genieße deine Bücher digital und schaffe Raum in deinem Zuhause.",
       icon: "streamline:interface-content-book-2-library-content-books-book-shelf-stack",
-      image:{
-        src:"",
-        alt:""
-      }
+      image: {
+        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_less-space.png",
+        alt: "",
+      },
     },
     {
       name: "Mitgestalten",
-      longDescription:"Wir bei bestes-kinderbuch.de glauben fest daran, dass unsere Nutzer das Herz unserer Plattform sind. Deshalb legen wir großen Wert auf dein Feedback und deine Meinungen. Mit unserem Abo hast du die Möglichkeit, aktiv an der Gestaltung der Inhalte mitzuwirken. Du kannst Geschichten bewerten, dein Feedback teilen und uns per E-Mail deine Wünsche und Ideen für zukünftige Geschichten mitteilen. Das gibt dir nicht nur das Gefühl, ein wichtiger Teil unserer Community zu sein, sondern ermöglicht uns auch, unsere Inhalte ständig zu verbessern und auf die Bedürfnisse und Wünsche unserer Nutzer abzustimmen.",
+      longDescription:
+        "Wir bei bestes-kinderbuch.de glauben fest daran, dass unsere Nutzer das Herz unserer Plattform sind. Deshalb legen wir großen Wert auf dein Feedback und deine Meinungen. Mit unserem Abo hast du die Möglichkeit, aktiv an der Gestaltung der Inhalte mitzuwirken. Du kannst Geschichten bewerten, dein Feedback teilen und uns per E-Mail deine Wünsche und Ideen für zukünftige Geschichten mitteilen. Das gibt dir nicht nur das Gefühl, ein wichtiger Teil unserer Community zu sein, sondern ermöglicht uns auch, unsere Inhalte ständig zu verbessern und auf die Bedürfnisse und Wünsche unserer Nutzer abzustimmen.",
       description:
         "Deine Meinung ist uns wichtig! Bei uns hast du die Möglichkeit, aktiv an der Gestaltung der Inhalte mitzuwirken. Bewerte Geschichten, teile Feedback und äußere per E-Mail deine Wünsche zu künftigen Geschichten. Wir freuen uns, von dir zu hören!",
       icon: "mdi:brush",
-      image:{
-        src:"",
-        alt:""
-      }
+      image: {
+        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_co-design.png",
+        alt: "",
+      },
     },
     {
       name: "Filtermöglichkeiten",
       comingSoon: true,
-      longDescription:"Mit einer umfangreichen Sammlung von Geschichten kann die Auswahl der passenden manchmal zu einer Herausforderung werden. Um das zu vereinfachen, bieten wir dir mit unserem Geschichten-Abo die Möglichkeit, unsere praktischen Filterfunktionen zu nutzen. Statt Zeit damit zu verbringen, durch endlose Listen von Büchern zu blättern, kannst du einfach deine Präferenzen einstellen und unsere Plattform wird die passenden Geschichten für dich finden. Ob du nach Geschichten für bestimmte Altersgruppen suchst, nach einem bestimmten Genre oder nach Büchern, die spezielle Lernziele fördern - unsere Filterfunktion hilft dir dabei. Diese Funktion ist nicht nur ein großer Zeitsparer, sondern sie stellt auch sicher, dass du genau das findest, was du suchst. So kannst du weniger Zeit mit der Suche verbringen und mehr Zeit mit dem genießen, was wirklich zählt - dem gemeinsamen Lesen mit deinem Kind.",
+      longDescription:
+        "Mit einer umfangreichen Sammlung von Geschichten kann die Auswahl der passenden manchmal zu einer Herausforderung werden. Um das zu vereinfachen, bieten wir dir mit unserem Geschichten-Abo die Möglichkeit, unsere praktischen Filterfunktionen zu nutzen. Statt Zeit damit zu verbringen, durch endlose Listen von Büchern zu blättern, kannst du einfach deine Präferenzen einstellen und unsere Plattform wird die passenden Geschichten für dich finden. Ob du nach Geschichten für bestimmte Altersgruppen suchst, nach einem bestimmten Genre oder nach Büchern, die spezielle Lernziele fördern - unsere Filterfunktion hilft dir dabei. Diese Funktion ist nicht nur ein großer Zeitsparer, sondern sie stellt auch sicher, dass du genau das findest, was du suchst. So kannst du weniger Zeit mit der Suche verbringen und mehr Zeit mit dem genießen, was wirklich zählt - dem gemeinsamen Lesen mit deinem Kind.",
       description:
         "Verbringe weniger Zeit mit Suchen und mehr mit Lesen. Nutze unsere Filterfunktion, um genau die Geschichten zu finden, die deinen Vorlieben und Interessen entsprechen.",
       icon: "icon-park-outline:setting-config",
-      image:{
-        src:"",
-        alt:""
-      }
+      image: {
+        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_filter-options.png",
+        alt: "",
+      },
     },
     {
       name: "Schriftgröße & Hellikeit anpassbar",
       comingSoon: true,
-      longDescription:"Jeder hat seine eigenen Vorlieben, wenn es um das Lesen geht, und wir möchten sicherstellen, dass du das bestmögliche Leseerlebnis hast. Mit unserem Abo kannst du die Schriftgröße und Helligkeit genau so einstellen, wie es dir am angenehmsten ist. Du kannst größere Schrift für einfachere Lesbarkeit wählen oder die Helligkeit herunterdrehen, wenn du abends im Bett liest. Unsere personalisierten Einstellungen ermöglichen es dir, eine angenehme Leseumgebung zu schaffen, die deinen Augen nicht schadet. Die individuelle Anpassungsfähigkeit unseres Abos ermöglicht ein Leseerlebnis, das genau auf deine Bedürfnisse zugeschnitten ist.",
+      longDescription:
+        "Jeder hat seine eigenen Vorlieben, wenn es um das Lesen geht, und wir möchten sicherstellen, dass du das bestmögliche Leseerlebnis hast. Mit unserem Abo kannst du die Schriftgröße und Helligkeit genau so einstellen, wie es dir am angenehmsten ist. Du kannst größere Schrift für einfachere Lesbarkeit wählen oder die Helligkeit herunterdrehen, wenn du abends im Bett liest. Unsere personalisierten Einstellungen ermöglichen es dir, eine angenehme Leseumgebung zu schaffen, die deinen Augen nicht schadet. Die individuelle Anpassungsfähigkeit unseres Abos ermöglicht ein Leseerlebnis, das genau auf deine Bedürfnisse zugeschnitten ist.",
       description:
         "Deine Augen werden es dir danken. Pass die Schriftgröße und Helligkeit nach deinen Wünschen an und schaffe dir so ein individuelles und angenehmes Leseerlebnis.",
       icon: "ph:text-aa-bold",
-      image:{
-        src:"",
-        alt:""
-      }
+      image: {
+        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_font-size-customizable.png",
+        alt: "",
+      },
     },
     {
       name: "Probelesen",
-      longDescription:"Manchmal ist es schwierig zu entscheiden, ob eine Geschichte das Richtige für dein Kind ist oder nicht. Um dir die Entscheidung zu erleichtern, bieten wir eine Probelese-Funktion an. Du kannst in jede Geschichte hineinschnuppern und dir einen Eindruck davon verschaffen, bevor du dich für den Kauf entscheidest. Auf diese Weise kannst du sicher sein, dass du die richtige Wahl triffst und dass dein Kind jede Minute des Lesens genießen wird. Denn unser Ziel ist es, dass jedes Kind das Lesen liebt und sich auf die nächste Geschichte freut.",
+      longDescription:
+        "Manchmal ist es schwierig zu entscheiden, ob eine Geschichte das Richtige für dein Kind ist oder nicht. Um dir die Entscheidung zu erleichtern, bieten wir eine Probelese-Funktion an. Du kannst in jede Geschichte hineinschnuppern und dir einen Eindruck davon verschaffen, bevor du dich für den Kauf entscheidest. Auf diese Weise kannst du sicher sein, dass du die richtige Wahl triffst und dass dein Kind jede Minute des Lesens genießen wird. Denn unser Ziel ist es, dass jedes Kind das Lesen liebt und sich auf die nächste Geschichte freut.",
       description:
         "Du bist dir nicht sicher, ob eine Geschichte das Richtige für dich ist? Kein Problem. Mit unserer Probelese-Funktion kannst du in jede Geschichte hineinschnuppern, bevor du dich entscheidest. Unser Ziel ist es, dass du jede Minute des Lesens genießt.",
       icon: "material-symbols:search",
-      image:{
-        src:"",
-        alt:""
-      }
+      image: {
+        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_trial-reading.png",
+        alt: "",
+      },
     },
   ];
 
@@ -684,7 +687,42 @@ export const useContentStore = defineStore("content", () => {
     `,
   }, */
 
+  const baseSeoInfo = ref({
+    title: "Zauberhafte Gute Nacht Geschichten zum Einschlafen",
+    url: "https://besteskinderbuch.de",
+    type: "website",
+    description:
+      "Entdecke zauberhafte Gute Nacht Geschichten zum Einschlafen und lasse dein Kind in magische Welten eintauchen.",
+    image:
+      "https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456",
+  });
+
+  type SeoInfo = {
+    title: string;
+    url: string;
+    description: string;
+    type: string;
+    image: string;
+  };
+
+  function createSeoMeta(info: SeoInfo) {
+    return {
+      title: info.title,
+      ogUrl: info.url,
+      ogType: info.type,
+      description: info.description,
+      ogTitle: info.title,
+      ogDescription: info.description,
+      ogImage: info.image,
+      twitterCard: "summary_large_image",
+      twitterTitle: info.title,
+      lang: "de",
+    };
+  }
+
   return {
+    baseSeoInfo,
+    createSeoMeta,
     title,
     subtitle,
     navigation,

@@ -2,6 +2,7 @@
 import { storeToRefs } from 'pinia'
 import { useAccountStore } from "~/stores/useAccountStore";
 import { useStoryStore } from "~/stores/useStoryStore";
+import { useContentStore } from '~/stores/useContentStore';
 
 const route = useRoute();
 const id = route.params.id;
@@ -22,32 +23,23 @@ const stories = computed(() => {
   return publicStories.value;
 });
 
+const contentStore = useContentStore();
+
 const story = ref(stories.value.find((s) => s.id === id))
 if (story.value) {
-  useServerSeoMeta({
-    title: `bestes-kinderbuch - ${story.value.title}`,
-    ogUrl: `https://besteskinderbuch.de/stories/${id}`,
-    ogType: 'article',
-    description: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
-    ogTitle: `bestes-kinderbuch - ${story.value.title}`,
-    ogDescription: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
-    ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
-    twitterCard: 'summary_large_image',
-    twitterTitle: `bestes-kinderbuch - ${story.value.title}`,
-  })
+  const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Gute Nacht Geschichte: ${story.value.title}`,
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
 }
 
 onMounted(() => {
   story.value = stories.value.find((s) => s.id === id)
 });
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
-
-const breadcrumb= [{name:"Geschichten", href:"/stories"}, {name:story.value?.title, href:`/stories/${id}`, current:true}];
+const breadcrumb= [{name:"Gute Nacht Geschichten", href:"/stories"}, {name:story.value?.title, href:`/stories/${id}`, current:true}];
 </script>
 
 <template>

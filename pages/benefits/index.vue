@@ -1,27 +1,16 @@
 <script setup>
 import { useContentStore } from "~/stores/useContentStore";
 
-
-useServerSeoMeta({
-    title: "bestes-kinderbuch - Vorteile",
-    ogUrl: 'https://besteskinderbuch.de/benefits',
-    ogType: 'website',
-    description: 'Entdecke unsere Vorteile-Seite auf Bestes-Kinderbuch.de.',
-    ogTitle: "bestes-kinderbuch - Vorteile",
-    ogDescription: 'Entdecke unsere Vorteile-Seite auf Bestes-Kinderbuch.de.',
-    ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop&w=1456',
-    twitterCard: 'summary_large_image',
-    twitterTitle: "bestes-kinderbuch - Vorteile",
-})
-
-useHead({
-    htmlAttrs: {
-        lang: 'de',
-    },
-})
-
-
 const contentStore = useContentStore();
+
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Vorteile - ${contentStore.baseSeoInfo.title}`,
+  description: 'Finde heraus was die Vorteile unseres Gute Nacht Geschichen Abos sind.',
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
+
 const features = contentStore.features;
 
 const breadcrumb= [{name:"Vorteile", href:"/benefits", current:true}];

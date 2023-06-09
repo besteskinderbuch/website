@@ -22,7 +22,7 @@ const { loggedIn, user } = storeToRefs(accountStore);
     <Container>
       <div class="mx-auto max-w-4xl text-center">
         <h2 class="mt-2 text-4xl font-bold tracking-tight text-gray-100 sm:text-5xl">
-          Preispläne für die Geschichten-Abos
+          Preispläne für die Gute Nacht Geschichten-Abos
         </h2>
       </div>
       <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
@@ -46,7 +46,7 @@ const { loggedIn, user } = storeToRefs(accountStore);
             <div class="flex justify-center items-center cursor-pointer rounded-full px-2.5 py-1" :class="[
               checked ? 'bg-secondary1' : '',
             ]">
-              <span>{{ option.label }}</span>
+              <span>{{ option.label }}{{ option.additionalInfo }}</span>
             </div>
           </RadioGroupOption>
         </RadioGroup>
@@ -81,7 +81,7 @@ const { loggedIn, user } = storeToRefs(accountStore);
               {{ tier.price[frequency.value].current }}
             </span>
 
-            <span v-if="!tier.free" class="text-sm font-semibold leading-6 text-gray-100">{{
+            <span v-if="!tier.isFree" class="text-sm font-semibold leading-6 text-gray-100">{{
               frequency.priceSuffix
             }}</span>
           </p>
@@ -94,7 +94,7 @@ const { loggedIn, user } = storeToRefs(accountStore);
           <NuxtLink v-else :to="tier.href[frequency.value]" :aria-describedby="tier.id"
             class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
             :class="[tier.mostPopular ? 'bg-secondary1 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-secondary1' : 'bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white']">
-            <span v-if="!tier.free">Kaufen</span>
+            <span v-if="!tier.isFree">Kaufen</span>
             <span v-else>Kostenlos registrieren</span>
           </NuxtLink>
           <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">

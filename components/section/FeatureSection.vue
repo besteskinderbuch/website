@@ -14,12 +14,12 @@ const features = contentStore.features;
           Immer was zum lesen
         </h2> -->
         <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
-          Vorteile deines Geschichten-Abos
+          Vorteile deines Gute Nacht Geschichten Abos
         </h2>
         <p class="mt-6 text-lg leading-8 text-gray-800">
           Träumst du davon, deinem Kind täglich vor dem Schlafengehen eine Gute-Nacht-Geschichte zu erzählen? Fühlst du
           dich jedoch durch den hohen Preis und den Platzbedarf von Büchern eingeschränkt? Dann haben wir mit unserem
-          Geschichten-Abo die perfekte Lösung für dich.
+          Gute Nacht Geschichten Abo die perfekte Lösung für dich.
         </p>
       </div>
       <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">

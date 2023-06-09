@@ -4,8 +4,8 @@
       <li>
         <div>
           <NuxtLink to="/" class="breadcrumb-link md:max-w-none text-gray-400 hover:text-gray-500">
-            <HomeIcon class="h-5 w-5 flex-shrink-0" aria-hidden="true" />
-            <span class="sr-only">Home</span>
+            <Icon name="material-symbols:other-houses" class="flex-shrink-0" width="1.25rem" height="1.25rem" aria-hidden="true" />
+            <span class="sr-only">Startseite</span>
           </NuxtLink>
         </div>
       </li>
@@ -21,7 +21,7 @@
 </template>
   
 <script setup>
-import { ChevronRightIcon, HomeIcon } from '@heroicons/vue/20/solid'
+import { ChevronRightIcon } from '@heroicons/vue/20/solid'
 
 defineProps({
   data: {
