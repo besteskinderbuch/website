@@ -20,12 +20,12 @@ const breadcrumb= [{name:"Vorteile", href:"/benefits", current:true}];
         <div class="mx-auto max-w-7xl px-6 py-3 sm:py-32 lg:px-8 lg:py-6">
             <div class="mx-auto text-center">
                 <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
-                    Vorteile gegenüber Büchern
+                    Vorteile deines Gute Nacht Geschichten Abos gegenüber Büchern
                 </h1>
                 <p class="mt-10 text-lg leading-8 text-gray-800 text-justify">
                     Herzlich willkommen auf unserer Vorteile-Seite! Hier bei bestes-kinderbuch.de sind wir stolz darauf,
                     eine Welt voller Wunder und Abenteuer anzubieten - und das ganz einfach mit einem Klick. Unser
-                    Geschichten-Abo ist mehr als nur ein Zugang zu Kinderbüchern, es ist ein Schlüssel zu einer Welt, die
+                    Gute Nacht Geschichten Abo ist mehr als nur ein Zugang zu Kinderbüchern, es ist ein Schlüssel zu einer Welt, die
                     die Kreativität und Vorstellungskraft deines Kindes auf eine besondere Weise erweitert. Aber was macht
                     unser Abo so besonders? Warum solltest du dich für digital entscheiden? Lass uns dir die zahlreichen
                     Vorteile unseres Abos aufzeigen.
@@ -52,7 +52,7 @@ const breadcrumb= [{name:"Vorteile", href:"/benefits", current:true}];
 
               
                 <p class="mt-10 text-lg leading-8 text-gray-800 text-justify">
-                    Wir hoffen, dass diese Vorteile dir die Entscheidung erleichtern, dich für unser Abo zu entscheiden. Wir
+                    Wir hoffen, dass diese Vorteile dir die Entscheidung erleichtern, dich für unser Gute Nacht Geschichten Abo zu entscheiden. Wir
                     freuen uns darauf, dich und dein Kind auf dieser wunderbaren Reise der Vorstellungskraft und Kreativität
                     zu begleiten.
                 </p>
