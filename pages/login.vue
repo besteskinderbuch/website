@@ -21,6 +21,17 @@ function handleSuccess() {
 definePageMeta({
   layout: "empty",
 });
+
+
+useHead(() => ({
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://beste-kinderbuch.de' + route.path,
+    },
+  ],
+}))
+
 </script>
 
 <template>
