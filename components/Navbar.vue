@@ -177,9 +177,9 @@ const loginUrl = computed(() => `/login?redirect=${fullPath.value}`);
                 </div>
 
                 <div v-else class="mt-3 space-y-1 px-2">
-                    <NavLink size="md" theme="light" type="button" href="/login" name="login" class="w-full">Anmelden
+                    <NavLink size="md" theme="light" type="button" :href="loginUrl" name="login" class="w-full">Anmelden
                     </NavLink>
-                    <NavLink size="md" theme="light" type="button" href="/signup" name="signup" class="w-full">Registieren
+                    <NavLink size="md" theme="light" type="button" :href="signupUrl" name="signup" class="w-full">Registieren
                     </NavLink>
                 </div>
             </div>
