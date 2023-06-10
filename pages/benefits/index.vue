@@ -4,16 +4,16 @@ import { useContentStore } from "~/stores/useContentStore";
 const contentStore = useContentStore();
 
 const seoInfo = {
-  ...contentStore.baseSeoInfo,
-  title: `Vorteile - ${contentStore.baseSeoInfo.title}`,
-  description: 'Finde heraus was die Vorteile unseres Gute Nacht Geschichen Abos sind.',
+    ...contentStore.baseSeoInfo,
+    title: `Vorteile - ${contentStore.baseSeoInfo.title}`,
+    description: 'Finde heraus was die Vorteile unseres Gute Nacht Geschichen Abos sind.',
 }
 const seoMeta = contentStore.createSeoMeta(seoInfo)
 useSeoMeta(seoMeta)
 
 const features = contentStore.features;
 
-const breadcrumb= [{name:"Vorteile", href:"/benefits", current:true}];
+const breadcrumb = [{ name: "Vorteile", href: "/benefits", current: true }];
 </script>
 <template>
     <Page :breadcrumb="breadcrumb">
@@ -25,7 +25,8 @@ const breadcrumb= [{name:"Vorteile", href:"/benefits", current:true}];
                 <p class="mt-10 text-lg leading-8 text-gray-800 text-justify">
                     Herzlich willkommen auf unserer Vorteile-Seite! Hier bei bestes-kinderbuch.de sind wir stolz darauf,
                     eine Welt voller Wunder und Abenteuer anzubieten - und das ganz einfach mit einem Klick. Unser
-                    Gute Nacht Geschichten Abo ist mehr als nur ein Zugang zu Kinderbüchern, es ist ein Schlüssel zu einer Welt, die
+                    Gute Nacht Geschichten Abo ist mehr als nur ein Zugang zu Kinderbüchern, es ist ein Schlüssel zu einer
+                    Welt, die
                     die Kreativität und Vorstellungskraft deines Kindes auf eine besondere Weise erweitert. Aber was macht
                     unser Abo so besonders? Warum solltest du dich für digital entscheiden? Lass uns dir die zahlreichen
                     Vorteile unseres Abos aufzeigen.
@@ -36,8 +37,10 @@ const breadcrumb= [{name:"Vorteile", href:"/benefits", current:true}];
                     <article v-for="feature in features" :key="feature.name"
                         class="relative isolate flex flex-col gap-8 lg:flex-row">
                         <div class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
-                            <img :src="feature.image.src" :alt="feature.image.alt"
-                                class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover" />
+                            <nuxt-img provider="imgix" :src="feature.image.src" :alt="feature.image.alt"
+                                class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover" loading="lazy"
+                                :modifiers="{ auto: 'format,compress' }" />
+
                             <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
                         </div>
                         <div>
@@ -50,9 +53,10 @@ const breadcrumb= [{name:"Vorteile", href:"/benefits", current:true}];
                     </article>
                 </div>
 
-              
+
                 <p class="mt-10 text-lg leading-8 text-gray-800 text-justify">
-                    Wir hoffen, dass diese Vorteile dir die Entscheidung erleichtern, dich für unser Gute Nacht Geschichten Abo zu entscheiden. Wir
+                    Wir hoffen, dass diese Vorteile dir die Entscheidung erleichtern, dich für unser Gute Nacht Geschichten
+                    Abo zu entscheiden. Wir
                     freuen uns darauf, dich und dein Kind auf dieser wunderbaren Reise der Vorstellungskraft und Kreativität
                     zu begleiten.
                 </p>

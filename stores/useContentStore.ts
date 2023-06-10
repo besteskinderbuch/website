@@ -408,8 +408,8 @@ export const useContentStore = defineStore("content", () => {
         "Vergiss das mühsame Schleppen von schweren Büchern. Mit unserem Geschichten-Abo hast du deinen persönlichen Zugang zu einer riesigen digitalen Bibliothek immer dabei - ohne zusätzliches Gewicht.",
       icon: "game-icons:weight-lifting-up",
       image: {
-        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_less-weight.png",
-        alt: "",
+        src: "/benefits/benefit_less-weight.png",
+        alt: "Koffer voller Bücher",
       },
     },
     {
@@ -420,8 +420,8 @@ export const useContentStore = defineStore("content", () => {
         "Dein Bücherregal ist schon überfüllt? Kein Problem. Unser Abo bietet dir unendlichen Lesestoff, ohne zusätzlichen Platz zu beanspruchen. Genieße deine Bücher digital und schaffe Raum in deinem Zuhause.",
       icon: "streamline:interface-content-book-2-library-content-books-book-shelf-stack",
       image: {
-        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_less-space.png",
-        alt: "",
+        src: "/benefits/benefit_less-space.png",
+        alt: "Zimmer voller Bücher",
       },
     },
     {
@@ -432,8 +432,8 @@ export const useContentStore = defineStore("content", () => {
         "Deine Meinung ist uns wichtig! Bei uns hast du die Möglichkeit, aktiv an der Gestaltung der Inhalte mitzuwirken. Bewerte Geschichten, teile Feedback und äußere per E-Mail deine Wünsche zu künftigen Geschichten. Wir freuen uns, von dir zu hören!",
       icon: "mdi:brush",
       image: {
-        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_co-design.png",
-        alt: "",
+        src: "/benefits/benefit_co-design.png",
+        alt: "Kind mit Pinsel in der Hand",
       },
     },
     {
@@ -445,8 +445,8 @@ export const useContentStore = defineStore("content", () => {
         "Verbringe weniger Zeit mit Suchen und mehr mit Lesen. Nutze unsere Filterfunktion, um genau die Geschichten zu finden, die deinen Vorlieben und Interessen entsprechen.",
       icon: "icon-park-outline:setting-config",
       image: {
-        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_filter-options.png",
-        alt: "",
+        src: "/benefits/benefit_filter-options.png",
+        alt: "Bücher mit Lupe",
       },
     },
     {
@@ -458,8 +458,8 @@ export const useContentStore = defineStore("content", () => {
         "Deine Augen werden es dir danken. Pass die Schriftgröße und Helligkeit nach deinen Wünschen an und schaffe dir so ein individuelles und angenehmes Leseerlebnis.",
       icon: "ph:text-aa-bold",
       image: {
-        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_font-size-customizable.png",
-        alt: "",
+        src: "/benefits/benefit_font-size-customizable.png",
+        alt: "Alte Frau mit Brille",
       },
     },
     {
@@ -470,8 +470,8 @@ export const useContentStore = defineStore("content", () => {
         "Du bist dir nicht sicher, ob eine Geschichte das Richtige für dich ist? Kein Problem. Mit unserer Probelese-Funktion kannst du in jede Geschichte hineinschnuppern, bevor du dich entscheidest. Unser Ziel ist es, dass du jede Minute des Lesens genießt.",
       icon: "material-symbols:search",
       image: {
-        src: "https://besteskinderbuch-8301.imgix.net/benefits/benefit_trial-reading.png",
-        alt: "",
+        src: "/benefits/benefit_trial-reading.png",
+        alt: "Mann liest Probe in einer Buchhandlung",
       },
     },
   ];
