@@ -54,9 +54,7 @@ export default defineNuxtConfig({
     },
   },
 
-  plugins: [
-    "~/plugins/rating.client.ts",
-  ],
+  plugins: ["~/plugins/rating.client.ts"],
   components: {
     global: true,
     dirs: ["~/components/section", "~/components/global", "~/components/"],
@@ -69,10 +67,17 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@vueuse/nuxt",
     "@nuxt/image-edge",
-    "@nuxtjs/robots",
     "nuxt-delay-hydration",
     "nuxt-simple-sitemap",
+    'nuxt-simple-robots',
   ],
+
+  robots: {
+    sitemap: 'https://bestes-kinderbuch.de/sitemap.xml',
+    indexable: true,
+    siteUrl: 'https://bestes-kinderbuch.de',
+    disallow: ['/account', '/abos'],
+  },
 
   sitemap: {
     siteUrl: "https://bestes-kinderbuch.de",
@@ -81,24 +86,7 @@ export default defineNuxtConfig({
   delayHydration: {
     mode: "mount",
   },
-
-  robots: {
-    rules: [
-      {
-        UserAgent: "*",
-        Allow: "/",
-      },
-      {
-        UserAgent: "*",
-        Disallow: "/abos/*",
-      },
-      {
-        UserAgent: "*",
-        Disallow: "/account",
-      }
-    ],
-  },
-
+  
   i18n: {
     vueI18n: "./i18n.config.ts",
   },
@@ -115,6 +103,7 @@ export default defineNuxtConfig({
     public: {
       hotjarId: process.env.HOTJAR_ID,
       gtagId: process.env.GTAG_ID,
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://bestes-kinderbuch.de',
     },
   },
 });
