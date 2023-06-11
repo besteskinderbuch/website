@@ -7,13 +7,19 @@ import { useContentStore } from '~/stores/useContentStore';
 const route = useRoute();
 const id = route.params.id;
 
-const accountStore = useAccountStore();
 
 const storyStore = useStoryStore();
 const freeStories = computed(() => storyStore.freeStories);
 const publicStories = computed(() => storyStore.publicStories);
 
-const { loggedIn } = storeToRefs(accountStore);
+const loggedIn = ref(false);
+onMounted(() => {
+    const { isLoggedIn} = useAuth();
+
+    watch(isLoggedIn, (newVal) => {
+        loggedIn.value = newVal
+    }, { immediate: true })
+});
 
 const stories = computed(() => {
   if (loggedIn.value) {
