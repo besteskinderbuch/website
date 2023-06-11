@@ -1,3 +1,4 @@
+
 const devStage = process.env.NODE_ENV !== "production";
 
 const cookiebot = {
@@ -95,7 +96,6 @@ export default defineNuxtConfig({
 
   modules: [
     "@pinia/nuxt",
-    "@nuxtjs/i18n",
     "nuxt-gtag",
     "nuxt-icon",
     "@vueuse/nuxt",
@@ -118,10 +118,6 @@ export default defineNuxtConfig({
 
   delayHydration: {
     mode: "mount",
-  },
-
-  i18n: {
-    vueI18n: "./i18n.config.ts",
   },
 
   gtag: {
