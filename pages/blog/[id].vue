@@ -14,6 +14,7 @@ const contentStore = useContentStore();
 const seoInfo = {
   ...contentStore.baseSeoInfo,
   title: `Blogartikel: ${post.title}`,
+  type: 'article',
   description: 'Unser Blog voller faszinierender Artikel rund ums Thema Kinder, Gute Nacht Geschichten und mehr. Jetzt anmelden!',
 }
 const seoMeta = contentStore.createSeoMeta(seoInfo)
