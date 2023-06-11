@@ -37,7 +37,7 @@ const devMode = computed(() => rootStore.devMode)
 </script>
 
 <template>
-  <div class="mt-10" v-if="devMode">
+  <div class="mt-10" v-if="!devMode">
     <div>
       <form @submit.prevent="handleSignup" class="space-y-6">
         <div>
