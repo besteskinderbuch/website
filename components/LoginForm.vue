@@ -35,7 +35,7 @@ const password = ref("")
 </script>
 
 <template>
-  <div class="mt-10" v-if="devMode">
+  <div class="mt-10" v-if="!devMode">
     <div>
       <form @submit.prevent="handleLogin" class="space-y-6">
         <div>

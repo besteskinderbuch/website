@@ -138,7 +138,7 @@ export default () => {
 
   async function getCurrentUser() {
     if (!user.value || user.value.type === "guest") {
-      if (!devMode.value) {
+      if (devMode.value) {
         const data = useLocalStorage("user-data", null);
         if (data.value) {
           user.value = {
