@@ -1,6 +1,4 @@
 <script setup>
-import { useRootStore } from "~/stores/useRootStore";
-
 const { createUser , sendVerificationMail, update, loginWithGoogle} = useAuth();
 
 const email = ref("");
@@ -31,13 +29,10 @@ async function handleGoogleLogin() {
 }
 
 const router = useRouter();
-
-const rootStore = useRootStore()
-const devMode = computed(() => rootStore.devMode)
 </script>
 
 <template>
-  <div class="mt-10" v-if="!devMode">
+  <div class="mt-10">
     <div>
       <form @submit.prevent="handleSignup" class="space-y-6">
         <div>

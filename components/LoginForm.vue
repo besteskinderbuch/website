@@ -1,14 +1,7 @@
 <script setup>
-import { storeToRefs } from 'pinia';
-import { useRootStore } from "~/stores/useRootStore";
-
-
 const { loginWithPasswordAndEmail, loginWithGoogle } = useAuth();
 
 const router = useRouter();
-
-const rootStore = useRootStore()
-const { devMode } = storeToRefs(rootStore)
 
 const emit = defineEmits(['success'])
 
@@ -35,7 +28,7 @@ const password = ref("")
 </script>
 
 <template>
-  <div class="mt-10" v-if="!devMode">
+  <div class="mt-10">
     <div>
       <form @submit.prevent="handleLogin" class="space-y-6">
         <div>
@@ -86,5 +79,4 @@ const password = ref("")
       </div>
     </div>
   </div>
-  <FakeLogin v-else></FakeLogin>
 </template>
