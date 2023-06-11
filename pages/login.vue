@@ -27,7 +27,7 @@ useHead(() => ({
   link: [
     {
       rel: 'canonical',
-      href: 'https://beste-kinderbuch.de' + route.path,
+      href: 'https://bestes-kinderbuch.de' + route.path,
     },
   ],
 }))
