@@ -1,26 +1,70 @@
 <script setup>
-const props=defineProps({
+const props = defineProps({
   href: String,
   size: {
     type: String,
     default: "sm",
   },
+  theme: {
+    type: String,
+    default: "dark",
+  },
+  border: {
+    type: Boolean,
+    default: true,
+  },
 });
 
-const current = useRoute().path === props.href;
+const route = useRoute()
+const current = computed(() => route.path === props.href)
+
+const textClasses = computed(() => {
+  if (current) {
+    if (props.theme === "light") {
+      return "text-white";
+    } else {
+      return "text-gray-700";
+    }
+  }
+  return "";
+});
+
+const borderClasses = computed(() => {
+  if (!props.border) {
+    return ""
+  }
+
+  const classes = ["border-b-2"]
+  if (props.theme === "light") {
+    classes.push("hover:border-white")
+  } else {
+    classes.push("hover:border-gray-700")
+  }
+
+  if (current.value) {
+    if (props.theme === "light") {
+      classes.push("border-white")
+    } else {
+      classes.push("border-gray-700")
+    }
+  } else {
+    classes.push("border-transparent")
+  }
+
+
+  return classes
+});
+
+
+
 </script>
 
 <template>
-  <NuxtLink
-    :to="href"
-    :class="[
-      `text-${size}`,
-      current
-        ? 'inline-flex items-center border-b-2 border-primary1 px-1 pt-1 font-medium text-gray-900'
-        : 'inline-flex items-center border-b-2 border-transparent px-1 pt-1  font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700',
-    ]"
-    :aria-current="current ? 'page' : undefined"
-  >
-    <slot></slot
-  ></NuxtLink>
+  <NuxtLink :to="href" class="inline-flex items-center font-medium px-1 pt-1" :class="[
+    `text-${size}`,
+    borderClasses,
+    textClasses,
+  ]" :aria-current="current ? 'page' : undefined">
+    <slot></slot>
+  </NuxtLink>
 </template>

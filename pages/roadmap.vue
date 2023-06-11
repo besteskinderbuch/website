@@ -1,23 +1,20 @@
 <script setup>
-useServerSeoMeta({
-  title: "bestes-kinderbuch - Roadmap",
-  description: 'Entdecken Sie die Roadmap von Bestes-Kinderbuch.de. Erleben Sie unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen Ihrer Erwartungen.',
-  ogTitle: "bestes-kinderbuch - Roadmap",
-  ogDescription: 'Entdecken Sie die Roadmap von Bestes-Kinderbuch.de. Erleben Sie unseren Weg zur kontinuierlichen Verbesserung und zur Übertreffen Ihrer Erwartungen.',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop',
-  twitterCard: 'summary_large_image',
-})
+import { useContentStore } from '~/stores/useContentStore';
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
+const contentStore = useContentStore();
+
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `In Kürze/Roadmap - ${contentStore.baseSeoInfo.title}`,
+  description: 'Hier erfährst du was wir als nächstes Planen: Unser Weg zur kontinuierlichen Verbesserung und zur Übertreffen deiner Erwartungen.',
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
+
+const breadcrumb = [{ name: "Roadmap", href: "/roadmap", current: true }];
 </script>
 <template>
-  <Navbar></Navbar>
-  <main class="flex-1">
+  <Page :breadcrumb="breadcrumb">
     <Roadmap></Roadmap>
-  </main>
-  <LazyFooter></LazyFooter>
+  </Page>
 </template>

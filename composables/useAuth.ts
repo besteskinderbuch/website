@@ -10,9 +10,12 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
-  sendEmailVerification
+  sendEmailVerification,
+  signInWithEmailAndPassword,
+  signOut,
+  applyActionCode,
+  updateProfile,
 } from "firebase/auth";
-import { verify } from "crypto";
 
 export default () => {
   const accountStore = useAccountStore();
@@ -23,7 +26,7 @@ export default () => {
 
   const auth = useFirebaseAuth();
 
-  async function withGoogle() {
+  async function loginWithGoogle() {
     if (!auth) {
       console.error("auth not found");
       return;
@@ -33,17 +36,70 @@ export default () => {
     const result = await signInWithPopup(auth, provider);
   }
 
-function verify(){
-  sendEmailVerification()
-}
+  async function verifyEmail(oobCode: string) {
+    if (!auth) {
+      console.error("auth not found");
+      return;
+    }
 
+    await applyActionCode(auth, oobCode);
+  }
 
-  async function login() {}
+  async function sendVerificationMail() {
+    if (!auth) {
+      console.error("auth not found");
+      return;
+    }
+
+    if (!auth.currentUser) {
+      console.log("auth.currentUser", auth.currentUser);
+      return;
+    }
+
+    await sendEmailVerification(auth.currentUser);
+  }
+
+  async function loginWithPasswordAndEmail(email: string, password: string) {
+    if (!auth) {
+      console.error("auth not found");
+      return;
+    }
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async function update(displayName: string){
+    if (!auth) {
+      console.error("auth not found");
+      return;
+    }
+
+    if (!auth.currentUser) {
+      console.log("auth.currentUser", auth.currentUser);
+      return;
+    }
+
+    await updateProfile(auth.currentUser,{
+      displayName,
+    })
+
+  }
+
   async function createUser(email: string, password: string) {
     if (!auth) {
       console.error("auth not found");
       return;
     }
+
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -57,6 +113,12 @@ function verify(){
   }
 
   async function logout() {
+    if (!auth) {
+      console.error("auth not found");
+      return;
+    }
+    await signOut(auth);
+
     if (devMode.value) {
       const data = useLocalStorage("user-data", null);
       data.value = null;
@@ -96,9 +158,13 @@ function verify(){
 
   return {
     user,
-    logout,
     getCurrentUser,
     createUser,
-    login,
+    update,
+    sendVerificationMail,
+    verifyEmail,
+    loginWithPasswordAndEmail,
+    loginWithGoogle,
+    logout,
   };
 };

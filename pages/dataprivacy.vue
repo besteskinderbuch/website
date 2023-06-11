@@ -1,23 +1,19 @@
 <script setup>
-useServerSeoMeta({
-  title: "bestes-kinderbuch - Datenschutz",
-  description: 'Erwecken Sie die Fantasie Ihres Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starten Sie heute das Abo!',
-  ogTitle: "bestes-kinderbuch - Datenschutz",
-  ogDescription: 'Erwecken Sie die Fantasie Ihres Kindes mit Bestes-Kinderbuch.de! Unbegrenzte Zugang zu packenden Kurzgeschichten für Kinder. Starten Sie heute das Abo!',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop',
-  twitterCard: 'summary_large_image',
-})
+import { useContentStore } from '~/stores/useContentStore';
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
+const contentStore = useContentStore();
+
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Datenschutz - ${contentStore.baseSeoInfo.title}`,
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
+
+const breadcrumb= [{name:"Datenschutz", href:"/dataprivacy", current:true}];
 </script>
 <template>
-  <Navbar></Navbar>
-  <main class="flex-1">
+  <Page :breadcrumb="breadcrumb">
     <DataPrivacy></DataPrivacy>
-  </main>
-  <LazyFooter></LazyFooter>
+  </Page>
 </template>

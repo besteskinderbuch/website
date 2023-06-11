@@ -1,22 +1,20 @@
 <script setup>
-useServerSeoMeta({
-  title: "bestes-kinderbuch - Hilfe",
-  description: 'Entdecke unsere Hilfe-Seite auf Bestes-Kinderbuch.de. Hier findest du Antworten auf deine Fragen zu unserem Kinderbuch-Abo. Begleite uns auf dieser magischen Lese-Reise!',
-  ogTitle: "bestes-kinderbuch - Hilfe",
-  ogDescription: 'Entdecke unsere Hilfe-Seite auf Bestes-Kinderbuch.de. Hier findest du Antworten auf deine Fragen zu unserem Kinderbuch-Abo. Begleite uns auf dieser magischen Lese-Reise!',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop',
-  twitterCard: 'summary_large_image',
-})
+import { useContentStore } from '~/stores/useContentStore';
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
+const contentStore = useContentStore();
+
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Hilfe - ${contentStore.baseSeoInfo.title}`,
+  description: 'Entdecke unseren Hilfe-Bereich. Hier findest du Antworten auf deine Fragen zu unserem Gute Nacht Geschichten Abo!',
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
+
+const breadcrumb= [{name:"Hilfe", href:"/help", current:true}];
 </script>
 <template>
-  <Navbar></Navbar>
-  <main class="flex-1 bg-white">
+  <Page :breadcrumb="breadcrumb">
     <div class="mx-auto max-w-7xl px-6 py-3 sm:py-32 lg:px-8 lg:py-6">
       <div class="mx-auto text-center">
         <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">
@@ -41,9 +39,8 @@ useHead({
         </p>
 
       </div>
-  </div>
-  <LazyManual></LazyManual>
-  <LazyFaqLong></LazyFaqLong>
-</main>
-<LazyFooter></LazyFooter>
+    </div>
+    <LazyManual></LazyManual>
+    <LazyFaqLong></LazyFaqLong>
+  </Page>
 </template>

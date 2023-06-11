@@ -1,23 +1,20 @@
 <script setup>
-useServerSeoMeta({
-  title: "bestes-kinderbuch - Blog",
-  description: 'Entdecke auf bestes-kinderbuch.de unseren Blog voller faszinierender Kindergeschichten. Tauche jede Woche in neue Themen ein und finde Inspiration. Dein Tor zur Welt der Fantasie!',
-  ogTitle: "bestes-kinderbuch - Blog",
-  ogDescription: 'Entdecke auf bestes-kinderbuch.de unseren Blog voller faszinierender Kindergeschichten. Tauche jede Woche in neue Themen ein und finde Inspiration. Dein Tor zur Welt der Fantasie!',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop',
-  twitterCard: 'summary_large_image',
-})
+import { useContentStore } from '~/stores/useContentStore';
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
+const contentStore = useContentStore();
+
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Blog - ${contentStore.baseSeoInfo.title}`,
+  description: 'Unser Blog voller faszinierender Artikel rund ums Thema Kinder, Gute Nacht Geschichten und mehr. Jetzt anmelden!',
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
+
+const breadcrumb = [{ name: "Alle Blogartikel", href: "/blog", current: true }];
 </script>
 <template>
-  <Navbar></Navbar>
-  <main class="flex-1">
+  <Page :breadcrumb="breadcrumb">
     <BlogSection></BlogSection>
-  </main>
-  <LazyFooter></LazyFooter>
+  </Page>
 </template>

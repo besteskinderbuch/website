@@ -6,6 +6,8 @@ const router = useRouter();
 const accountStore = useAccountStore()
 const data = useLocalStorage("user-data", null)
 
+const emit = defineEmits(['success'])
+
 function login() {
     const user = {
         type: "user",
@@ -18,8 +20,8 @@ function login() {
 
     data.value = user
     accountStore.user = user
-    
-    router.push({ path: "/" });
+
+    emit("success")
 }
 
 const email = ref("")

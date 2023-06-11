@@ -1,23 +1,20 @@
 <script setup>
-useServerSeoMeta({
-  title: "bestes-kinderbuch - Geschichten",
-  description: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
-  ogTitle: "bestes-kinderbuch - Geschichten",
-  ogDescription: 'Entdecke faszinierende Kinder-Kurzgeschichten auf bestes-kinderbuch.de! Sichere dir 5 Gratisgeschichten und entdecke unsere Abo-Optionen.',
-  ogImage: 'https://besteskinderbuch-8301.imgix.net/buchtanz.png?ar=2:1&fit=crop',
-  twitterCard: 'summary_large_image',
-})
+import { useContentStore } from '~/stores/useContentStore';
 
-useHead({
-  htmlAttrs: {
-    lang: 'de',
-  },
-})
+const contentStore = useContentStore();
+
+const seoInfo = {
+  ...contentStore.baseSeoInfo,
+  title: `Geschichten - ${contentStore.baseSeoInfo.title}`,
+}
+const seoMeta = contentStore.createSeoMeta(seoInfo)
+useSeoMeta(seoMeta)
+
+
+const breadcrumb = [{ name: "Gute Nacht Geschichten", href: "/stories", current: true }];
 </script>
 <template>
-  <Navbar></Navbar>
-  <main class="flex-1">
+  <Page :breadcrumb="breadcrumb">
     <StoriesSection> </StoriesSection>
-  </main>
-  <LazyFooter></LazyFooter>
+  </Page>
 </template>

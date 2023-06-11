@@ -1,3 +1,4 @@
+
 const devStage = process.env.NODE_ENV !== "production";
 
 const cookiebot = {
@@ -7,7 +8,9 @@ const cookiebot = {
   "data-blockingmode": "auto",
 };
 
-const hotjarWindow = { children: `window._hjSettings={hjid:${process.env.HOTJAR_ID},hjsv:6};` };
+const hotjarWindow = {
+  children: `window._hjSettings={hjid:${process.env.HOTJAR_ID},hjsv:6};`,
+};
 
 const hotjar = {
   id: "Hotjar",
@@ -25,6 +28,42 @@ export default defineNuxtConfig({
   app: {
     head: {
       script,
+      htmlAttrs: {
+        lang: "de",
+      },
+      link: [
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/apple-touch-icon.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "/favicon-32x32.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/favicon-16x16.png",
+        },
+        {
+          rel: "manifest",
+          href: "/site.webmanifest",
+        },
+      ],
+      meta: [
+        {
+          name: "msapplication-TileColor",
+          content: "#da532c",
+        },
+        {
+          name: "theme-color",
+          content: "#ffffff",
+        },
+      ],
     },
   },
 
@@ -43,34 +82,37 @@ export default defineNuxtConfig({
     },
   },
 
-  plugins: [],
+  plugins: ["~/plugins/rating.client.ts"],
+  components: {
+    global: true,
+    dirs: ["~/components/section", "~/components/global", "~/components/"],
+  },
 
   modules: [
     "@pinia/nuxt",
-    "@nuxtjs/i18n",
     "nuxt-gtag",
     "nuxt-icon",
     "@vueuse/nuxt",
     "@nuxt/image-edge",
-    "@nuxtjs/robots",
-    'nuxt-delay-hydration',
+    "nuxt-delay-hydration",
+    "nuxt-simple-sitemap",
+    "nuxt-simple-robots",
+    '@vueuse/nuxt',
   ],
 
-  delayHydration: {
-    mode: 'mount'
-  },
-
   robots: {
-    rules: [
-      {
-        UserAgent: "*",
-        Allow: "/",
-      },
-    ],
+    sitemap: "https://bestes-kinderbuch.de/sitemap.xml",
+    indexable: true,
+    siteUrl: "https://bestes-kinderbuch.de",
+    disallow: ["/account", "/abos"],
   },
 
-  i18n: {
-    vueI18n: "./i18n.config.ts",
+  sitemap: {
+    siteUrl: "https://bestes-kinderbuch.de",
+  },
+
+  delayHydration: {
+    mode: "mount",
   },
 
   gtag: {
@@ -85,6 +127,8 @@ export default defineNuxtConfig({
     public: {
       hotjarId: process.env.HOTJAR_ID,
       gtagId: process.env.GTAG_ID,
+      siteUrl:
+        process.env.NUXT_PUBLIC_SITE_URL || "https://bestes-kinderbuch.de",
     },
   },
 });
