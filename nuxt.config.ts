@@ -30,6 +30,39 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "de",
       },
+      link: [
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/apple-touch-icon.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "/favicon-32x32.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/favicon-16x16.png",
+        },
+        {
+          rel: "manifest",
+          href: "/site.webmanifest",
+        },
+      ],
+      meta: [
+        {
+          name: "msapplication-TileColor",
+          content: "#da532c",
+        },
+        {
+          name: "theme-color",
+          content: "#ffffff",
+        },
+      ],
     },
   },
 
@@ -69,14 +102,14 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "nuxt-delay-hydration",
     "nuxt-simple-sitemap",
-    'nuxt-simple-robots',
+    "nuxt-simple-robots",
   ],
 
   robots: {
-    sitemap: 'https://bestes-kinderbuch.de/sitemap.xml',
+    sitemap: "https://bestes-kinderbuch.de/sitemap.xml",
     indexable: true,
-    siteUrl: 'https://bestes-kinderbuch.de',
-    disallow: ['/account', '/abos'],
+    siteUrl: "https://bestes-kinderbuch.de",
+    disallow: ["/account", "/abos"],
   },
 
   sitemap: {
@@ -86,7 +119,7 @@ export default defineNuxtConfig({
   delayHydration: {
     mode: "mount",
   },
-  
+
   i18n: {
     vueI18n: "./i18n.config.ts",
   },
@@ -103,7 +136,8 @@ export default defineNuxtConfig({
     public: {
       hotjarId: process.env.HOTJAR_ID,
       gtagId: process.env.GTAG_ID,
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://bestes-kinderbuch.de',
+      siteUrl:
+        process.env.NUXT_PUBLIC_SITE_URL || "https://bestes-kinderbuch.de",
     },
   },
 });
