@@ -1,20 +1,18 @@
 import { defineStore } from "pinia";
+import type { User as UserData } from "firebase/auth";
 
-
-// TODO:
-type Userdata = {}
 type User = {
   type: "guest" | "user";
-  data?: Userdata;
+  data?: UserData;
   subscription?: string;
-}
+};
 
 export const useAccountStore = defineStore("account", () => {
-  const user: Ref<User | undefined>= ref();
+  const user: Ref<User | undefined> = ref();
 
-  const loggedIn = computed(() => user.value && user.value.type === "user");
+  const isLoggedIn = computed(() => user.value?.type === "user" && user.value?.data?.emailVerified);
 
-  const wordsPerMin= ref(160);
+  const wordsPerMin = ref(160);
 
-  return { user, loggedIn, wordsPerMin };
+  return { user, isLoggedIn, wordsPerMin };
 });

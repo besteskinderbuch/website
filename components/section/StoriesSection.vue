@@ -1,10 +1,14 @@
 <script setup>
-import { storeToRefs } from 'pinia'
-import { useAccountStore } from "~/stores/useAccountStore";
 import { useStoryStore } from '~/stores/useStoryStore';
+const { isLoggedIn } = useAuth();
 
-const accountStore = useAccountStore();
-const { loggedIn } = storeToRefs(accountStore);
+const loggedIn = ref(false);
+
+onMounted(() => {
+    watch(isLoggedIn, (newVal) => {
+        loggedIn.value = newVal
+    }, { immediate: true })
+});
 
 const storyStore = useStoryStore();
 const freeStories = computed(() => storyStore.freeStories);
@@ -17,17 +21,6 @@ const stories = computed(() => {
 
   return publicStories.value;
 });
-
-onMounted(() => {
-
-})
-
-watch(stories, (newVal, oldVal) => {
-  console.log("newVal", newVal?.length)
-  console.log("oldVal", oldVal?.length)
-}, {
-  immediate: true
-})
 </script>
 <template>
   <Section>
@@ -36,20 +29,20 @@ watch(stories, (newVal, oldVal) => {
         <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Gute Nacht Geschichten zum Vorlesen
         </h1>
+
+        <h2 class="mt-6 text-lg leading-8 text-gray-800 text-justify">
+          Bereit für eine Reise in die magische Welt der Fantasie?
+        </h2>
         <p v-if="!loggedIn" class="mt-6 text-lg leading-8 text-gray-800 text-justify">
-          Bereit für eine Reise in die magische Welt der Fantasie? Klick <NuxtLink to="/login" class="text-blue-300">hier
-          </NuxtLink> und erhalte deinen eigenen, persönlichen Account, welcher dir sofortigen Zugang zu sieben
-          zauberhaften Geschichten schenkt – das sind 5 kostenlose Bonusgeschichten zusätzlich zu den zwei, die du schon
-          genießen kannst!
+          Hier findest du 2 kostenlose Gute Nacht Geschichten zum Vorlesen.<br/>
+          Um 5 weitere kostenlose Bonus Gute Nacht Geschichten genießen zu können, kannst du dir <NuxtLink to="/login" class="text-blue-300">hier</NuxtLink> deinen persönlichen kostenlosen Account erstellen.
         </p>
         <p v-if="!loggedIn" class="mt-6 text-lg leading-8 text-gray-800 text-justify">
           Doch das ist erst der Anfang! Für die Abenteurer, die bereit sind, tiefer in die unendlichen Weiten unserer
           Fantasiewelt einzutauchen, haben wir eine Schatztruhe voller Geschichten, die nur darauf warten, entdeckt zu
           werden. Klick <NuxtLink to="/#pricing" class="text-blue-300">hier</NuxtLink> und wähle das Abonnement, das zu
           dir passt. Denn mit unseren Premium-Abos kannst du die ganze Fülle unserer einzigartigen Geschichtensammlung
-          erkunden.
-        </p>
-        <p v-if="!loggedIn" class="mt-6 text-lg leading-8 text-gray-800 text-justify">
+          erkunden.<br/>
           Stelle dir vor, du könntest jeden Abend eine neue Geschichte entdecken. Oder sogar zwei! Die Möglichkeiten sind
           grenzenlos und du kannst sie freischalten, indem du in die fesselnde Welt unserer Premium-Abonnements
           eintauchst. Mach den Sprung und tauche ein in ein Meer voller Geschichten, das nie austrocknet. Entdecke,

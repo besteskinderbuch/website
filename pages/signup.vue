@@ -27,6 +27,13 @@ useHead(() => ({
     },
   ],
 }))
+
+
+const showConfirmationInfo = ref(false)
+function handleSuccess(a) {
+  showConfirmationInfo.value=true
+}
+
 </script>
 
 <template>
@@ -42,8 +49,15 @@ useHead(() => ({
         </div> -->
         <h1 class="text-3xl font-bold">Bestes-Kinderbuch.de</h1>
 
-        <div class="mt-40">
-          <SignupForm></SignupForm>
+        <div class="mt-36">
+          <SignupForm v-if="!showConfirmationInfo" @success="handleSuccess"></SignupForm>
+          <div v-else class="space-y-4">
+            <p>Bitte bestätige deinen Registierung:</p>
+            <div class="space-y-4">
+              <p>1. Prüfe deinen Posteinfang/Spam-Ordner und öffne die E-Mail, welche wir dir gesendet haben</p>
+              <p>2. Bestätige deine Registierung durch Klicken auf den enthaltenen Link</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

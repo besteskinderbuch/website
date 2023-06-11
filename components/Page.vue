@@ -4,6 +4,10 @@ defineProps({
         type: Array,
         required: true,
     },
+    showConvinced: {
+        type: Boolean,
+        default: true,
+    },
 })
 
 </script>
@@ -13,6 +17,6 @@ defineProps({
             <Breadcrumb v-if="breadcrumb" :data="breadcrumb"></Breadcrumb>
         </Container>
         <slot></slot>
-        <LazyConvinced />
+        <LazyConvinced v-if="showConvinced"/>
     </main>
 </template>

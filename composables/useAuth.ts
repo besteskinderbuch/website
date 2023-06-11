@@ -4,7 +4,7 @@ import { useLocalStorage } from "@vueuse/core";
 import { storeToRefs } from "pinia";
 import {
   useFirebaseAuth,
-  useCurrentUser as getCurrentFirebaseUser,
+  getCurrentUser as getCurrentFirebaseUser,
 } from "vuefire";
 import {
   createUserWithEmailAndPassword,
@@ -19,7 +19,7 @@ import {
 
 export default () => {
   const accountStore = useAccountStore();
-  const { user } = storeToRefs(accountStore);
+  const { user , isLoggedIn } = storeToRefs(accountStore);
 
   const rootStore = useRootStore();
   const devMode = computed(() => rootStore.devMode);
@@ -34,6 +34,15 @@ export default () => {
 
     const provider = new GoogleAuthProvider();
     const result = await signInWithPopup(auth, provider);
+
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    if (!credential) {
+      console.error("credential not found");
+      return;
+    }
+    const token = credential.accessToken;
+    user.value = { type: "user", data: result.user };
   }
 
   async function verifyEmail(oobCode: string) {
@@ -66,18 +75,18 @@ export default () => {
     }
 
     try {
-      const userCredential = await signInWithEmailAndPassword(
+      const result = await signInWithEmailAndPassword(
         auth,
         email,
         password
       );
-
+      user.value = { type: "user", data: result.user };
     } catch (e) {
       console.error(e);
     }
   }
 
-  async function update(displayName: string){
+  async function update(displayName: string) {
     if (!auth) {
       console.error("auth not found");
       return;
@@ -88,10 +97,9 @@ export default () => {
       return;
     }
 
-    await updateProfile(auth.currentUser,{
+    await updateProfile(auth.currentUser, {
       displayName,
-    })
-
+    });
   }
 
   async function createUser(email: string, password: string) {
@@ -130,7 +138,7 @@ export default () => {
 
   async function getCurrentUser() {
     if (!user.value || user.value.type === "guest") {
-      if (devMode.value) {
+      if (!devMode.value) {
         const data = useLocalStorage("user-data", null);
         if (data.value) {
           user.value = {
@@ -139,25 +147,32 @@ export default () => {
             subscription: "tier-littlebookworm",
           };
         }
-      } else {
-        try {
-          const data = getCurrentFirebaseUser();
-          console.log("data", data);
-          user.value = {
-            type: "user",
-            data,
-            subscription: "tier-littlebookworm",
-          };
-        } catch (e) {
+
+        return user.value;
+      }
+
+      try {
+        const data = await getCurrentFirebaseUser();
+        if (!data) {
           user.value = { type: "guest" };
+          return user.value;
         }
+        user.value = {
+          type: "user",
+          data,
+          subscription: "tier-littlebookworm",
+        };
+      } catch (e) {
+        console.error(e);
+        user.value = { type: "guest" };
       }
     }
     return user.value;
   }
-
+  
   return {
     user,
+    isLoggedIn,
     getCurrentUser,
     createUser,
     update,

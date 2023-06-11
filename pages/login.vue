@@ -15,7 +15,6 @@ const redirect = route.query.redirect || '/'
 
 const router = useRouter()
 function handleSuccess() {
-  console.log("[login] handleSuccess")
   router.push(redirect)
 }
 
@@ -48,7 +47,7 @@ useHead(() => ({
         </div> -->
         <h1 class="text-3xl font-bold">Bestes-Kinderbuch.de</h1>
 
-        <div class="mt-40">
+        <div class="mt-36">
           <LoginForm @success="handleSuccess"></LoginForm>
         </div>
       </div>

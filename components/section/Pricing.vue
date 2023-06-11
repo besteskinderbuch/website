@@ -1,11 +1,9 @@
 
 <script setup>
 import { ref } from "vue";
-import { storeToRefs } from 'pinia';
 import { RadioGroup, RadioGroupLabel, RadioGroupOption } from "@headlessui/vue";
 import { CheckIcon } from "@heroicons/vue/20/solid";
 import { useContentStore } from "~/stores/useContentStore";
-import { useAccountStore } from "~/stores/useAccountStore";
 
 const contentStore = useContentStore();
 const tiers = contentStore.tiers;
@@ -13,8 +11,14 @@ const frequencies = contentStore.frequencies;
 
 const frequency = ref(frequencies[0]);
 
-const accountStore = useAccountStore();
-const { loggedIn, user } = storeToRefs(accountStore);
+const { isLoggedIn, user } = useAuth();
+
+const loggedIn = ref(false);
+onMounted(() => {
+  watch(isLoggedIn, (newVal) => {
+    loggedIn.value = newVal
+  }, { immediate: true })
+});
 </script>
 
 <template>

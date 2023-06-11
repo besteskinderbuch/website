@@ -1,5 +1,4 @@
 <script setup>
-import { storeToRefs } from 'pinia'
 import {
     Disclosure,
     DisclosureButton,
@@ -24,16 +23,14 @@ const accountStore = useAccountStore();
 
 const loggedIn = ref(false);
 onMounted(() => {
-    const { loggedIn: bla } = storeToRefs(accountStore);
+    const { isLoggedIn} = useAuth();
 
-    watch(bla, (newVal) => {
+    watch(isLoggedIn, (newVal) => {
         loggedIn.value = newVal
     }, { immediate: true })
 });
 
-
 const user = computed(() => accountStore.user);
-
 
 const contentStore = useContentStore();
 const navigation = contentStore.navigation;
@@ -56,8 +53,8 @@ const loginUrl = computed(() => `/login?redirect=${fullPath.value}`);
 </script>
 <template>
     <Disclosure as="nav"
-        class="w-full transition ease-in-out delay-150 transform-gpu translate-y-0 fixed bg-primary1 md:bg-backgroundColor1"
-        :class="{ '-translate-y-full': hidden }" v-slot="{ open }">
+        class="z-10 w-full transition ease-in-out delay-150 transform-gpu fixed bg-primary1 md:bg-backgroundColor1"
+        :class="{ '-translate-y-full': hidden, 'translate-y-0': !hidden }" v-slot="{ open }">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
@@ -129,8 +126,11 @@ const loginUrl = computed(() => `/login?redirect=${fullPath.value}`);
                                     <MenuItems
                                         class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                         <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
-                                        <BasicLink v-if="item.href" size="lg" theme="light" :href="item.href">{{ item.name
-}}</BasicLink>
+                                        <div v-if="item.href" class="px-4 py-2">
+                                            <BasicLink size="sm" theme="light" :href="item.href">{{
+                                                item.name
+                                            }}</BasicLink>
+                                        </div>
                                         <div v-else @click="item.action()" class="block px-4 py-2 text-sm text-gray-700"
                                             :class="[active ? 'bg-gray-100' : '']">{{ item.name }}</div>
                                         </MenuItem>
@@ -194,5 +194,6 @@ const loginUrl = computed(() => `/login?redirect=${fullPath.value}`);
                 </div>
             </div>
         </DisclosurePanel>
-    </Disclosure></template>
+    </Disclosure>
+</template>
   

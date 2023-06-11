@@ -1,6 +1,5 @@
   
 <script setup>
-import { storeToRefs } from 'pinia';
 import { useContentStore } from '~/stores/useContentStore';
 import { useAccountStore } from "~/stores/useAccountStore";
 
@@ -10,7 +9,15 @@ const subtitle = contentStore.subtitle;
 
 
 const accountStore = useAccountStore();
-const { loggedIn } = storeToRefs(accountStore);
+
+const loggedIn = ref(false);
+onMounted(() => {
+    const { isLoggedIn} = useAuth();
+
+    watch(isLoggedIn, (newVal) => {
+        loggedIn.value = newVal
+    }, { immediate: true })
+});
 </script>
 
 <template>
