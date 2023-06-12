@@ -6,6 +6,7 @@ export const useStoryStore = defineStore("stories", () => {
       id: "die-abenteuer-des-regenbogendrachens",
       title: "Die Abenteuer des Regenbogendrachens",
       href: "/stories/die-abenteuer-des-regenbogendrachens",
+      neededSubscription: false,
       image: {
         src: "/stories/die-abenteuer-des-regenbogendrachens.png",
         alt: "Cover - Die Abenteuer des Regenbogendrachens",
@@ -98,6 +99,7 @@ export const useStoryStore = defineStore("stories", () => {
       id: "luna-und-die-sternenstaubfee",
       title: "Luna und die Sternenstaubfee",
       href: "/stories/luna-und-die-sternenstaubfee",
+      neededSubscription: false,
       image: {
         src: "/stories/luna-und-die-sternenstaubfee.png",
         alt: "Cover - Luna und die Sternenstaubfee",
@@ -204,6 +206,7 @@ export const useStoryStore = defineStore("stories", () => {
       id: "die-verzauberte-feder",
       title: "Die verzauberte Feder",
       href: "/stories/die-verzauberte-feder",
+      neededSubscription: "free",
       image: {
         src: "/stories/die-verzauberte-feder.png",
         alt: "Cover - Die verzauberte Feder",
@@ -312,6 +315,7 @@ export const useStoryStore = defineStore("stories", () => {
       id: "pfoetchens-erster-schultag",
       title: "Pfötchens erster Schultag",
       href: "/stories/pfoetchens-erster-schultag",
+      neededSubscription: "free",
       image: {
         src: "/stories/pfoetchens-erster-schultag.png",
         alt: "Cover - Pfötchens erster Schultag",
@@ -409,6 +413,7 @@ export const useStoryStore = defineStore("stories", () => {
       id: "bommelbaers-reise-zum-mond",
       title: "Bommelbärs Reise zum Mond",
       href: "/stories/bommelbaers-reise-zum-mond",
+      neededSubscription: "free",
       image: {
         src: "/stories/bommelbaers-reise-zum-mond.png",
         alt: "Cover - Bommelbärs Reise zum Mond",
@@ -492,6 +497,7 @@ export const useStoryStore = defineStore("stories", () => {
       id: "der-mutige-kleine-kaefer",
       title: "Der mutige kleine Käfer",
       href: "/stories/der-mutige-kleine-kaefer",
+      neededSubscription: "free",
       image: {
         src: "/stories/der-mutige-kleine-kaefer.png",
         alt: "Cover - Der mutige kleine Käfer",
@@ -573,6 +579,7 @@ export const useStoryStore = defineStore("stories", () => {
       id: "die-vier-jahreszeiten-der-waldtiere",
       title: "Die vier Jahreszeiten der Waldtiere",
       href: "/stories/die-vier-jahreszeiten-der-waldtiere",
+      neededSubscription: "free",
       image: {
         src: "/stories/die-vier-jahreszeiten-der-waldtiere.png",
         alt: "Cover - Die vier Jahreszeiten der Waldtiere",

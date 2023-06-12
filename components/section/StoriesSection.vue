@@ -14,13 +14,7 @@ const storyStore = useStoryStore();
 const freeStories = computed(() => storyStore.freeStories);
 const publicStories = computed(() => storyStore.publicStories);
 
-const stories = computed(() => {
-  if (loggedIn.value) {
-    return freeStories.value.concat(publicStories.value);
-  }
-
-  return publicStories.value;
-});
+const stories = computed(() => publicStories.value.concat(freeStories.value));
 </script>
 <template>
   <Section>
