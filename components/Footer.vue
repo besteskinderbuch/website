@@ -30,8 +30,8 @@
             </NuxtLink>
           </div>
           <div>
-            <NuxtLink class="text-sm font-semibold leading-6 text-white" to="/blog">
-              Blog
+            <NuxtLink class="text-sm font-semibold leading-6 text-white" to="/articles">
+              Ratgeber
             </NuxtLink>
           </div>
         </div>

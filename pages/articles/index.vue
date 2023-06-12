@@ -5,13 +5,13 @@ const contentStore = useContentStore();
 
 const seoInfo = {
   ...contentStore.baseSeoInfo,
-  title: `Blog - ${contentStore.baseSeoInfo.title}`,
-  description: 'Unser Blog voller faszinierender Artikel rund ums Thema Kinder, Gute Nacht Geschichten und mehr. Jetzt anmelden!',
+  title: `Ratgeber - ${contentStore.baseSeoInfo.title}`,
+  description: 'Unser Ratgeber ist voller faszinierender Artikel rund ums Thema Kinder, Gute Nacht Geschichten und mehr. Jetzt anmelden!',
 }
 const seoMeta = contentStore.createSeoMeta(seoInfo)
 useSeoMeta(seoMeta)
 
-const breadcrumb = [{ name: "Alle Blogartikel", href: "/blog", current: true }];
+const breadcrumb = [{ name: "Alle Artikel", href: "/articles", current: true }];
 </script>
 <template>
   <Page :breadcrumb="breadcrumb">

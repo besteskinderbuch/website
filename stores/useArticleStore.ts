@@ -1,11 +1,11 @@
 import { defineStore } from "pinia";
 
-export const useBlogStore = defineStore("blog", () => {
+export const useArticleStore = defineStore("article", () => {
   const posts = [
     {
       id: "die-magie-von-gute-nacht-geschichten-warum-sie-wichtig-sind",
       title: "Die Magie von Gute Nacht Geschichten: Warum sie wichtig sind",
-      href: "/blog/die-magie-von-gute-nacht-geschichten-warum-sie-wichtig-sind",
+      href: "/articles/die-magie-von-gute-nacht-geschichten-warum-sie-wichtig-sind",
       image: {
         src: "/blogs/die-magie-von-gute-nacht-geschichten-warum-sie-wichtig-sind.png",
         alt: "Cover - Die Magie von Gute Nacht Geschichten: Warum sie wichtig sind",
@@ -52,7 +52,7 @@ export const useBlogStore = defineStore("blog", () => {
     {
       id: "entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen",
       title: "Entdecke die Magie: Wie Kinderbücher die Fantasie anregen",
-      href: "/blog/entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen",
+      href: "/articles/entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen",
       description: "",
       image: {
         src: "/blogs/entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen.png",
@@ -100,7 +100,7 @@ export const useBlogStore = defineStore("blog", () => {
     {
       id: "warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist",
       title: "Warum Vorlesen wichtig für die Entwicklung Ihres Kindes ist",
-      href: "/blog/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist",
+      href: "/articles/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist",
       image: {
         src: "/blogs/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist.png",
         alt: "Cover - Warum Vorlesen wichtig für die Entwicklung Ihres Kindes ist",
@@ -161,7 +161,7 @@ export const useBlogStore = defineStore("blog", () => {
       id: "die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt",
       title:
         "Die Kunst des Erzählens: Wie man eine fesselnde Kindergeschichte schreibt",
-      href: "/blog/die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt",
+      href: "/articles/die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt",
       image: {
         src: "/blogs/die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt.png",
         alt: "Cover - Die Kunst des Erzählens: Wie man eine fesselnde Kindergeschichte schreibt",
@@ -203,7 +203,7 @@ export const useBlogStore = defineStore("blog", () => {
     {
       id: "die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten",
       title: "Die Welt der Fabeln: Wie sie Kinder lehren und unterhalten",
-      href: "/blog/die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten",
+      href: "/articles/die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten",
       image: {
         src: "/blogs/die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten.png",
         alt: "Cover - Die Welt der Fabeln: Wie sie Kinder lehren und unterhalten",
@@ -251,7 +251,7 @@ export const useBlogStore = defineStore("blog", () => {
     {
       id: "das-magische-der-guten-nacht-geschichten-wie-lange-sollten-wir-vorlesen",
       title: "Das Magische der Guten Nacht Geschichten: Wie lange sollten wir vorlesen?",
-      href: "/blog/das-magische-der-guten-nacht-geschichten-wie-lange-sollten-wir-vorlesen",
+      href: "/articles/das-magische-der-guten-nacht-geschichten-wie-lange-sollten-wir-vorlesen",
       image: {
         src: "/blogs/das-magische-der-guten-nacht-geschichten-wie-lange-sollten-wir-vorlesen.png",
         alt: "Cover - Das Magische der Guten Nacht Geschichten: Wie lange sollten wir vorlesen?",
@@ -296,7 +296,7 @@ export const useBlogStore = defineStore("blog", () => {
       id: "kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes",
       title:
         "Kinderbücher und ihre Rolle in der emotionalen Entwicklung des Kindes",
-      href: "/blog/kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes",
+      href: "/articles/kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes",
       image: {
         src: "/blogs/kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes.png",
         alt: "Cover - Kinderbücher und ihre Rolle in der emotionalen Entwicklung des Kindes",
@@ -338,7 +338,7 @@ export const useBlogStore = defineStore("blog", () => {
       id: "von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit",
       title:
         "Von Drachen, Prinzen und Prinzessinnen: Die Bedeutung von Märchen in der Kindheit",
-      href: "/blog/von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit",
+      href: "/articles/von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit",
       image: {
         src: "/blogs/von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit.png",
         alt: "Cover - Von Drachen, Prinzen und Prinzessinnen: Die Bedeutung von Märchen in der Kindheit",
@@ -386,7 +386,7 @@ export const useBlogStore = defineStore("blog", () => {
       id: "die-magische-welt-der-gute-nacht-geschichten-ein-entscheidender-baustein-fuer-die-entwicklung-ihres-babys",
       title:
         "Die magische Welt der Gute Nacht Geschichten: Ein entscheidender Baustein für die Entwicklung Ihres Babys",
-      href: "/blog/die-magische-welt-der-gute-nacht-geschichten-ein-entscheidender-baustein-fuer-die-entwicklung-ihres-babys",
+      href: "/articles/die-magische-welt-der-gute-nacht-geschichten-ein-entscheidender-baustein-fuer-die-entwicklung-ihres-babys",
       image: {
         src: "/blogs/die-magische-welt-der-gute-nacht-geschichten-ein-entscheidender-baustein-fuer-die-entwicklung-ihres-babys.png",
         alt: "Cover - Die magische Welt der Gute Nacht Geschichten: Ein entscheidender Baustein für die Entwicklung Ihres Babys",
@@ -435,7 +435,7 @@ export const useBlogStore = defineStore("blog", () => {
       id: "von-seiten-zu-sozialen-faehigkeiten-wie-kindergeschichten-die-entwicklung-sozialer-kompetenzen-praegen",
       title:
         "Von Seiten zu sozialen Fähigkeiten: Wie Kindergeschichten die Entwicklung sozialer Kompetenzen prägen",
-      href: "/blog/von-seiten-zu-sozialen-faehigkeiten-wie-kindergeschichten-die-entwicklung-sozialer-kompetenzen-praegen",
+      href: "/articles/von-seiten-zu-sozialen-faehigkeiten-wie-kindergeschichten-die-entwicklung-sozialer-kompetenzen-praegen",
       image: {
         src: "/blogs/von-seiten-zu-sozialen-faehigkeiten-wie-kindergeschichten-die-entwicklung-sozialer-kompetenzen-praegen.png",
         alt: "Cover - Von Seiten zu sozialen Fähigkeiten: Wie Kindergeschichten die Entwicklung sozialer Kompetenzen prägen",
@@ -452,7 +452,7 @@ export const useBlogStore = defineStore("blog", () => {
         imageUrl: "",
       },
       content: `
-        <p>Kinderbücher haben einen besonderen Zauber. Sie schaffen Welten, erwecken Charaktere zum Leben und erzählen Geschichten, die Generationen überdauern. Aber sie machen mehr als nur unterhalten. In diesem Blogartikel möchten wir das Rampenlicht auf einen wichtigen, aber oft übersehenen Aspekt von Kindergeschichten richten: ihre Rolle in der Entwicklung sozialer Kompetenzen.</p>
+        <p>Kinderbücher haben einen besonderen Zauber. Sie schaffen Welten, erwecken Charaktere zum Leben und erzählen Geschichten, die Generationen überdauern. Aber sie machen mehr als nur unterhalten. In diesem Artikel möchten wir das Rampenlicht auf einen wichtigen, aber oft übersehenen Aspekt von Kindergeschichten richten: ihre Rolle in der Entwicklung sozialer Kompetenzen.</p>
     
         <h2>Die stille Macht der Kindergeschichten</h2>
         <p>Von dem Moment an, in dem sie ihre ersten Worte lernen, beginnen Kinder, sich ein Verständnis für die Welt um sie herum zu bilden. Kindergeschichten spielen dabei eine entscheidende Rolle. Sie sind mehr als nur unterhaltsame Betthupferl; sie sind Pfade, die Kindern helfen, soziale Situationen zu verstehen und zu navigieren.</p>
@@ -478,7 +478,7 @@ export const useBlogStore = defineStore("blog", () => {
       id: "zwischen-den-zeilen-gefuehle-entdecken-wie-kinderbuecher-emotionale-resilienz-foerdern",
       title:
         "Zwischen den Zeilen Gefühle entdecken: Wie Kinderbücher emotionale Resilienz fördern",
-      href: "/blog/zwischen-den-zeilen-gefuehle-entdecken-wie-kinderbuecher-emotionale-resilienz-foerdern",
+      href: "/articles/zwischen-den-zeilen-gefuehle-entdecken-wie-kinderbuecher-emotionale-resilienz-foerdern",
       image: {
         src: "/blogs/zwischen-den-zeilen-gefuehle-entdecken-wie-kinderbuecher-emotionale-resilienz-foerdern.png",
         alt: "Cover - Zwischen den Zeilen Gefühle entdecken: Wie Kinderbücher emotionale Resilienz fördern",
@@ -518,7 +518,7 @@ export const useBlogStore = defineStore("blog", () => {
       id: "zwischen-pixeln-und-seiten-die-revolution-des-kinderbuchlesens-durch-e-books-und-apps",
       title:
         "Zwischen Pixeln und Seiten: Die Revolution des Kinderbuchlesens durch E-Books und Apps",
-      href: "/blog/zwischen-pixeln-und-seiten-die-revolution-des-kinderbuchlesens-durch-e-books-und-apps",
+      href: "/articles/zwischen-pixeln-und-seiten-die-revolution-des-kinderbuchlesens-durch-e-books-und-apps",
       image: {
         src: "/blogs/zwischen-pixeln-und-seiten-die-revolution-des-kinderbuchlesens-durch-e-books-und-apps.png",
         alt: "Cover - Zwischen Pixeln und Seiten: Die Revolution des Kinderbuchlesens durch E-Books und Apps",
@@ -562,7 +562,7 @@ export const useBlogStore = defineStore("blog", () => {
     {
       id: "ab-wann-sollte-man-kindern-gutenachtgeschichten-vorlesen",
       title: "Ab wann sollte man Kindern Gute Nacht Geschichten vorlesen?",
-      href: "/blog/ab-wann-sollte-man-kindern-gutenachtgeschichten-vorlesen",
+      href: "/articles/ab-wann-sollte-man-kindern-gutenachtgeschichten-vorlesen",
       image: {
         src: "/blogs/ab-wann-sollte-man-kindern-gutenachtgeschichten-vorlesen.png",
         alt: "Cover - Ab wann sollte man Kindern Gute Nacht Geschichten vorlesen?",
@@ -606,7 +606,7 @@ export const useBlogStore = defineStore("blog", () => {
     {
       id: "so-waehlen-sie-die-perfekte-gute-nacht-geschichte-aus",
       title: "So wählen Sie die perfekte Gute Nacht Geschichte aus",
-      href: "/blog/so-waehlen-sie-die-perfekte-gute-nacht-geschichte-aus",
+      href: "/articles/so-waehlen-sie-die-perfekte-gute-nacht-geschichte-aus",
       image: {
         src: "/blogs/so-waehlen-sie-die-perfekte-gute-nacht-geschichte-aus.png",
         alt: "Cover - So wählen Sie die perfekte Gute Nacht Geschichte aus",

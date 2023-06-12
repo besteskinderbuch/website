@@ -1,5 +1,5 @@
 <script setup>
-import { useBlogStore } from "~/stores/useBlogStore";
+import { useArticleStore } from "~/stores/useArticleStore";
 
 const props = defineProps({
   id: {
@@ -8,8 +8,8 @@ const props = defineProps({
   },
 });
 
-const blogStore = useBlogStore();
-const posts = blogStore.posts;
+const store = useArticleStore();
+const posts = store.posts;
 
 const post = posts.find((post) => post.id === props.id);
 
@@ -71,7 +71,7 @@ related.value = others.sort(() => Math.random() - Math.random()).slice(0, 5)
         <div class="lg:col-span-1 lg:w-full lg:h-full">
           <div class="sticky top-0 left-0 py-8 lg:pl-8">
 
-            <h2 class="mb-10 text-center">Andere Blogartikel</h2>
+            <h2 class="mb-10 text-center">Andere Artikel</h2>
             <!-- End Avatar Media -->
             <div class="space-y-6">
               <!-- Media -->

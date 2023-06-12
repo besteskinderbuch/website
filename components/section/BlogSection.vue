@@ -1,9 +1,9 @@
 
 <script setup>
-import { useBlogStore } from "~/stores/useBlogStore";
+import { useArticleStore } from "~/stores/useArticleStore";
 
-const blogStore = useBlogStore();
-const posts = computed(() => blogStore.posts);
+const store = useArticleStore();
+const posts = computed(() => store.posts);
 </script>
 
 <template>
@@ -11,17 +11,17 @@ const posts = computed(() => blogStore.posts);
     <Container>
       <div class="mx-auto text-center">
         <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Blog
+          Ratgeber
         </h1>
         <p class="mt-2 text-lg leading-8 text-gray-600 text-justify">
-          Entdecke unseren Blog, eine wahre Schatzkammer an aufschlussreichen Artikeln, die sich ganz der zauberhaften
+          Entdecke unseren Ratgeber, eine wahre Schatzkammer an aufschlussreichen Artikeln, die sich ganz der zauberhaften
           Welt der Kindergeschichten widmen. Jede Woche bereichern wir diese Sammlung mit frischen Beiträgen, um dich
           stets mit neuen Anregungen und Wissen zu versorgen.<br />
           Ob du tiefer in bestimmte Themen eintauchen, mehr über deine Lieblingsgeschichten erfahren oder einfach nur neue
-          Inspiration suchen möchtest - unser Blog ist der perfekte Ort dafür.
+          Inspiration suchen möchtest - unser Ratgeber ist der perfekte Ort dafür.
         </p>
         <p class="mt-2 text-lg leading-8 text-gray-600 text-justify">
-          Du möchtest keinen unserer Blogartikel verpassen? Dann melde dich hier an und bleibe immer auf dem neuesten
+          Du möchtest keinen unserer Artikel verpassen? Dann melde dich hier an und bleibe immer auf dem neuesten
           Stand:
         </p>
         <div class="flex w-full justify-center">

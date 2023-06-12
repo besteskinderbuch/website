@@ -3,11 +3,11 @@
     <Container>
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Aus dem Blog
+          Aus dem Ratgeber
         </h2>
         <p class="mt-2 text-lg leading-8 text-gray-600">
-          Hier findest du viele interessante Blogartikel rund um das Thema Kindergeschichten.
-          Und jede Woche kommen Neue dazu! Wenn du nichts verpassen willst, trag dich <NuxtLink to="/blog">hier</NuxtLink>
+          Hier findest du viele interessante Artikel rund um das Thema Kindergeschichten.
+          Und jede Woche kommen Neue dazu! Wenn du nichts verpassen willst, trag dich <NuxtLink to="/articles">hier</NuxtLink>
           in unseren Newsletter ein
         </p>
       </div>
@@ -18,8 +18,8 @@
         </BlogTeaser>
       </div>
       <div class="w-full flex justify-center mt-20">
-        <BasicLink href="/blog">
-          <Icon name="material-symbols:arrow-forward" />alle Blogartikel
+        <BasicLink href="/articles">
+          <Icon name="material-symbols:arrow-forward" />alle Artikel
         </BasicLink>
       </div>
     </Container>
@@ -27,10 +27,10 @@
 </template>
 
 <script setup>
-import { useBlogStore } from "~/stores/useBlogStore";
+import { useArticleStore } from "~/stores/useArticleStore";
 
-const blogStore = useBlogStore();
-const posts = computed(() => blogStore.posts);
+const store = useArticleStore();
+const posts = computed(() => store.posts);
 
 const prewiewPosts = posts.value.slice(0, 3);
 </script>

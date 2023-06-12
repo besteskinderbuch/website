@@ -9,13 +9,13 @@ export const useContentStore = defineStore("content", () => {
     "Entdecke mit unserer Plattform eine Welt voller Fantasie! Unsere liebevoll ausgewählten, altersgerechten Gute Nacht Geschichten fördern die Vorstellungskraft und Kreativität deines Kindes und lassen es in unvergessliche Abenteuer eintauchen. Gestalte das Lesen zu einem besonderen Moment, den du und dein Kind gemeinsam erleben könnt - entfache die Liebe zum Lesen in deinem Kind. Tritt jetzt unserer Community bei!";
   const navigation = ref([
     {
-      name: "Gute Nacht Geschichten",
+      name: "Geschichten",
       href: "/stories",
       type: "internal",
       important: true,
     },
     { name: "Bücher", href: "/books", type: "internal", important: false },
-    { name: "Blog", href: "/blog", type: "internal", important: true },
+    { name: "Ratgeber", href: "/articles", type: "internal", important: true },
     { name: "Hilfe", href: "/help", type: "internal", important: false },
   ]);
 
@@ -52,7 +52,7 @@ export const useContentStore = defineStore("content", () => {
     ],
     impressum: [
       { name: "About", href: "#" },
-      { name: "Blog", href: "#" },
+      { name: "Ratgeber", href: "#" },
       { name: "Jobs", href: "#" },
       { name: "Press", href: "#" },
       { name: "Partners", href: "#" },
