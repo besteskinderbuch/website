@@ -52,10 +52,10 @@ function handleSuccess(a) {
         <div class="mt-36">
           <SignupForm v-if="!showConfirmationInfo" @success="handleSuccess"></SignupForm>
           <div v-else class="space-y-4">
-            <p>Bitte bestätige deinen Registierung:</p>
+            <p>Bitte bestätige deinen Registrierung:</p>
             <div class="space-y-4">
-              <p>1. Prüfe deinen Posteinfang/Spam-Ordner und öffne die E-Mail, welche wir dir gesendet haben</p>
-              <p>2. Bestätige deine Registierung durch Klicken auf den enthaltenen Link</p>
+              <p>1. Prüfe deinen Posteingang/Spam-Ordner und öffne die E-Mail, welche wir dir gesendet haben</p>
+              <p>2. Bestätige deine Registrierung durch Klicken auf den dort enthaltenen Link</p>
             </div>
           </div>
         </div>
