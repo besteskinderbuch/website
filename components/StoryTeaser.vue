@@ -16,7 +16,7 @@ defineProps({
         <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
       </div>
       <div class="max-w-xl">
-        <div class="mt-8 flex items-center gap-x-4 text-xs">
+        <div class="mt-4 md:mt-8 flex items-center gap-x-4 text-xs">
           <time :datetime="data.datetime" class="text-gray-500">{{
             data.date
           }}</time>
