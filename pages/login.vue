@@ -23,11 +23,13 @@ definePageMeta({
 });
 
 
+const config = useRuntimeConfig()
+
 useHead(() => ({
   link: [
     {
       rel: 'canonical',
-      href: 'https://bestes-kinderbuch.de' + route.path,
+      href: config.public.siteUrl + route.path,
     },
   ],
 }))

@@ -7,13 +7,13 @@
         </h2>
         <p class="mt-2 text-lg leading-8 text-gray-600">
           Hier findest du viele interessante Artikel rund um das Thema Kindergeschichten.
-          Und jede Woche kommen Neue dazu! Wenn du nichts verpassen willst, trag dich <NuxtLink to="/articles">hier</NuxtLink>
+          Und jede Woche kommen Neue dazu! Wenn du nichts verpassen willst, trag dich <NuxtLink to="/articles">hier
+          </NuxtLink>
           in unseren Newsletter ein
         </p>
       </div>
       <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        <BlogTeaser v-for="post in prewiewPosts" :key="post.id" :href="post.href" :image="post.image" :date="post.date"
-          :datetime="post.datetime" :category="post.category" :title="post.title" :description="post.description"
+        <BlogTeaser v-for="article in previewArticles" :key="article.id" :data="article"
           class="flex flex-col items-start justify-between">
         </BlogTeaser>
       </div>
@@ -27,10 +27,15 @@
 </template>
 
 <script setup>
-import { useArticleStore } from "~/stores/useArticleStore";
+const { previewArticles, getAll } = useArticles()
 
-const store = useArticleStore();
-const posts = computed(() => store.posts);
 
-const prewiewPosts = posts.value.slice(0, 3);
+await useAsyncData(
+  'articles',
+  () =>  getAll()
+)
+
+
+
+
 </script>

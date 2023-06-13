@@ -5,14 +5,18 @@ const contentStore = useContentStore();
 
 const seoInfo = {
   ...contentStore.baseSeoInfo,
-  title: `Registrierung - ${contentStore.baseSeoInfo.title}`,
+  title: `Passwort vergessen - ${contentStore.baseSeoInfo.title}`,
 }
-
 const seoMeta = contentStore.createSeoMeta(seoInfo)
 useSeoMeta(seoMeta)
 
 const route = useRoute()
 const redirect = route.query.redirect || '/'
+
+const router = useRouter()
+function handleSuccess() {
+  router.push(redirect)
+}
 
 definePageMeta({
   layout: "empty",
@@ -30,12 +34,6 @@ useHead(() => ({
   ],
 }))
 
-
-const showConfirmationInfo = ref(false)
-function handleSuccess(a) {
-  showConfirmationInfo.value = true
-}
-
 </script>
 
 <template>
@@ -52,14 +50,7 @@ function handleSuccess(a) {
         <h1 class="text-3xl font-bold">Bestes-Kinderbuch.de</h1>
 
         <div class="mt-36">
-          <SignupForm v-if="!showConfirmationInfo" @success="handleSuccess"></SignupForm>
-          <div v-else class="space-y-4">
-            <p>Bitte bestätige deine Registrierung:</p>
-            <div class="space-y-4">
-              <p>1. Prüfe deinen Posteingang/Spam-Ordner und öffne die E-Mail, welche wir dir gesendet haben</p>
-              <p>2. Bestätige deine Registrierung durch Klicken auf den dort enthaltenen Link</p>
-            </div>
-          </div>
+          <PasswordForgotForm @success="handleSuccess"></PasswordForgotForm>
         </div>
       </div>
     </div>

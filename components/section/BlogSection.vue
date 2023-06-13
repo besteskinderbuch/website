@@ -1,9 +1,11 @@
 
 <script setup>
-import { useArticleStore } from "~/stores/useArticleStore";
+const { getAll, articles } = useArticles()
 
-const store = useArticleStore();
-const posts = computed(() => store.posts);
+await useAsyncData(
+  'stories',
+  () => getAll()
+)
 </script>
 
 <template>
@@ -29,9 +31,7 @@ const posts = computed(() => store.posts);
         </div>
       </div>
       <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-28 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        <BlogTeaser v-for="post in posts" :key="post.id" :href="post.href" :image="post.image" :date="post.date"
-          :datetime="post.datetime" :category="post.category" :title="post.title" :description="post.description"
-          class="flex flex-col items-start justify-between" />
+        <BlogTeaser v-for="article in articles" :key="article.id" :data="article" class="flex flex-col items-start justify-between" />
       </div>
     </Container>
   </Section>

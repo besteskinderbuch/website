@@ -1,18 +1,21 @@
-type Story = {
+type BaseData = {
   id: string;
   title: string;
   href: string;
-  neededSubscription: boolean;
-  image: Image;
-  rating: number;
-  ageRange: AgeRange;
   description: string;
-  premium: boolean;
-  audio: Audio;
   date: string;
   datetime: string;
   tags: Array<string>;
   content: string;
+};
+
+type Story = BaseData & {
+  neededSubscription: boolean;
+  image: Image;
+  rating: number;
+  ageRange: AgeRange;
+  premium: boolean;
+  audio: Audio;
 };
 
 type Audio = {
@@ -29,4 +32,9 @@ type AgeRange = {
   max: number;
 };
 
-export { Story, AgeRange, Image, Audio };
+type Article = BaseData & {
+  preview: boolean;
+}
+
+
+export { Story, AgeRange, Image, Audio, Article, BaseData };
