@@ -4,11 +4,11 @@ import { VueFire, VueFireAuth } from "vuefire";
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig();
-  const siteUrl = config.public.siteUrl
+  const authDomain = config.public.authDomain
 
   const firebaseConfig = {
     apiKey: "AIzaSyDw2TTwT4poKxVVTM-A-BMTrxAkfNe1RfE",
-    authDomain: siteUrl,
+    authDomain,
     projectId: "bestes-kinderbuch",
     storageBucket: "bestes-kinderbuch.appspot.com",
     messagingSenderId: "577377422130",
