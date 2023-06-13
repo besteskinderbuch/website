@@ -6,7 +6,10 @@ export default cachedEventHandler(
     const config = useRuntimeConfig();
     const siteUrl = config.public.siteUrl;
 
-    return [...stories, ...articles].map((p) => {
+
+    const publicStories = stories.filter((s) => !s.neededSubscription);
+
+    return [...publicStories, ...articles].map((p) => {
       return { loc: `${siteUrl}${p.href}` };
     });
   },
