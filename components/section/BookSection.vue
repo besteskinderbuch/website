@@ -13,7 +13,7 @@
           In unserer gedruckten Bücherkollektion findest du eine handverlesene Auswahl an liebevoll gestalteten
           Kinderbüchern. Jede Geschichte, die wir in unserer digitalen Bibliothek anbieten, wurde mit großer Sorgfalt in
           physischer Form gebracht und wartet nur darauf, von dir entdeckt zu werden.Egal, ob du auf der Suche nach einer
-          Gute-Nacht-Geschichte bist, deinen Kindern die Freude am Lesen näherbringen
+          Gute Nacht Geschichte bist, deinen Kindern die Freude am Lesen näherbringen
           möchtest oder das perfekte Geschenk für einen kleinen Bücherwurm suchst – bei uns findest du garantiert das
           Richtige.
         </p>

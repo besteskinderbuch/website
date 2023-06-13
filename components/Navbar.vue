@@ -23,7 +23,7 @@ const accountStore = useAccountStore();
 
 const loggedIn = ref(false);
 onMounted(() => {
-    const { isLoggedIn} = useAuth();
+    const { isLoggedIn } = useAuth();
 
     watch(isLoggedIn, (newVal) => {
         loggedIn.value = newVal
@@ -52,9 +52,9 @@ const signupUrl = computed(() => `/signup?redirect=${fullPath.value}`);
 const loginUrl = computed(() => `/login?redirect=${fullPath.value}`);
 </script>
 <template>
-    <Disclosure as="nav"
+    <Disclosure as="nav" 
         class="z-10 w-full transition ease-in-out delay-150 transform-gpu fixed bg-primary1 md:bg-backgroundColor1"
-        :class="{ '-translate-y-full': hidden, 'translate-y-0': !hidden }" v-slot="{ open }">
+        :class="{ '-translate-y-full': hidden, 'translate-y-0': !hidden }" v-slot="{ open, close }">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
@@ -79,7 +79,7 @@ const loginUrl = computed(() => `/login?redirect=${fullPath.value}`);
                     <!-- between sm and lg-->
                     <div class="hidden sm:block md:hidden">
                         <div class="flex space-x-4">
-                            <NavLink v-for="item in navigation" :key="item.name" :href="item.href" size="lg" theme="light">
+                            <NavLink v-for="item in navigation" :key="item.name" :href="item.href" size="lg" theme="light"  @click="close">
                                 {{ item.name }}
                             </NavLink>
                         </div>
@@ -88,7 +88,7 @@ const loginUrl = computed(() => `/login?redirect=${fullPath.value}`);
                     <div class="sm:hidden">
                         <div class="flex space-x-4">
                             <NavLink v-for="item in importantNavigation" :key="item.name" :href="item.href" size="lg"
-                                theme="light">
+                                theme="light" @click="close">
                                 {{ item.name }}
                             </NavLink>
                         </div>

@@ -17,7 +17,7 @@ const features = contentStore.features;
           Vorteile deines Gute Nacht Geschichten Abos
         </h2>
         <p class="mt-6 text-lg leading-8 text-gray-800">
-          Träumst du davon, deinem Kind täglich vor dem Schlafengehen eine Gute-Nacht-Geschichte zu erzählen? Fühlst du
+          Träumst du davon, deinem Kind täglich vor dem Schlafengehen eine Gute Nacht Geschichte zu erzählen? Fühlst du
           dich jedoch durch den hohen Preis und den Platzbedarf von Büchern eingeschränkt? Dann haben wir mit unserem
           Gute Nacht Geschichten Abo die perfekte Lösung für dich.
         </p>
