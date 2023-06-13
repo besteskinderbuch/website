@@ -132,7 +132,7 @@ export default defineNuxtConfig({
       hotjarId: process.env.HOTJAR_ID,
       gtagId: process.env.GTAG_ID,
       siteUrl: process.env.PUBLIC_SITE_URL || "https://bestes-kinderbuch.de",
-      authDomain: process.env.AUTH_DOMAIN || "bestes-kinderbuch.de",
+      authDomain: process.env.AUTH_DOMAIN || "bestes-kinderbuch.firebaseapp.com",
     },
   },
 });
