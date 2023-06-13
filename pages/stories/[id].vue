@@ -7,45 +7,40 @@ import { useContentStore } from '~/stores/useContentStore';
 const route = useRoute();
 const id = route.params.id;
 
+const { stories, get } = useStories()
 
-const storyStore = useStoryStore();
-const freeStories = computed(() => storyStore.freeStories);
-const publicStories = computed(() => storyStore.publicStories);
+await useAsyncData(
+  `story-${id}`,
+  () => get(id)
+)
 
 const loggedIn = ref(false);
 onMounted(() => {
-    const { isLoggedIn} = useAuth();
+  const { isLoggedIn } = useAuth();
 
-    watch(isLoggedIn, (newVal) => {
-        loggedIn.value = newVal
-    }, { immediate: true })
-});
-
-const stories = computed(() => {
-  if (loggedIn.value) {
-    return freeStories.value.concat(publicStories.value);
-  }
-
-  return publicStories.value;
+  watch(isLoggedIn, (newVal) => {
+    loggedIn.value = newVal
+  }, { immediate: true })
 });
 
 const contentStore = useContentStore();
 
-const story = ref(stories.value.find((s) => s.id === id))
+const story = computed(() => stories.value.find((s) => s.id === id))
+
 if (story.value) {
   const seoInfo = {
-  ...contentStore.baseSeoInfo,
-  title: `Gute Nacht Geschichte: ${story.value.title}`,
-}
-const seoMeta = contentStore.createSeoMeta(seoInfo)
-useSeoMeta(seoMeta)
+    ...contentStore.baseSeoInfo,
+    title: `Gute Nacht Geschichte: ${story.value.title}`,
+  }
+  const seoMeta = contentStore.createSeoMeta(seoInfo)
+  useSeoMeta(seoMeta)
 }
 
 onMounted(() => {
   story.value = stories.value.find((s) => s.id === id)
 });
 
-const breadcrumb= [{name:"Gute Nacht Geschichten", href:"/stories"}, {name:story.value?.title, href:`/stories/${id}`, current:true}];
+const breadcrumb = [{ name: "Gute Nacht Geschichten", href: "/stories" }, { name: story.value?.title, href: `/stories/${id}`, current: true }];
 </script>
 
 <template>

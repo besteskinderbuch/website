@@ -1,9 +1,32 @@
 type Story = {
-    id: number;
-    title: string;
-    url: string;
-    by: string;
-    time: number;
-}
+  id: string;
+  title: string;
+  href: string;
+  neededSubscription: boolean;
+  image: Image;
+  rating: number;
+  ageRange: AgeRange;
+  description: string;
+  premium: boolean;
+  audio: Audio;
+  date: string;
+  datetime: string;
+  tags: Array<string>;
+  content: string;
+};
 
-export { Story}
+type Audio = {
+  src: string;
+};
+
+type Image = {
+  src: string;
+  alt: string;
+};
+
+type AgeRange = {
+  min: number;
+  max: number;
+};
+
+export { Story, AgeRange, Image, Audio };

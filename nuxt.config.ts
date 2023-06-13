@@ -105,14 +105,14 @@ export default defineNuxtConfig({
   ],
 
   robots: {
-    sitemap: "https://bestes-kinderbuch.de/sitemap.xml",
+    sitemap: `${process.env.PUBLIC_SITE_URL}/sitemap.xml`,
     indexable: true,
-    siteUrl: "https://bestes-kinderbuch.de",
+    siteUrl: process.env.PUBLIC_SITE_URL,
     disallow: ["/account", "/abos"],
   },
 
   sitemap: {
-    siteUrl: "https://bestes-kinderbuch.de",
+    siteUrl: process.env.PUBLIC_SITE_URL,
   },
 
   delayHydration: {
@@ -131,8 +131,7 @@ export default defineNuxtConfig({
     public: {
       hotjarId: process.env.HOTJAR_ID,
       gtagId: process.env.GTAG_ID,
-      siteUrl:
-        process.env.NUXT_PUBLIC_SITE_URL || "https://bestes-kinderbuch.de",
+      siteUrl: process.env.PUBLIC_SITE_URL || "https://bestes-kinderbuch.de",
     },
   },
 });

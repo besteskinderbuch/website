@@ -1,20 +1,21 @@
 <script setup>
-import { useStoryStore } from '~/stores/useStoryStore';
 const { isLoggedIn } = useAuth();
 
 const loggedIn = ref(false);
 
 onMounted(() => {
-    watch(isLoggedIn, (newVal) => {
-        loggedIn.value = newVal
-    }, { immediate: true })
+  watch(isLoggedIn, (newVal) => {
+    loggedIn.value = newVal
+  }, { immediate: true })
 });
 
-const storyStore = useStoryStore();
-const freeStories = computed(() => storyStore.freeStories);
-const publicStories = computed(() => storyStore.publicStories);
+const { stories, getAll } = useStories()
 
-const stories = computed(() => publicStories.value.concat(freeStories.value));
+await useAsyncData(
+  'stories',
+  () => getAll()
+)
+
 </script>
 <template>
   <Section>
@@ -28,15 +29,16 @@ const stories = computed(() => publicStories.value.concat(freeStories.value));
           Bereit für eine Reise in die magische Welt der Fantasie?
         </h2>
         <p v-if="!loggedIn" class="mt-6 text-lg leading-8 text-gray-800 text-justify">
-          Hier findest du 2 kostenlose Gute Nacht Geschichten zum Vorlesen.<br/>
-          Um 5 weitere kostenlose Bonus Gute Nacht Geschichten genießen zu können, kannst du dir <NuxtLink to="/login" class="text-blue-300">hier</NuxtLink> deinen persönlichen kostenlosen Account erstellen.
+          Hier findest du 2 kostenlose Gute Nacht Geschichten zum Vorlesen.<br />
+          Um 5 weitere kostenlose Bonus Gute Nacht Geschichten genießen zu können, kannst du dir <NuxtLink to="/login"
+            class="text-blue-300">hier</NuxtLink> deinen persönlichen kostenlosen Account erstellen.
         </p>
         <p v-if="!loggedIn" class="mt-6 text-lg leading-8 text-gray-800 text-justify">
           Doch das ist erst der Anfang! Für die Abenteurer, die bereit sind, tiefer in die unendlichen Weiten unserer
           Fantasiewelt einzutauchen, haben wir eine Schatztruhe voller Geschichten, die nur darauf warten, entdeckt zu
           werden. Klick <NuxtLink to="/#pricing" class="text-blue-300">hier</NuxtLink> und wähle das Abonnement, das zu
           dir passt. Denn mit unseren Premium-Abos kannst du die ganze Fülle unserer einzigartigen Geschichtensammlung
-          erkunden.<br/>
+          erkunden.<br />
           Stelle dir vor, du könntest jeden Abend eine neue Geschichte entdecken. Oder sogar zwei! Die Möglichkeiten sind
           grenzenlos und du kannst sie freischalten, indem du in die fesselnde Welt unserer Premium-Abonnements
           eintauchst. Mach den Sprung und tauche ein in ein Meer voller Geschichten, das nie austrocknet. Entdecke,
