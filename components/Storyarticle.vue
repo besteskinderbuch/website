@@ -33,6 +33,22 @@ onMounted(() => {
     })
   }
 })
+
+
+const fontSizeH1Pixel = computed(()=>  fontSizeH1.value + "px")
+const fontSizeH1 = ref(30)
+
+const fontSizeH2Pixel = computed(()=>  fontSizeH2.value + "px")
+const fontSizeH2 = ref(24)
+
+const fontSizePPixel = computed(()=>  fontSizeP.value + "px")
+const fontSizeP = ref(16)
+
+function handleFontSizeChnage(value){
+  fontSizeH1.value = fontSizeH1.value + value
+  fontSizeH2.value = fontSizeH2.value + value
+  fontSizeP.value = fontSizeP.value + value
+  }
 </script>
 
 <template>
@@ -40,7 +56,7 @@ onMounted(() => {
     <Container v-if="data" class="space-y-4">
       <!-- Content -->
 
-      <h1 class="text-3xl font-bold lg:text-5xl">
+      <h1 class="font-bold">
         {{ data.title }}
       </h1>
 
@@ -83,5 +99,22 @@ onMounted(() => {
 
     </Container>
   </Section>
+  <StoryMenu @changeFontsize="handleFontSizeChnage"></StoryMenu>
   <!-- End Story Article -->
 </template>
+
+<style lang="scss">
+
+  h1 {
+    font-size: v-bind(fontSizeH1Pixel) !important;
+  }
+
+  h2 {
+    font-size: v-bind(fontSizeH2Pixel) !important;
+  }
+  
+  p {
+    font-size: v-bind(fontSizePPixel) !important;
+  }
+
+</style>
