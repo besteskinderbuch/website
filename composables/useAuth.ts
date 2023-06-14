@@ -15,6 +15,8 @@ import {
   signOut,
   applyActionCode,
   updateProfile,
+  sendPasswordResetEmail as sendPasswordResetEmailFirebase,
+  confirmPasswordReset as confirmPasswordResetFirebase,
 } from "firebase/auth";
 
 export default () => {
@@ -136,21 +138,29 @@ export default () => {
     user.value = { type: "guest" };
   }
 
+
+  async function sendPasswordResetEmail(email:string) {
+    if (!auth) {
+      console.error("auth not found");
+      return;
+    }
+
+    await sendPasswordResetEmailFirebase(auth, email);
+  }
+
+  async function confirmPasswordReset(oobCode:string, newPassword:string) {
+    if (!auth) {
+      console.error("auth not found");
+      return;
+    }
+
+    await confirmPasswordResetFirebase(auth, oobCode, newPassword);
+  }
+
+
   async function getCurrentUser() {
     if (!user.value || user.value.type === "guest") {
-      if (devMode.value) {
-        const data = useLocalStorage("user-data", null);
-        if (data.value) {
-          user.value = {
-            type: "user",
-            data: data.value,
-            subscription: "tier-littlebookworm",
-          };
-        }
-
-        return user.value;
-      }
-
+     
       try {
         const data = await getCurrentFirebaseUser();
         if (!data) {
@@ -181,5 +191,7 @@ export default () => {
     loginWithPasswordAndEmail,
     loginWithGoogle,
     logout,
+    sendPasswordResetEmail,
+    confirmPasswordReset,
   };
 };

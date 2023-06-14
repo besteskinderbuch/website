@@ -86,7 +86,7 @@ export default defineNuxtConfig({
     },
   },
 
-  plugins: ["~/plugins/rating.client.ts"],
+  plugins: ["~/plugins/rating.client.ts", "~/plugins/notifications.client.ts"],
   components: {
     global: true,
     dirs: ["~/components/section", "~/components/global", "~/components/"],

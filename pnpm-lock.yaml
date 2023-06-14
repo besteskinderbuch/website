@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@headlessui/vue': ^1.7.13
   '@heroicons/vue': ^2.0.18
+  '@kyvg/vue3-notification': ^2.9.1
   '@nuxt/devtools': ^0.5.5
   '@nuxt/image-edge': 1.0.0-28089462.3520a62
   '@pinia/nuxt': ^0.4.11
@@ -32,6 +33,7 @@ specifiers:
 dependencies:
   '@headlessui/vue': 1.7.13_vue@3.3.4
   '@heroicons/vue': 2.0.18_vue@3.3.4
+  '@kyvg/vue3-notification': 2.9.1_vue@3.3.4
   '@pinia/nuxt': 0.4.11_vue@3.3.4
   '@vueuse/core': 10.1.2_vue@3.3.4
   '@vueuse/nuxt': 10.1.2_nuxt@3.5.1+vue@3.3.4
@@ -1132,6 +1134,14 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+
+  /@kyvg/vue3-notification/2.9.1_vue@3.3.4:
+    resolution: {integrity: sha512-FsY8g25tQetr3etnarxHtCeNFKssH8sheFu13LyL2JJmOOel437QqKV5n4RBDDDTIo55iKgIVYXeojliXYdEhw==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      vue: 3.3.4
+    dev: false
 
   /@mapbox/node-pre-gyp/1.0.10:
     resolution: {integrity: sha512-4ySo4CjzStuprMwk35H5pPbkymjv1SF3jGLj6rAHp/xT/RF7TL7bd9CTm1xDY49K2qF7jmR/g7k+SkLETP6opA==}

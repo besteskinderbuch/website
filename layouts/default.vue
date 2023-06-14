@@ -18,8 +18,11 @@ onMounted(() => {
 })
 </script>
 <template>
-    <Navbar :hidden="!showNavbar"/>
-    <NuxtPage class="mt-16"/>
+    <ClientOnly>
+        <Notifications />
+    </ClientOnly>
+    <Navbar :hidden="!showNavbar" />
+    <NuxtPage class="mt-16" />
     <LazyFooter />
 </template>
 <style>

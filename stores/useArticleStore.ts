@@ -17,12 +17,6 @@ export const useArticleStore = defineStore("articles", () => {
 
   const previewArticles = computed(() => articles.value.filter((a) => a.preview));
 
-  watch(previewArticles, (newVal) => {
-    console.log("[useArticleStore] previewArticles", newVal);
-  },{
-    immediate: true,
-  });
-
   return {
     initialized,
     add,

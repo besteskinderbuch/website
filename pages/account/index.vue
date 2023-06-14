@@ -1,5 +1,4 @@
 <script setup>
-import { useRootStore } from "~/stores/useRootStore";
 import { useContentStore } from '~/stores/useContentStore';
 
 const contentStore = useContentStore();
@@ -11,8 +10,6 @@ const seoInfo = {
 }
 const seoMeta = contentStore.createSeoMeta(seoInfo)
 useSeoMeta(seoMeta)
-
-const { devMode } = useRootStore()
 </script>
 
 <template>
@@ -24,13 +21,10 @@ const { devMode } = useRootStore()
         </div> -->
 
         <div class="mt-10">
-          <div v-if="!devMode">TODO</div>
+          <BasicLink type="button" href="/forgotPassword?redirect=/account">Passwort ändern</BasicLink>
         </div>
       </div>
     </div>
-    <div class="relative hidden w-0 flex-1 lg:block">
-      <nuxt-img provider="imgix" class="absolute inset-0 h-full w-full object-cover" src="/login.png" alt="Märchenwald"
-        :modifiers="{ auto: 'format,compress' }" />
-    </div>
+   
   </div>
 </template>

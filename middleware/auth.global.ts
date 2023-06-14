@@ -4,7 +4,6 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
   }
   
   const { getCurrentUser, user } = useAuth();
-  console.debug("[auth-middleware] user.value: ", user.value);
 
   if (!user.value) {
     try {

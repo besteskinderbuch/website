@@ -1,4 +1,7 @@
 <template>
+     <ClientOnly>
+        <Notifications />
+    </ClientOnly>
     <NuxtPage />
 </template>
 <style>
