@@ -108,7 +108,6 @@ export default defineNuxtConfig({
     sitemap: `${process.env.PUBLIC_SITE_URL}/sitemap.xml`,
     indexable: true,
     siteUrl: process.env.PUBLIC_SITE_URL,
-    disallow: ["/account", "/abos"],
   },
 
   sitemap: {

@@ -10,7 +10,7 @@ export default cachedEventHandler(
     const publicStories = stories.filter((s) => !s.neededSubscription);
 
     return [...publicStories, ...articles].map((p) => {
-      return { loc: `${siteUrl}${p.href}` };
+      return { loc: `${siteUrl}${p.href}`, lastmod: p.updatedAt};
     });
   },
   {
