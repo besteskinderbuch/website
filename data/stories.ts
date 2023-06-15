@@ -1,6 +1,7 @@
 export default [
   {
     id: "die-abenteuer-des-regenbogendrachens",
+    updatedAt: new Date(2023,5,15),
     title: "Die Abenteuer des Regenbogendrachens",
     href: "/stories/die-abenteuer-des-regenbogendrachens",
     neededSubscription: false,
@@ -87,6 +88,7 @@ export default [
   },
   {
     id: "luna-und-die-sternenstaubfee",
+    updatedAt: new Date(2023,5,15),
     title: "Luna und die Sternenstaubfee",
     href: "/stories/luna-und-die-sternenstaubfee",
     neededSubscription: false,
@@ -184,6 +186,7 @@ export default [
   },
   {
     id: "die-verzauberte-feder",
+    updatedAt: new Date(2023,5,15),
     title: "Die verzauberte Feder",
     href: "/stories/die-verzauberte-feder",
     neededSubscription: "free",
@@ -286,6 +289,7 @@ export default [
   },
   {
     id: "pfoetchens-erster-schultag",
+    updatedAt: new Date(2023,5,15),
     title: "Pfötchens erster Schultag",
     href: "/stories/pfoetchens-erster-schultag",
     neededSubscription: "free",
@@ -377,6 +381,7 @@ export default [
   },
   {
     id: "bommelbaers-reise-zum-mond",
+    updatedAt: new Date(2023,5,15),
     title: "Bommelbärs Reise zum Mond",
     href: "/stories/bommelbaers-reise-zum-mond",
     neededSubscription: "free",
@@ -454,6 +459,7 @@ export default [
   },
   {
     id: "der-mutige-kleine-kaefer",
+    updatedAt: new Date(2023,5,15),
     title: "Der mutige kleine Käfer",
     href: "/stories/der-mutige-kleine-kaefer",
     neededSubscription: "free",
@@ -529,6 +535,7 @@ export default [
   },
   {
     id: "die-vier-jahreszeiten-der-waldtiere",
+    updatedAt: new Date(2023,5,15),
     title: "Die vier Jahreszeiten der Waldtiere",
     href: "/stories/die-vier-jahreszeiten-der-waldtiere",
     neededSubscription: "free",

@@ -1,6 +1,7 @@
 export default [
     {
         id: "die-magie-von-gute-nacht-geschichten-warum-sie-wichtig-sind",
+        updatedAt: new Date(2023,5,15),
         title: "Die Magie von Gute Nacht Geschichten: Warum sie wichtig sind",
         preview: true,
         href: "/articles/die-magie-von-gute-nacht-geschichten-warum-sie-wichtig-sind",
@@ -42,6 +43,7 @@ export default [
       },
       {
         id: "entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen",
+        updatedAt: new Date(2023,5,15),
         title: "Entdecke die Magie: Wie Kinderbücher die Fantasie anregen",
         href: "/articles/entdecke-die-magie-wie-kinderbuecher-die-fantasie-anregen",
         description: "",
@@ -83,6 +85,7 @@ export default [
       },
       {
         id: "warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist",
+        updatedAt: new Date(2023,5,15),
         title: "Warum Vorlesen wichtig für die Entwicklung Ihres Kindes ist",
         href: "/articles/warum-vorlesen-wichtig-fuer-die-entwicklung-ihres-kindes-ist",
         image: {
@@ -136,6 +139,7 @@ export default [
       },
       {
         id: "die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt",
+        updatedAt: new Date(2023,5,15),
         title:
           "Die Kunst des Erzählens: Wie man eine fesselnde Kindergeschichte schreibt",
         href: "/articles/die-kunst-des-erzaehlens-wie-man-eine-fesselnde-kindergeschichte-schreibt",
@@ -172,6 +176,7 @@ export default [
       },
       {
         id: "die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten",
+        updatedAt: new Date(2023,5,15),
         title: "Die Welt der Fabeln: Wie sie Kinder lehren und unterhalten",
         href: "/articles/die-welt-der-fabeln-wie-sie-kinder-lehren-und-unterhalten",
         image: {
@@ -213,6 +218,7 @@ export default [
       },
       {
         id: "das-magische-der-guten-nacht-geschichten-wie-lange-sollten-wir-vorlesen",
+        updatedAt: new Date(2023,5,15),
         title: "Das Magische der Guten Nacht Geschichten: Wie lange sollten wir vorlesen?",
         preview: true,
         href: "/articles/das-magische-der-guten-nacht-geschichten-wie-lange-sollten-wir-vorlesen",
@@ -251,6 +257,7 @@ export default [
       },
       {
         id: "kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes",
+        updatedAt: new Date(2023,5,15),
         title:
           "Kinderbücher und ihre Rolle in der emotionalen Entwicklung des Kindes",
         href: "/articles/kinderbuecher-und-ihre-rolle-in-der-emotionalen-entwicklung-des-kindes",
@@ -286,6 +293,7 @@ export default [
       },
       {
         id: "von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit",
+        updatedAt: new Date(2023,5,15),
         title:
           "Von Drachen, Prinzen und Prinzessinnen: Die Bedeutung von Märchen in der Kindheit",
         href: "/articles/von-drachen-prinzen-und-prinzessinnen-die-bedeutung-von-marchen-in-der-kindheit",
@@ -327,6 +335,7 @@ export default [
       },
       {
         id: "die-magische-welt-der-gute-nacht-geschichten-ein-entscheidender-baustein-fuer-die-entwicklung-ihres-babys",
+        updatedAt: new Date(2023,5,15),
         title:
           "Die magische Welt der Gute Nacht Geschichten: Ein entscheidender Baustein für die Entwicklung Ihres Babys",
         preview: true,
@@ -370,6 +379,7 @@ export default [
       },
       {
         id: "von-seiten-zu-sozialen-faehigkeiten-wie-kindergeschichten-die-entwicklung-sozialer-kompetenzen-praegen",
+        updatedAt: new Date(2023,5,15),
         title:
           "Von Seiten zu sozialen Fähigkeiten: Wie Kindergeschichten die Entwicklung sozialer Kompetenzen prägen",
         href: "/articles/von-seiten-zu-sozialen-faehigkeiten-wie-kindergeschichten-die-entwicklung-sozialer-kompetenzen-praegen",
@@ -406,6 +416,7 @@ export default [
       },
       {
         id: "zwischen-den-zeilen-gefuehle-entdecken-wie-kinderbuecher-emotionale-resilienz-foerdern",
+        updatedAt: new Date(2023,5,15),
         title:
           "Zwischen den Zeilen Gefühle entdecken: Wie Kinderbücher emotionale Resilienz fördern",
         href: "/articles/zwischen-den-zeilen-gefuehle-entdecken-wie-kinderbuecher-emotionale-resilienz-foerdern",
@@ -439,6 +450,7 @@ export default [
       },
       {
         id: "zwischen-pixeln-und-seiten-die-revolution-des-kinderbuchlesens-durch-e-books-und-apps",
+        updatedAt: new Date(2023,5,15),
         title:
           "Zwischen Pixeln und Seiten: Die Revolution des Kinderbuchlesens durch E-Books und Apps",
         href: "/articles/zwischen-pixeln-und-seiten-die-revolution-des-kinderbuchlesens-durch-e-books-und-apps",
@@ -477,6 +489,7 @@ export default [
       },
       {
         id: "ab-wann-sollte-man-kindern-gutenachtgeschichten-vorlesen",
+        updatedAt: new Date(2023,5,15),
         title: "Ab wann sollte man Kindern Gute Nacht Geschichten vorlesen?",
         href: "/articles/ab-wann-sollte-man-kindern-gutenachtgeschichten-vorlesen",
         image: {
@@ -514,6 +527,7 @@ export default [
       },
       {
         id: "so-waehlen-sie-die-perfekte-gute-nacht-geschichte-aus",
+        updatedAt: new Date(2023,5,15),
         title: "So wählen Sie die perfekte Gute Nacht Geschichte aus",
         href: "/articles/so-waehlen-sie-die-perfekte-gute-nacht-geschichte-aus",
         image: {
