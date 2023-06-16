@@ -33,6 +33,26 @@ export default defineNuxtConfig({
       },
       link: [
         {
+          rel: "preconnect",
+          href: "https://consent.cookiebot.com/",
+        },
+        {
+          rel: "preconnect",
+          href: " https://consentcdn.cookiebot.com",
+        },
+        {
+          rel: "preconnect",
+          href: "https://static.hotjar.com/",
+        },
+        {
+          rel: "preconnect",
+          href: "https://script.hotjar.com/",
+        },
+        {
+          rel: "preconnect",
+          href: "https://apis.google.com/",
+        },
+        {
           rel: "apple-touch-icon",
           sizes: "180x180",
           href: "/apple-touch-icon.png",

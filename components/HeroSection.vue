@@ -34,8 +34,7 @@ onMounted(() => {
       </div>
       <div class="absolute lg:static top-0 lg:top-auto opacity-30 lg:opacity-100 -z-10 lg:z-auto mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
         <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-          <nuxt-img provider="imgix" src="/heroteaser.png" alt="App screenshot" width="2432" height="1442"
-            class="w-[76rem] rounded-md " :modifiers="{ auto: 'format,compress' }" />
+          <nuxt-img provider="imgix" src="/heroteaser.png" alt="App screenshot" class="w-[76rem] rounded-md " :modifiers="{ auto: 'format,compress' }" fetchpriority="high"/>
         </div>
       </div>
     </div>
