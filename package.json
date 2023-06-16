@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.6.1",
-    "@nuxt/image-edge": "1.0.0-28089462.3520a62",
+    "@nuxt/image-edge": "1.0.0-rc.1-28115526.1a8c782",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^18.16.18",
