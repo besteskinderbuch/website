@@ -133,7 +133,7 @@ onMounted(() => {
   </Section>
 </template>
 
-<style>
+<style lang="scss">
 .diagonal-line-through {
   font-size: 14px;
   position: relative;

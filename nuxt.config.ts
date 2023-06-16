@@ -25,6 +25,11 @@ if (!devStage) {
 }
 
 export default defineNuxtConfig({
+  routeRules: {
+    '/': { prerender: true },
+    '/stories/**': { ssr: true },
+    '/articles/**': { prerender: true },
+  },
   app: {
     head: {
       script,
