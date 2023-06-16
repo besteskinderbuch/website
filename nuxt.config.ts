@@ -27,8 +27,26 @@ if (!devStage) {
 export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
-    '/stories/**': { ssr: true },
-    '/articles/**': { prerender: true },
+    '/stories': { ssr: true },
+    '/stories/*': { ssr: true },
+    '/articles': { prerender: true },
+    '/articles/*': { prerender: true },
+    '/login': { prerender: true },
+    '/signup': { prerender: true },
+    '/impressum': { prerender: true },
+    '/dataprivacy': { prerender: true },
+    '/books': { prerender: true },
+    '/forgotPassword': { prerender: true },
+    '/help': { prerender: true },
+    '/roadmap': { prerender: true },
+    '/benefits': { prerender: true },
+    '/abos': { prerender: true },
+    '/abos/*': { prerender: true },
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true
+    }
   },
   app: {
     head: {
