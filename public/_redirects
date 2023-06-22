@@ -1,1 +1,1 @@
- /blog/*         /articles/:splat              301
+ /*         https://fimbi.de/:splat              301
